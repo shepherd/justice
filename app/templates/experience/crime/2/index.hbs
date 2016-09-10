@@ -1,0 +1,16 @@
+
+<h1>Crime 2</h1>
+
+<p>Description of crime.</p>
+
+<p>Prompt to action:</p>
+
+{{input type='range' class='range' name='range' min='0' max='10' value=test}}
+
+<p><em>This button shouldn't appear until the slider has been adjusted.</em></p>
+
+{{#link-to 'experience.crime.2.result' class='button'}}
+  <span>{{test}}: to result</span>
+{{/link-to}}
+
+{{outlet}}
