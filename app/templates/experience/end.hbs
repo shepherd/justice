@@ -5,8 +5,34 @@
 
 <p><em>Likely sharable at some point.</em></p>
 
-{{#link-to 'application' class='button'}}
-  <span>Home</span>
+
+<form action='javascript:void(0)' class='form'>
+
+  <header>
+    <h2>Add your email address too...</h2>
+  </header>  
+
+  <section class='fields'>
+    <label for='email-address' class='input-w'>
+      <div class='label'>Email address</div>
+      <input id='email-address' type='text' placeholder='placeholder@email.domain'>
+    </label>
+  </section>
+
+  <footer>
+    {{#link-to 'experience.thank-you' tagName='button' class='button'}}
+      <span>Submit</span>
+    {{/link-to}}
+    <p>
+      <em>Don't worry about the email addres - but do click submit to view thank-you page.</em>
+    </p>
+  </footer>
+
+</form>
+
+<br><br><br><br>
+{{#link-to 'application'}}
+  <span>⇽ Home</span>
 {{/link-to}}
 
 {{outlet}}

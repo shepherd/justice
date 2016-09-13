@@ -1,0 +1,67 @@
+
+
+
+body
+  background: $black
+  color: $white
+  font-family: monospace
+
+a
+  color: $color
+
+button()
+  display: inline-block
+  background: $color
+  border: 0
+  font-family: inherit
+  font-size: 16px
+  color: $black
+  padding: $pad $pad*3
+  border-radius: $pad*.5
+  min-width: 140px
+  text-align: center
+  cursor: pointer
+  
+.button
+  button()
+
+.image-w
+  background: #666
+  display: inline-block
+  img
+    opacity: 0
+
+p
+  max-width: 700px
+  em
+    opacity: .4
+
+.stuff
+  // opacity: .2
+
+reset-text-input()
+  border: 0
+  outline: 0
+  border-radius: 0
+
+text-input()
+  input[type='text'],
+  input[type='email']
+    reset-text-input()
+    display: block
+    width: 100%
+    padding: $pad
+    max-width: 300px
+    background: $gray
+    margin-bottom: $pad
+    &:focus
+      background: $white
+
+.form
+  width: 100%
+  max-width: 500px
+  .input-w
+    width: 100%
+    .label
+      margin-bottom: $pad
+    text-input()

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'lawn',
+    modulePrefix: 'justice-for-us',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -43,7 +43,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/lawn/';
+    ENV.baseURL = '/justice-for-us/';
   }
 
   return ENV;
