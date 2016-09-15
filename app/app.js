@@ -15,4 +15,6 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+document.addEventListener("touchstart", function(){}, true);
+
 export default App;

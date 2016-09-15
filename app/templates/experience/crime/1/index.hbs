@@ -1,16 +1,14 @@
 
-<h1>Crime 1</h1>
+<h1>The Crime</h1>
 
-<p>Description of crime.</p>
+<p>Possession of a 1/2 lb. of Cocain and several thousand dollars cash while crossing a state line.</p>
 
-<p>Prompt to action:</p>
+<p>What do you think is the appropriate sentence?</p>
 
-{{input type='range' class='range' name='range' min='0' max='10' value=test}}
+{{input type='range' class='range' name='range' min='5' max='45' step='10' value=test}}
 
 <p><em>This button shouldn't appear until the slider has been adjusted.</em></p>
 
 {{#link-to 'experience.crime.1.result' class='button'}}
   <span>{{test}}: to result</span>
 {{/link-to}}
-
-{{outlet}}
