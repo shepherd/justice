@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('experience', function() {
     this.route('index');
     this.route('start', function() {
+      this.route('index');
       this.route('button');
       this.route('slider');
     });

@@ -1,13 +1,17 @@
 
 <p>and sliders like this:</p>
 
-{{input type='range' class='range' name='range' min='0' max='10' value=test}}
+{{input type='range' class='range' name='range' min='0' max='10' value=currentPosition}}
 
-<p>Set the slider to 10 to begin.</p>
+<p class='prompt'>Set the slider to 10 to begin.</p>
+  
+{{#liquid-if participantReady}}
 
-{{#link-to 'experience.intro' class='button'}}
-  <span>Confirm {{test}}</span>
-{{/link-to}}
+  {{#link-to 'experience.intro' class='button'}}
+    <span>Confirm {{currentPosition}}</span>
+  {{/link-to}}
+
+{{/liquid-if}}
 
 <p><em>When the user sets the slider to 10, this button will appear</em></p>
 

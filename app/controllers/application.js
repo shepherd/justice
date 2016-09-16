@@ -1,13 +1,13 @@
 import Ember from 'ember';
 import { storageFor } from 'ember-local-storage';
 
-export default Ember.Route.extend({
+export default Ember.Controller.extend({
 
   choices: storageFor('choices'),
 
   actions: {
-    collectChoice(thisChoice) {
-      this.set('choices.choice01', thisChoice);
+    resetChoices() {
+      this.get('choices').clear();
       console.log( this.get('choices.content') );
     }
   }

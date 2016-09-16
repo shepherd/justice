@@ -1,14 +1,18 @@
 
 <h1>The Crime</h1>
 
-<p>Securities fraud while running a jewellery business.</p>
+<p>Securities fraud while running a jewellery business. <em>Your average person has no idea what 'securities' are, so I think we would benefit from clarifying with a dumbed down description of things like this.</em></p>
 
 <p>What do you think is the appropriate sentence?</p>
 
-{{input type='range' class='range' name='range' min='0' max='10' value=test}}
+{{input type='range' class='range' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
 
 <p><em>This button shouldn't appear until the slider has been adjusted.</em></p>
 
-{{#link-to 'experience.crime.2.result' class='button'}}
-  <span>{{test}}: to result</span>
-{{/link-to}}
+{{#liquid-if rangeCurrent}}
+
+  {{#link-to 'experience.crime.2.result' class='button'}}
+    <span>{{formattedCurrent}}</span>
+  {{/link-to}}
+
+{{/liquid-if}}

@@ -3,12 +3,16 @@
 
 <p>Possession of a 1/2 lb. of Cocain and several thousand dollars cash while crossing a state line.</p>
 
-<p>What do you think is the appropriate sentence?</p>
+<p class='prompt'>What do you think is the appropriate sentence?</p>
 
-{{input type='range' class='range' name='range' min='5' max='45' step='10' value=test}}
+{{input type='range' class='range' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
 
 <p><em>This button shouldn't appear until the slider has been adjusted.</em></p>
 
-{{#link-to 'experience.crime.1.result' class='button'}}
-  <span>{{test}}: to result</span>
-{{/link-to}}
+{{#liquid-if rangeCurrent}}
+
+  {{#link-to 'experience.crime.1.result' class='button'}}
+    <span>{{formattedCurrent}}</span>
+  {{/link-to}}
+
+{{/liquid-if}}
