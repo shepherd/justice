@@ -1,4 +1,7 @@
 
+html, body
+  height: 100%
+
 html
   box-sizing: border-box
   background: black
@@ -6,7 +9,8 @@ html
     box-sizing: inherit
 
 body
-  background: $black
+  margin: 0
+  background: black
   color: $white
   font-family: monospace
 
@@ -20,6 +24,13 @@ reset-list-styles()
   list-style: none
   margin: 0
   padding: 0
+
+body
+  transition: background 1s ease-in-out
+
+body.ember-application
+  transition: .3s
+  background: black
 
 button()
   display: inline-block
@@ -37,11 +48,14 @@ button()
 .button
   button()
 
+resonsive-image()
+  img, svg
+    display: block
+    width: 100%
+    height: auto
+
 .image-w
-  background: #666
-  display: inline-block
-  img
-    opacity: 0
+  resonsive-image()
 
 p
   max-width: 700px
@@ -88,7 +102,6 @@ text-input()
   height: 100%
   max-width: 1024px // basic landscape ipad
   max-height: 660px
-  border: 2px solid $color
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
@@ -129,10 +142,40 @@ text-input()
   // border: 1px solid black
   // padding: 3px
 
-.brand-icon
-  max-width: 30px
+center-center()
+  float: none //
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+absolute-transform-center()
+  center-center()
+  position: absolute
+
+fixed-transform-center()
+  center-center()
+  position: fixed
+
+.ember-load-indicator
+  fixed-transform-center()
+  .brand-icon
+    max-width: 30px
+    fill: $color
 
 // components
+
+.brand-icon
+  resonsive-image()
+  max-width: 50px
+  position: fixed
+  top: $pad*2
+  left: $pad*2
+
+.liquid-container 
+  > .liquid-child,
+    transform: initial
+    overflow: initial
+
 @keyframes frantic-noise-movement
   0%, 100%
     transform: translate(0,0)
@@ -168,9 +211,45 @@ text-input()
   right: 2rem
   z-index: 10
 
+.charge-block, .sentence-block, .effects-block
+  with: 700px
+  height: 400px
+  background: $white
+  padding: $pad
+  color: $black
+  display: inline-block
+  margin-top: $pad*12
+  margin-left: $pad*20
+
 .charge-block
-  border: 2px solid red
+  // border: 2px solid red
+  
+.sentence-block
+  // border: 2px solid green
+  
+.effects-block
+  // border: 2px solid orange
   
 .range-slider
-  border: 1px solid blue
+  // border: 2px solid blue
 
+// $pages
+body.about
+  .branding
+    max-width: 200px
+
+.content
+  // border: 2px solid red
+  position: relative
+  margin-top: $pad*14
+
+.outfield
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  height: 100%
+  background: black
