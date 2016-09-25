@@ -33,7 +33,7 @@ button()
   min-width: 160px
   text-align: center
   cursor: pointer
-  
+
 .button
   button()
 
@@ -94,7 +94,21 @@ text-input()
   transform: translate(-50%, -50%)
   padding: $pad
   background: $black
-  
+
+.bg
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-image: url('http://i43.tinypic.com/fllf8j.jpg')
+  background-size: cover
+  background-position: center center
+  filter: blur(3px)
+  opacity: .5
+
 .effects-list
   reset-list-styles()
   margin-bottom: $pad*2
@@ -110,7 +124,53 @@ text-input()
 .experience-crime-1
   .justice-wrapper
     background: $gray
-    
+
 .ember-view:not(.button)
   // border: 1px solid black
   // padding: 3px
+
+.brand-icon
+  max-width: 30px
+
+// components
+@keyframes frantic-noise-movement
+  0%, 100%
+    transform: translate(0,0)
+  50%
+    transform: translate(10%,0)
+
+.noise-layer
+  background-image: url(http://i.stack.imgur.com/PEnJm.png)
+  position: absolute
+  width: 300%
+  height: 300%
+  top: -100%
+  left: -100%
+  animation: frantic-noise-movement .2s infinite
+  opacity: .5
+  z-index: 0
+
+@keyframes record-pulse
+  0%, 100%
+    box-shadow: 0 0 2px 2px alpha($highlight, 40%)
+  50%
+    box-shadow: 0 0 3px 3px alpha($highlight, 60%)
+
+.record-indicator
+  width: $pad*2
+  height: $pad*2
+  border-radius: 50%
+  background: $highlight
+  animation: record-pulse 2s infinite
+  //
+  position: absolute
+  top: 2rem
+  right: 2rem
+  z-index: 10
+
+.charge-block
+  border: 2px solid red
+  
+.range-slider
+  border: 1px solid blue
+
