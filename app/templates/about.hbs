@@ -1,20 +1,21 @@
 
 <div class='content'>
-  <div class='image-w branding'>
-    <img src='http://placehold.it/300x200?text=Branding' alt=''>
-  </div>
+  
+  {{full-logo}}<br><br>
+
   <div class='text-w'>
-    <h1>About area</h1>
-    <p>An explaination of the project. This would not be the actual project, but the front-facing splash site for the general public</p>
+    {{!-- <h1>About area</h1> --}}
+    <p>A platform to bring change to Criminal Justice in America.</p>
+    <p>An explaination of the platform. This would not be the actual project, but the front-facing splash site for the general public.</p>
     {{#link-to 'experience.start'}}
       <span>Start experience</span>
     {{/link-to}}
-    <p><em>This button would not be here, but is for our ease of navigation while building.</em></p>
+    <p><em>This button would not be here, but is for our ease of navigation while programing.</em></p>
   </div>
 
   <div>
-    <p>LAST UPDATED: 6pm tuesday</p>
+    <p>LAST UPDATED: 9am Wednesday</p>
   </div>
 </div>
 
-{{liquid-outlet}}
+{{outlet}}

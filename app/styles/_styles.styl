@@ -1,0 +1,571 @@
+
+html, body
+  height: 100%
+
+html
+  box-sizing: border-box
+  background: black
+  *
+    box-sizing: inherit
+
+body
+  margin: 0
+  background: black
+  color: $white
+  // font-family: monospace
+
+input, textarea, button, select, a
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+a
+  color: $color
+
+[data-ember-action], .touchable
+  cursor: pointer
+
+svg
+  fill: currentColor
+
+reset-list-styles()
+  list-style: none
+  margin: 0
+  padding: 0
+
+body.ember-application
+  transition: .3s
+  background: black
+
+standard-type()
+  font-family: "roboto-mono",sans-serif;
+
+noir-type()
+  font-family: "acier-bat-noir",sans-serif
+  letter-spacing: .06em
+  
+solid-type()
+  font-family: "acier-bat-solid",sans-serif
+  letter-spacing: .06em
+
+extra-large-type()
+  font-size: 50px
+  noir-type()
+
+large-type()
+  font-size: 34px
+  solid-type()
+
+body
+  transition: background 1s ease-in-out
+  standard-type()
+
+button()
+  position: relative
+  display: inline-block
+  background: transparent
+  font-family: inherit
+  font-size: 16px
+  padding: $pad*1.5 $pad $pad*1.15
+  border-radius: 0
+  border: 2px solid $white
+  color: $white
+  min-width: 160px
+  text-align: center
+  cursor: pointer
+  text-decoration: none
+  text-transform: uppercase
+  min-width: 220px
+  standard-type()
+  font-weight: 700
+  span
+    float: none
+    display: inline-block
+    vertical-align: middle
+  .special-char
+    position: relative
+    bottom: 2px
+  &:active, &:focus, &:hover
+    background: $highlight
+    color: $white
+    border: 2px solid $highlight
+  &:before
+    position: absolute
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    z-index: 30!important
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+.button
+  button()
+
+resonsive-image()
+  img, svg
+    display: block
+    width: 100%
+    height: auto
+
+.image-w
+  resonsive-image()
+
+
+p
+  max-width: 700px
+  em
+    opacity: .4
+
+h1
+  solid-type()
+
+.stuff
+  // opacity: .2
+
+reset-text-input()
+  border: 0
+  outline: 0
+  border-radius: 0
+
+text-input()
+  input[type='text'],
+  input[type='email']
+    reset-text-input()
+    display: block
+    width: 100%
+    padding: $pad
+    max-width: 300px
+    background: $gray
+    margin-bottom: $pad
+    &:focus
+      background: $white
+
+.form
+  width: 100%
+  max-width: 500px
+  .input-w
+    width: 100%
+    .label
+      margin-bottom: $pad
+    text-input()
+
+.justice-wrapper
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  max-width: 1024px // basic landscape ipad
+  max-height: 660px
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  padding: $pad
+  background: $black
+
+.bg
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-image: url('http://i43.tinypic.com/fllf8j.jpg')
+  background-size: cover
+  background-position: center center
+  filter: blur(3px)
+  opacity: .5
+
+.effects-list
+  reset-list-styles()
+  margin-bottom: $pad*2
+  > li
+    border: 1px solid black
+    padding: $pad
+    display: inline-block
+
+.prompt
+  // padding: $pad
+  // background: rgba(0,0,0,.2)
+
+.experience-crime-1
+  .justice-wrapper
+    background: $gray
+
+.ember-view:not(.button)
+  // border: 1px solid black
+  // padding: 3px
+
+center-center()
+  float: none //
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+absolute-transform-center()
+  center-center()
+  position: absolute
+
+fixed-transform-center()
+  center-center()
+  position: fixed
+
+.ember-load-indicator
+  fixed-transform-center()
+  top: 47%;
+  max-width: 100px
+  color: $white
+  svg
+    display: block
+    width: 100%
+    height: auto
+    fill: currentColor
+
+// components
+
+.brand-icon
+  resonsive-image()
+  max-width: 40px
+  position: fixed
+  top: $pad*2.5
+  left: $pad*3.2
+  z-index: 10
+
+.full-logo
+  resonsive-image()
+  max-width: 200px
+  .eye
+    color: $color
+
+.liquid-container 
+  > .liquid-child,
+    transform: initial
+    overflow: initial
+
+@keyframes frantic-noise-movement
+  0%, 100%
+    transform: translate(0,0)
+  50%
+    transform: translate(10%,0)
+
+.noise-layer
+  background-image: url(http://i.stack.imgur.com/PEnJm.png)
+  position: absolute
+  width: 300%
+  height: 300%
+  top: -100%
+  left: -100%
+  animation: frantic-noise-movement .2s infinite
+  opacity: .3
+  z-index: 0
+  background-size: 300px
+
+@keyframes record-pulse
+  0%, 100%
+    box-shadow: 0 0 2px 2px alpha($highlight, 40%)
+  50%
+    box-shadow: 0 0 3px 3px alpha($highlight, 60%)
+
+.record-indicator
+  width: $pad*2
+  height: $pad*2
+  border-radius: 50%
+  background: $highlight
+  animation: record-pulse 2s infinite
+  //
+  position: absolute
+  top: 2rem
+  right: 2rem
+  z-index: 10
+
+.lego-house, .charge-block, .sentence-block, .effects-block
+  background: $white
+  padding: $pad
+  color: $black
+  display: inline-block
+  min-height: 240px
+  .chunk
+    position: absolute
+    width: 40px
+    height: 40px
+    background: $white
+    &.one
+      top: 0
+      right: 100%
+    &.two
+      top: 80px
+      right: 100%
+    &.three
+      top: 160px
+      right: 100%
+    &.four
+      bottom: 160px
+      left: 100%
+    &.five
+      bottom: 80px
+      left: 100%
+    &.six
+      bottom: 0
+      left: 100%
+  .button
+    border-color: $black
+    color: $black
+    &:active, &:focus, &:hover
+      border-color: $highlight
+
+.charge-block
+  position: relative
+  margin: 40px
+
+.sentence-block
+  // border: 2px solid green
+  
+.effects-block
+  // border: 2px solid orange
+
+.range-slider
+  // border: 2px solid blue
+  width: 70%
+  max-width: 500px
+
+// $pages
+body.about
+  .branding
+    max-width: 200px
+
+.experience-start
+  h2
+    margin: 0
+    extra-large-type()
+    
+.experience-intro
+  h1
+    large-type()
+
+.content
+  // border: 2px solid red
+  position: relative
+  margin-top: $pad*14
+  padding: $pad*2
+
+.outfield
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  height: 100%
+  background: black
+  
+.experience-story
+  //
+  .background-image-full, .background-image-pattern
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    // z-index: 30
+    background-size: cover
+    background-position: center center
+    z-index: 0
+    
+  // STORY 1
+  &.experience-story-1
+    //
+    .background-image-full
+      background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
+    .background-image-pattern
+      background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
+      clip-left()
+
+  &.experience-story-1-charge
+    // covered by previous
+
+  &.experience-story-1-sentence
+    //
+    .background-image-full
+      background-image: url('http://1.bp.blogspot.com/-1V5-FuxNEEU/TjWeZkOQzGI/AAAAAAAAAWk/dBcFhtR28xg/s1600/parking+garage+HDR3.jpg')
+    .background-image-pattern
+      background-image: url('https://picproj2722.files.wordpress.com/2012/10/empty.jpg')
+      clip-right()
+  &.experience-story-1-effects
+      //
+      .background-image-full
+        background-image: url('http://sites.psu.edu/wp-content/uploads/sites/12008/2010/06/empty-playground2.jpg')
+      .background-image-pattern
+        background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
+        clip-right()
+
+  // STORY 2
+  &.experience-story-2
+    //
+    .background-image-full
+      background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
+    .background-image-pattern
+      background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
+      clip-right()
+
+  &.experience-story-2-charge
+    // covered by previous
+
+  &.experience-story-2-sentence
+    //
+    .background-image-full
+      background-image: url('http://1.bp.blogspot.com/-1V5-FuxNEEU/TjWeZkOQzGI/AAAAAAAAAWk/dBcFhtR28xg/s1600/parking+garage+HDR3.jpg')
+    .background-image-pattern
+      background-image: url('https://picproj2722.files.wordpress.com/2012/10/empty.jpg')
+      clip-right()
+  &.experience-story-2-effects
+      //
+      .background-image-full
+        background-image: url('http://sites.psu.edu/wp-content/uploads/sites/12008/2010/06/empty-playground2.jpg')
+      .background-image-pattern
+        background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
+        clip-right()
+
+.range-w
+  position: relative
+  // left: 50%
+  // margin: 0 40px
+  text-align: center
+  header
+    // border: 2px solid red
+    padding: $pad 0
+  h2
+    display: inline-block
+    margin: 0
+    extra-large-type()
+    color: $black
+    text-align: center
+    border: 1px solid black
+    min-width: 100px
+    padding: $pad
+  .range-slider
+    display: block
+    padding: 1.3rem 0
+    background: transparent
+    // border: 1px solid blue
+    position: relative
+    left: 50%
+    margin: 0
+    transform: translate(-50%, 0)
+
+footer.button-w
+  float: right
+  margin-right: $pad*3
+
+.lego-house
+  background: $white
+  padding: $pad $pad*3
+  color: $black
+  margin-top: $pad*10
+  width: 100%
+  max-width: 500px
+  margin-left: 40px
+  margin-right: 40px
+  position: relative
+  left: 50%
+  transform: translate(-50%, 0)
+  // border: 1px solid red
+  h1
+    margin: 0
+
+.crime-w
+  // border: 1px solid red
+  width: 100%
+  min-height: 100px
+  padding: $pad*3 $pad $pad
+  font-family: monospace
+  .crime
+    width: 100%
+    float: left
+    border: 2px solid $black
+    header
+      // border: 1px solid orange
+      div
+        display: inline-block
+        text-transform: uppercase
+      .name, .number
+        font-size: 12px
+      .name
+        // text-transform: uppercase
+      .number
+        border-right: 2px solid $black
+        border-bottom: 2px solid $black
+        min-width: 30px
+        text-align: center
+        padding: $pad*.5 $pad
+    .charge, .headline
+      padding: $pad
+      solid-type()
+      font-size: 22px
+  .location, .priors, .actual, .your
+    float: left
+    border: 2px solid $black
+    border-top: 0
+    padding: $pad*.25 $pad $pad*.5
+    min-width: 30%
+    font-size: 13px
+    text-transform: uppercase
+    span
+      display: block
+      font-size: 9px
+      margin: $pad*.5 0
+  .priors
+    border-left: 0
+  .actual, .your
+    //
+    span
+      font-size: 12px
+    h2
+      noir-type()
+      margin: 0
+      font-size: 50px
+  .actual
+    h2
+      color: $highlight
+
+  .overview, .story, .reasoning
+    width: 100%
+    float: left
+    standard-type()
+    
+    p, li
+      margin: 0
+      margin-bottom: $pad
+      font-family: monospace!important
+  .story, .overview
+    // background: red
+    margin-top: $pad*1.5
+  .reasoning, .prompt
+    // background: blue
+    margin-bottom: $pad
+  .prompt
+    width: 100%
+    float: left
+    color: $color
+    p
+      margin: 0
+      margin-bottom: $pad
+  .button
+    margin-top: $pad*2
+
+.fact-list
+  margin 0
+  padding: 0
+  list-style: none
+  margin: $pad*2 0
+  li //
+    margin-bottom: $pad*1.5
+
+      
+      

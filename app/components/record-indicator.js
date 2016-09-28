@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'div',
-  classNames: ['record-indicator'],
+  classNames: ['record-indicator', 'touchable'],
   didInsertElement() {
     Ember.$('body').find('.record-indicator').css('opacity', 0);
   },
@@ -12,5 +12,8 @@ export default Ember.Component.extend({
         'opacity': 1
       }, 500);
     }, 2000);
+  },
+  click() {
+    alert('When tapping the recording-indicator, it may show the user info as recorded.');
   }
 });

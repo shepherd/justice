@@ -7,10 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-
   // 'application' is the end-all parent route
 
-  this.route('about', { path: '' });
+  // this.route('title', { path: '/' });
+
+  this.route('about', { path: '/' });
 
   this.route('experience', function() {
     this.route('index');
@@ -35,6 +36,7 @@ Router.map(function() {
     this.route('end');
     this.route('thank-you');
   });
+  
 });
 
 export default Router;

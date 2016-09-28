@@ -1,20 +1,64 @@
 
-{{charge-block next='experience.story.2.sentence'}}
+{{!-- {{charge-block next='experience.story.1.sentence'}} --}}
 
-{{!-- <h1>The Crime</h1>
+<div class='lego-house'>
 
-<p>Securities fraud while running a jewellery business. <em>Your average person has no idea what 'securities' are, so I think we would benefit from clarifying with a dumbed down description of things like this.</em></p>
+  <div class='chunk one'></div>
+  <div class='chunk two'></div>
+  <div class='chunk three'></div>
+  <div class='chunk four'></div>
+  <div class='chunk five'></div>
+  <div class='chunk six'></div>
+  
+  <div class='crime-w'>
+    <div class='crime'>
+      <header>
+        <div class='number'>1</div>
+        <div class='name'>The Crime</div>
+      </header>
+      <div class='charge'>
+        Facilitating one crack cocaine transaction in 1999.
+      </div>
+    </div>
+    <footer>
+      <div class='location'>
+        <span>Location</span>
+        Texas
+      </div>
+      <div class='priors'>
+        <span>Priors</span>
+        Yes
+      </div>
+    </footer>
 
-<p>What do you think is the appropriate sentence?</p>
+    <section class="overview">
+      <p>A 32-year-old single mother with no previous convictions was found guilty of one count of conspiracy to distribute crack cocaine, and acquitted of six counts of possession of crack cocaine and aiding and abetting.</p>
+      <p>No prior convictions.</p>
+    </section>
 
-{{input type='range' class='range' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
+    <section class='prompt'>
+      <p>What do you think is the appropriate sentence?</p>
+    </section>
 
-<p><em>This button shouldn't appear until the slider has been adjusted.</em></p>
+  </div>
 
-{{#liquid-if rangeCurrent}}
+</div>
 
-  {{#link-to 'experience.story.2.sentence' class='button'}}
-    <span>{{formattedCurrent}}</span>
-  {{/link-to}}
+<div class='range-w'>
+  <header>
+    <h2>{{rangeCurrent}}</h2>
+  </header>
+  <footer>
+    {{input type='range' class='range-slider' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
+  </footer>
+</div>
 
-{{/liquid-if}} --}}
+{{#if rangeCurrent}}
+
+  <footer class='button-w'>
+    {{#link-to 'experience.story.1.sentence' class='button'}}
+      <span>{{formattedCurrent}} <span class='special-char'>⇾</span></span>
+    {{/link-to}}
+  </footer>
+
+{{/if}}

@@ -1,2 +1,64 @@
 
-{{charge-block next='experience.story.1.sentence'}}
+{{!-- {{charge-block next='experience.story.1.sentence'}} --}}
+
+<div class='lego-house'>
+
+  <div class='chunk one'></div>
+  <div class='chunk two'></div>
+  <div class='chunk three'></div>
+  <div class='chunk four'></div>
+  <div class='chunk five'></div>
+  <div class='chunk six'></div>
+  
+  <div class='crime-w'>
+    <div class='crime'>
+      <header>
+        <div class='number'>1</div>
+        <div class='name'>The Crime</div>
+      </header>
+      <div class='charge'>
+        Possession of 2.8 grams of marijuana.
+      </div>
+    </div>
+    <footer>
+      <div class='location'>
+        <span>Location</span>
+        Louisiana
+      </div>
+      <div class='priors'>
+        <span>Priors</span>
+        Yes
+      </div>
+    </footer>
+
+    <section class="overview">
+      <p>A 49-year-old man was stopped by police and found with a small amount of marijuana. He was convicted of simple possession in 2011.</p>
+      <p>Two prior convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.</p>
+    </section>
+
+    <section class='prompt'>
+      <p>What do you think is the appropriate sentence?</p>
+    </section>
+
+  </div>
+
+</div>
+
+<div class='range-w'>
+  <header>
+    <h2>{{rangeCurrent}}</h2>
+  </header>
+  <footer>
+    {{input type='range' class='range-slider' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
+  </footer>
+</div>
+
+{{#if rangeCurrent}}
+
+  <footer class='button-w'>
+    {{#link-to 'experience.story.1.sentence' class='button'}}
+      <span>{{formattedCurrent}} <span class='special-char'>⇾</span></span>
+    {{/link-to}}
+  </footer>
+
+{{/if}}

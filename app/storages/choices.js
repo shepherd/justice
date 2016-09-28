@@ -6,8 +6,8 @@ const Storage = StorageObject.extend();
 Storage.reopenClass({
   initialState() {
     return {
-      choice01: null,
-      choice02: null // ?? ?
+      choice01: 'hey',
+      choice02: 'buddy' // ?? ?
     };
   }
 });

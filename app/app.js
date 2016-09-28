@@ -13,7 +13,11 @@ App = Ember.Application.extend({
   Resolver
 });
 
-Ember.Route.reopen({
+Ember.run.later( function() {
+  // alert('hi');
+}, 2000);
+
+Ember.Route.reopen({ // adds CSS classes to body based on route-names
   activate: function() {
     var cssClass = this.toCssClass();
     // you probably don't need the application class
@@ -23,7 +27,7 @@ Ember.Route.reopen({
     }
   },
   deactivate: function() {
-    Ember.$('body').removeClass(this.toCssClass());
+    Ember.$('body').removeClass( this.toCssClass() );
   },
   toCssClass: function() {
     return this.routeName.replace(/\./g, '-').dasherize();
