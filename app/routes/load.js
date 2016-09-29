@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     var thisRoute = this;
     Ember.run.later( function() {
       thisRoute.transitionTo('title');
-    }, 5000);
+    }, 2000);
     this.get('backgrounds').loadImages();
   },
 
