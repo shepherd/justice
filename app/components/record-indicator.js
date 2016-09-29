@@ -7,7 +7,7 @@ export default Ember.Component.extend({
 
   initAudioFile: Ember.on('init', function() {
     // Eb5.mp3 is an mp3 file located in the "public" folder
-    this.get('audio').load('/audio/jail-door.mp3').asSound('jail-door');
+    this.get('audio').load('/audio/alert.mp3').asSound('jail-door');
   }),
 
   didInsertElement() {
