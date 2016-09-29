@@ -1,39 +1,37 @@
 
-<div class='lego-house'>
-
-  <div class='chunk one'></div>
-  <div class='chunk two'></div>
-  <div class='chunk three'></div>
-  <div class='chunk four'></div>
-  <div class='chunk five'></div>
-  <div class='chunk six'></div>
+<div class='center'>
+  <div class='lego-house'>
   
-  <div class='crime-w'>
-    <div class='crime'>
-      <header>
-        <div class='number'>1</div>
-        <div class='name'>The Effects</div>
-      </header>
-      <div class='charge'>
-        ???
+    <div class='chunk one'></div>
+    <div class='chunk two'></div>
+    <div class='chunk three'></div>
+    <div class='chunk four'></div>
+    <div class='chunk five'></div>
+    <div class='chunk six'></div>
+    
+    <div class='crime-w'>
+      <div class='crime'>
+        <header>
+          <div class='number'>1</div>
+          <div class='name'>The Effects</div>
+        </header>
+        <div class='charge'>
+          ???
+        </div>
       </div>
+  
+      <div class='story'>
+        <ul class='fact-list'>
+          <li>50%: As of 2014, half of all federal inmates are incarcerated on drug-related convictions.</li>
+          <li>16%: In 1970, just 16 percent of federal inmates were locked up on drug-related convictions.</li>
+          <li>$31,286: On average, it costs $31,286 to keep one person in prison for one year.</li>
+        </ul>
+      </div>
+  
     </div>
-
-    <div class='story'>
-      <ul class='fact-list'>
-        <li>50%: As of 2014, half of all federal inmates are incarcerated on drug-related convictions.</li>
-        <li>16%: In 1970, just 16 percent of federal inmates were locked up on drug-related convictions.</li>
-        <li>$31,286: On average, it costs $31,286 to keep one person in prison for one year.</li>
-      </ul>
-    </div>
-
-    {{#link-to 'experience.story.2.charge' class='button'}}
-      <span>Next ⇾</span>
-    {{/link-to}}
-
+  
   </div>
 
 </div>
 
-
-{{!-- {{effects-block next='experience.story.2.charge'}} --}}
+{{next-button destination='experience.end' class='lower-right'}}

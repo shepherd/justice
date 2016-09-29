@@ -1,0 +1,36 @@
+
+html, body
+  background: black
+  height: 100%
+
+html
+  box-sizing: border-box
+  
+  *, *:before, *:after
+    box-sizing: inherit
+
+body
+  margin: 0
+  
+a
+  color: inherit
+  
+svg
+  fill: currentColor
+  
+[data-ember-action], .touchable
+  cursor: pointer
+
+resonsive-image()
+  img, svg
+    display: block
+    width: 100%
+    height: auto
+
+.image-w
+  resonsive-image()
+  
+.liquid-container, .liquid-child
+  position: relative
+  width: 100%
+  height: 100%

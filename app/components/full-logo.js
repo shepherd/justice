@@ -2,5 +2,5 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'div',
-  classNames: ['image-w, full-logo']
+  classNames: ['image-w full-logo']
 });

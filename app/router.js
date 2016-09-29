@@ -9,17 +9,18 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   // 'application' is the end-all parent route
 
-  // this.route('title', { path: '/' });
+  this.route('load', { path: '/' });
+  this.route('title', { path: '/welcome' });
 
-  this.route('about', { path: '/' });
+  // this.route('about', { path: '/' });
 
   this.route('experience', function() {
-    this.route('index');
-    this.route('start', function() {
-      this.route('index', { path: '/' });
-      this.route('button');
-      this.route('slider');
-    });
+    this.route('index', { path: '/' });
+    // this.route('start', function() {
+    //   this.route('index', { path: '/' });
+    //   this.route('button');
+    //   this.route('slider');
+    // });
     this.route('intro');
     this.route('story', function() {
       this.route('1', function() {
@@ -36,7 +37,8 @@ Router.map(function() {
     this.route('end');
     this.route('thank-you');
   });
-  
+
+  this.route('load');
 });
 
 export default Router;
