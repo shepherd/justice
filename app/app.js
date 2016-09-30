@@ -19,27 +19,6 @@ App = Ember.Application.extend({
   Resolver
 });
 
-Ember.run.later( function() {
-  // alert('hi');
-}, 2000);
-
-Ember.Route.reopen({ // adds CSS classes to body based on route-names
-  activate: function() {
-    var cssClass = this.toCssClass();
-    // you probably don't need the application class
-    // to be added to the body
-    if (cssClass != 'application') {
-      Ember.$('body').addClass(cssClass);
-    }
-  },
-  deactivate: function() {
-    Ember.$('body').removeClass( this.toCssClass() );
-  },
-  toCssClass: function() {
-    return this.routeName.replace(/\./g, '-').dasherize();
-  }
-});
-
 loadInitializers(App, config.modulePrefix);
 
 export default App;

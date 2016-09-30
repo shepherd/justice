@@ -22,17 +22,10 @@ Router.map(function() {
     //   this.route('slider');
     // });
     this.route('intro');
-    this.route('story', function() {
-      this.route('1', function() {
-        this.route('charge');
-        this.route('sentence');
-        this.route('effects');
-      });
-      this.route('2', function() {
-        this.route('charge');
-        this.route('sentence');
-        this.route('effects');
-      });
+    this.route('story', { path: ':story_id' }, function() {
+      this.route('charge');
+      this.route('sentence');
+      this.route('effects');
     });
     this.route('end');
     this.route('thank-you');

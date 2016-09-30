@@ -21,10 +21,7 @@ export default Ember.Component.extend({
   }),
 
   click() {
-    var thisSound = this.get('sound');
-    this.get('audio').getSound(thisSound).play();
-    this.get('router').transitionTo( this.destination );
-    console.log('You should have heard a ' + this.get('sound'));
+    this.get('audio').getSound(this.get('sound')).play();
+    this.sendAction();
   }
-
 });

@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
+  currentPath: '',
+
   charge: {
     one: 'c-one',
     two: 'c-two'
@@ -13,7 +15,12 @@ export default Ember.Service.extend({
     one: 'e-one',
     two: 'e-two'
   },
+
   loadImages() {
     alert('loading images');
+  },
+
+  registerCurrentPath(id) {
+    this.set('currentPath', `experience-story-${id}`);
   }
 });
