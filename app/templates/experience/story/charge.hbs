@@ -47,20 +47,20 @@
     {{ui-slider
       tooltip='always'
       classNames='range-slider'
-      min=model.story.charge.min
+      min=0
       max=model.story.charge.max
       step=model.story.charge.step
       value=model.selectedSentence
     }}
   </div>
 
-  {{#if valueSelected}}
+  {{#liquid-if valueSelected}}
 
     <footer class='button-w'>
-      {{link-to 'Next ⇾' 'experience.story.sentence' 1 classNames='button next-button' tagName='button'}}
+      {{next-button action='transitionToSentence'}}
     </footer>
 
-  {{/if}}
+  {{/liquid-if}}
 
 
 </div>

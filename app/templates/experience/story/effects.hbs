@@ -32,6 +32,8 @@
 
   </div>
 
-  {{link-to 'Next ⇾' 'experience.story.charge' 2 classNames='button next-button' tagName='button'}}
+  {{#if nextStoryExists}}
+    {{next-button action='transitionToNextStory'}}
+  {{/if}}
 
 </div>
