@@ -170,7 +170,7 @@ const storyData = [
   },
   {
     "id": 5,
-    "name": "",
+    "name": "Aiding marijuana smugglers",
     "location": "Georgia",
     "charge": {
       "description": "Leasing trucks to marijuana smugglers in Georgia.",
@@ -212,7 +212,7 @@ const storyData = [
   },
   {
     "id": 6,
-    "name": "",
+    "name": "Example hash",
     "location": "",
     "charge": {
       "description": "",
@@ -254,4 +254,4 @@ const storyData = [
   },
 ];
 
-export default function() {}
+export default storyData;

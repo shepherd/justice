@@ -4,6 +4,12 @@
 
   <p>How many pages will be here?</p>
 
+  <ul class="story-list">
+    {{#each model as |story|}}
+      <li>{{story.name}}</li>
+    {{/each}}
+  </ul>
+
   <p>The United States has 5% of the world’s population, and 25%
     of the world’s prisoners.</p>
 
