@@ -20,7 +20,11 @@ export default Ember.Service.extend({
     alert('loading images');
   },
 
-  registerCurrentPath(id) {
-    this.set('currentPath', `experience-story-${id}`);
+  registerCurrentPath(id, section) {
+    this.set('currentPath', `experience-story experience-story-${id} experience-story-${id}-${section}`);
+  },
+
+  removeBackgroundImages() {
+    this.set('currentPath', '');
   }
 });
