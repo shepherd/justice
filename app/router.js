@@ -9,10 +9,29 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   // 'application' is the end-all parent route
 
-  this.route('load', { path: '/' });
-  this.route('title', { path: '/welcome' });
+
+  this.route('title', { path: '/' });
 
   // this.route('about', { path: '/' });
+
+
+  // /
+  // - /index - default
+  // - /overview
+  // - /how-to
+  // - /why
+
+  // /stories/dynamic_id
+  // - /charge
+  // - /sentence
+  //  -/effect // societal effects ~
+
+  // /conclusion
+  // - /index
+  // - /email-sign-up
+  // - /thank-you
+  // - /return to loading state or welcome page etc.
+
 
   this.route('experience', function() {
     this.route('index', { path: '/' });
@@ -30,8 +49,6 @@ Router.map(function() {
     this.route('end');
     this.route('thank-you');
   });
-
-  this.route('load');
 });
 
 export default Router;
