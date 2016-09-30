@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   rangeMin: 0,
   rangeMax: 45,
   rangeStep: 5,
-  rangeCurrent: null,
+  rangeCurrent: 0,
   formattedCurrent: Ember.computed('rangeCurrent', function() {
     const current = this.get('rangeCurrent');
     const min = this.get('rangeMin');
@@ -19,5 +19,11 @@ export default Ember.Controller.extend({
     } else {
       return current + ' years in prison';
     }
-  })
+  }),
+
+  actions: {
+    updateSentence(value) {
+      this.set('model.sentence', value);
+    }
+  }
 });
