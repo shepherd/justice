@@ -1,6 +1,6 @@
 
 <div class="center">
-  
+
 
   <div class='lego-house'>
 
@@ -10,7 +10,7 @@
     <div class='chunk four'></div>
     <div class='chunk five'></div>
     <div class='chunk six'></div>
-    
+
     <div class='crime-w'>
       <div class='crime'>
         <header>
@@ -46,12 +46,7 @@
   </div>
 
   <div class='range-w'>
-    <header>
-      <h2>{{rangeCurrent}}</h2>
-    </header>
-    <footer>
-      {{input type='range' class='range-slider' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
-    </footer>
+    {{ui-slider tooltip='always' classNames='range-slider' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent changed='updateSentence'}}
   </div>
 
   {{#if rangeCurrent}}
@@ -64,5 +59,3 @@
 
 
 </div>
-
-

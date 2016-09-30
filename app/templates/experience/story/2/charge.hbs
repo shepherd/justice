@@ -4,14 +4,14 @@
 <div class='center'>
 
   <div class='lego-house'>
-  
+
     <div class='chunk one'></div>
     <div class='chunk two'></div>
     <div class='chunk three'></div>
     <div class='chunk four'></div>
     <div class='chunk five'></div>
     <div class='chunk six'></div>
-    
+
     <div class='crime-w'>
       <div class='crime'>
         <header>
@@ -32,29 +32,24 @@
           Yes
         </div>
       </footer>
-  
+
       <section class='overview'>
         <p>A 32-year-old single mother with no previous convictions was found guilty of one count of conspiracy to distribute crack cocaine, and acquitted of six counts of possession of crack cocaine and aiding and abetting.</p>
         <p>No prior convictions.</p>
       </section>
-  
+
       <section class='prompt'>
         <p>What do you think is the appropriate sentence?</p>
       </section>
-  
+
     </div>
-  
+
   </div>
-  
+
   <div class='range-w'>
-    <header>
-      <h2>{{rangeCurrent}}</h2>
-    </header>
-    <footer>
-      {{input type='range' class='range-slider' name='range' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent}}
-    </footer>
+    {{ui-slider tooltip='always' classNames='range-slider' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent changed='updateSentence'}}
   </div>
-  
+
 </div>
 
 {{#if rangeCurrent}}
