@@ -13,30 +13,30 @@
     <div class='crime-w'>
       <div class='crime'>
         <header>
-          <div class='number'>{{model.id}}</div>
+          <div class='number'>{{model.story.id}}</div>
           <div class='name'>The Crime</div>
         </header>
         <div class='charge'>
-          {{model.charge.description}}
+          {{model.story.charge.description}}
         </div>
       </div>
       <footer>
         <div class='location'>
           <span>Location</span>
-          {{model.location}}
+          {{model.story.location}}
         </div>
         <div class='priors'>
           <span>Priors</span>
-          {{happy-bool model.priors}}
+          {{happy-bool model.story.priors}}
         </div>
       </footer>
 
       <section class="overview">
-        {{{model.charge.overview}}}
+        {{{model.story.charge.overview}}}
       </section>
 
       <section class='prompt'>
-        <p>{{model.charge.prompt}}</p>
+        <p>{{model.story.charge.prompt}}</p>
       </section>
 
     </div>
@@ -44,26 +44,20 @@
   </div>
 
   <div class='range-w'>
-    <header>
-      <h2>{{model.charge.selectedValue}}</h2>
-    </header>
-    <footer>
-      {{input
-        type='range'
-        class='range-slider'
-        name='range'
-        min=0
-        max=model.charge.max
-        step=model.charge.step
-        value=model.charge.selectedValue
-      }}
-    </footer>
+    {{ui-slider
+      tooltip='always'
+      classNames='range-slider'
+      min=model.story.charge.min
+      max=model.story.charge.max
+      step=model.story.charge.step
+      value=model.selectedSentence
+    }}
   </div>
 
   {{#if valueSelected}}
 
     <footer class='button-w'>
-      {{next-button destination='experience.story.1.sentence' sound='jail-door'}}
+      {{link-to 'Next ⇾' 'experience.story.sentence' 1 classNames='button next-button' tagName='button'}}
     </footer>
 
   {{/if}}

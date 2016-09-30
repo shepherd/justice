@@ -4,6 +4,9 @@ export default Ember.Route.extend({
   model({ story_id }) {
     // ember's params are always passed as strings
     const id = parseInt(story_id);
-    return this.modelFor('experience').findBy('id', id);
+    return {
+      story: this.modelFor('experience').findBy('id', id),
+      selectedSentence: 0
+    };
   }
 });

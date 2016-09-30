@@ -1,1 +1,50 @@
-{{outlet}}
+
+
+<div class='center'>
+
+  <div class='lego-house'>
+
+    <div class='chunk one'></div>
+    <div class='chunk two'></div>
+    <div class='chunk three'></div>
+    <div class='chunk four'></div>
+    <div class='chunk five'></div>
+    <div class='chunk six'></div>
+
+    <div class='crime-w'>
+
+      <div class='crime'>
+        <header>
+          <div class='number'>1</div>
+          <div class='name'>The Sentence</div>
+        </header>
+        <div class='headline'>
+          There is currently no headline for this story
+        </div>
+      </div>
+      <footer>
+        <div class='actual'>
+          <span>Actual Sentence</span>
+          <h2>{{model.story.sentence.time}}</h2>
+        </div>
+        <div class='your'>
+          <span>Your Sentence</span>
+          <h2>{{model.selectedSentence}}</h2>
+        </div>
+      </footer>
+
+      <div class='story'>
+        <p>{{model.story.sentence.story}}</p>
+      </div>
+
+      <div class='reasoning'>
+        <p>{{model.story.sentence.reasoning}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  {{link-to 'Next ⇾' 'experience.story.effects' 1 classNames='button next-button' tagName='button'}}
+
+</div>

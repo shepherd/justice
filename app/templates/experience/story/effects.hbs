@@ -1,1 +1,37 @@
-{{outlet}}
+
+<div class='center'>
+  <div class='lego-house'>
+
+    <div class='chunk one'></div>
+    <div class='chunk two'></div>
+    <div class='chunk three'></div>
+    <div class='chunk four'></div>
+    <div class='chunk five'></div>
+    <div class='chunk six'></div>
+
+    <div class='crime-w'>
+      <div class='crime'>
+        <header>
+          <div class='number'>1</div>
+          <div class='name'>The Effects</div>
+        </header>
+        <div class='charge'>
+          {{model.story.effects.title}}
+        </div>
+      </div>
+
+      <div class='story'>
+        <ul class='fact-list'>
+          {{#each model.story.effects.facts as |fact|}}
+            <li>{{fact.visualNumber}}: {{fact.copy}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  {{link-to 'Next ⇾' 'experience.story.charge' 2 classNames='button next-button' tagName='button'}}
+
+</div>
