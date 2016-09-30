@@ -49,13 +49,13 @@
     {{ui-slider tooltip='always' classNames='range-slider' min=rangeMin max=rangeMax step=rangeStep value=rangeCurrent changed='updateSentence'}}
   </div>
 
-  {{#if rangeCurrent}}
+  {{#liquid-if rangeCurrent}}
 
     <footer class='button-w'>
       {{next-button destination='experience.story.1.sentence' sound='jail-door'}}
     </footer>
 
-  {{/if}}
-
+  {{/liquid-if}}
 
 </div>
+

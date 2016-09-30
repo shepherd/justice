@@ -74,6 +74,8 @@ button()
 .center
   fixed-transform-center()
   // border: 4px double blue
+  width: 100%
+  max-width: 65%
 
 p
   max-width: 700px
@@ -124,6 +126,7 @@ text-input()
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%)
   padding: $pad
   background: black
   overflow: hidden
@@ -186,8 +189,10 @@ text-input()
 @keyframes frantic-noise-movement
   0%, 100%
     transform: translate(0,0)
+    -webkit-transform: translate(0,0)
   50%
     transform: translate(10%,0)
+    -webkit-transform: translate(10%,0)
 
 .noise-layer
   background-image: url(http://i.stack.imgur.com/PEnJm.png)
@@ -280,6 +285,7 @@ text-input()
   position: relative
   left: 50%
   transform: translate(-50%, 0)
+  -webkit-transform: translate(-50%, 0)
   // border: 1px solid red
   h1
     margin: 0
@@ -301,14 +307,22 @@ body.load
   max-width: 100px
   color: white
 
-body.title
+body.title, body.experience-end
   .center
     text-align: center
-    *
+    .full-logo
       display: inline-block
     .full-logo
       margin-bottom: $pad*2
-      
+    .button
+      margin-top: $pad*2
+  h2
+    solid-type()
+    uppercase()
+  p 
+    font-family: monospace
+    opacity: .8
+
 .title-blocks
   .block
     absolute()
@@ -335,11 +349,6 @@ body.title
   
 .effects-block
   // border: 2px solid orange
-
-.range-slider
-  // border: 2px solid blue
-  width: 70%
-  max-width: 500px
 
 // $pages
 body.about
@@ -458,15 +467,6 @@ body.about
     border: 1px solid black
     min-width: 100px
     padding: $pad
-  .range-slider
-    display: block
-    padding: 1.3rem 0
-    background: transparent
-    // border: 1px solid blue
-    position: relative
-    left: 50%
-    margin: 0
-    transform: translate(-50%, 0)
 
 footer.button-w
   float: right

@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import { storageFor } from 'ember-local-storage';
 
 // this needs to be switched out for a component so we can reuse it
 export default Ember.Controller.extend({
@@ -21,13 +20,7 @@ export default Ember.Controller.extend({
       return current + ' years in prison';
     }
   }),
-  choices: storageFor('choices'),
   actions: {
-    saveChoice() {
-      var choices = this.get('choices');
-      Ember.set('choices.thing1', 'adsjkflashfa');
-      console.log(choices);
-    },
     updateSentence(value) {
       this.set('model.sentence', value);
     }

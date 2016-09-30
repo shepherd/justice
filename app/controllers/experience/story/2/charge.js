@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   rangeMin: 0,
   rangeMax: 45,
-  rangeStep: 5,
+  rangeStep: 1,
   rangeCurrent: 0,
   formattedCurrent: Ember.computed('rangeCurrent', function() {
     const current = this.get('rangeCurrent');
