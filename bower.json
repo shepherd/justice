@@ -2,6 +2,8 @@
   "name": "justice-for-us",
   "dependencies": {
     "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1"
+    "ember-cli-shims": "0.1.1",
+    "seiyria-bootstrap-slider": "~6.0.6",
+    "bootstrap": "^3.3.7"
   }
 }

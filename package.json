@@ -46,6 +46,7 @@
     "ember-local-storage": "1.3.1",
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.25.0",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "ui-ember-slider": "0.3.8"
   }
 }
