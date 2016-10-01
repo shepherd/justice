@@ -4,8 +4,8 @@ export default function() {
   this.transition(
     this.fromRoute('load'),
     this.toRoute('title'),
-    this.use('fade'),
-    this.reverse('fade')
+    this.use('wait', 500, { then: 'fade' }),
+    this.reverse('wait', 200, { then: 'fade' })
   );
 
   this.transition(
@@ -44,7 +44,8 @@ export default function() {
   // );
 
   this.transition(
-    this.use('crossFade')
+    this.use('wait', 500, { then: 'fade' }),
+    this.reverse('wait', 200, { then: 'fade' })
   );
 
 }

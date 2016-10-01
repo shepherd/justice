@@ -360,14 +360,28 @@ body.about
   .branding
     max-width: 200px
 
-.experience-start
+.info
+  width: 100%
+  max-width: 66%
+  text-align: center
+  .full-logo
+    display: inline-block
+    margin-bottom: $pad*3
+  header
+    border: 1px solid pink
   h2
     margin: 0
-    extra-large-type()
-    
-.experience-intro
-  h1
-    large-type()
+    solid-type()
+    margin-bottom: $pad*2
+    text-align: center
+  .body
+    border: 1px solid green
+    text-align: left
+  p
+    font-family: monospace
+  footer
+    text-align: center
+    border: 1px solid orange
 
 .content
   border: 2px solid red
@@ -515,20 +529,20 @@ footer.button-w
       padding: $pad
       solid-type()
       font-size: 22px
-  .location, .priors, .actual, .your
-    float: left
-    border: 2px solid $black
-    border-top: 0
-    padding: $pad*.25 $pad $pad*.5
-    min-width: 30%
-    font-size: 13px
-    text-transform: uppercase
-    span
-      display: block
-      font-size: 9px
-      margin: $pad*.5 0
-  .priors
-    border-left: 0
+    .location, .priors, .actual, .your
+      float: left
+      border: 2px solid $black
+      border-top: 0
+      padding: $pad*.25 $pad $pad*.5
+      min-width: 30%
+      font-size: 13px
+      text-transform: uppercase
+      span
+        display: block
+        font-size: 9px
+        margin: $pad*.5 0
+    .priors
+      border-left: 0
   .actual, .your
     //
     span

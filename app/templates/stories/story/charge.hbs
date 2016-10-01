@@ -1,5 +1,5 @@
 
-<div class="center">
+<div class='center'>
 
   <div class='lego-house'>
 
@@ -31,9 +31,15 @@
         </div>
       </footer>
 
-      <section class="overview">
+      <section class='overview'>
         {{{model.story.charge.overview}}}
       </section>
+
+      {{#if model.story.charge.priors}}
+        <section class='priors'>
+          {{model.story.charge.priors}}
+        </section>
+      {{/if}}
 
       <section class='prompt'>
         <p>{{model.story.charge.prompt}}</p>
