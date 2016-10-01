@@ -25,12 +25,17 @@
       <footer>
         <div class='actual'>
           <span>Actual Sentence</span>
-          <h2>{{model.story.sentence.time}}</h2>
+          <h2>{{model.story.sentence.shortTime}}</h2>
         </div>
         <div class='your'>
           <span>Your Sentence</span>
           <h2>{{model.selectedSentence}}</h2>
         </div>
+        {{!-- Maybe this? --}}
+        {{!-- <div class='your'>
+          <span>Difference</span>
+          <h2>{{difference model.story.sentence.shortTime model.selectedSentence}}</h2>
+        </div> --}}
       </footer>
 
       <div class='story'>
