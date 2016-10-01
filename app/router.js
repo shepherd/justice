@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('overview');
     this.route('how-to');
     this.route('why');
+    this.route('welcome');
   });
   this.route('stories', function() {
     this.route('story', { path: ':story_id' }, function() {

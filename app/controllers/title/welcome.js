@@ -1,9 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+export default Ember.Controller.extend({
   actions: {
     transitionToOverview() {
-      this.transitionTo('title.welcome');
+      this.transitionTo('title.overview');
     }
   }
 });
