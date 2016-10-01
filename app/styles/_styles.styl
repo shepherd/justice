@@ -6,7 +6,7 @@ dev-outline($color)
   user-select: none
 
 body
-  background: black
+  background: #222
   color: $white
   font-family: monospace
 
@@ -215,7 +215,7 @@ text-input()
   top: -100%
   left: -100%
   animation: frantic-noise-movement .2s infinite
-  opacity: .2
+  opacity: 0
   z-index: 0
   background-size: 300px
 
@@ -330,22 +330,25 @@ body.title
 .title-blocks
   .block
     absolute()
-    width: 120px
-    height: 100px
+    width: 12%
+    height: 10%
     background: $color
-    &.one, &.two, &.three, &.four
+    top: 0
+    &.one, &.two, &.three, &.four, &.five
       left: 0
-      width: 50px
-    &.five, &.six, &.seven, &.eight
+      width: 7%
+    &.six, &.seven, &.eight, &.nine, &.ten
       right: 0
-    &.one, &.five
-      top: -50px
-    &.two, &.six
-      top: 150px
-    &.three, &.seven
-      top: 350px
-    &.four, &.eight
-      top: 550px
+    &.one, &.six
+      top: 0%
+    &.two, &.seven
+      top: 20%
+    &.three, &.eight
+      top: 40%
+    &.four, &.nine
+      top: 60%
+    &.five, &.ten
+      top: 80%
 
 
 .sentence-block
@@ -405,7 +408,7 @@ body.about
   width: 100%
   height: 100%
   height: 100%
-  background: black
+  background: #222
   
 .experience-story
   //
