@@ -15,6 +15,7 @@ export default Ember.Controller.extend({
   actions: {
     transitionToSentence() {
       const currentStoryId = this.get('model.story.id');
+      // do awesome stuff ? and .then(
       this.transitionToRoute('stories.story.sentence', currentStoryId);
     }
   }

@@ -4,7 +4,7 @@ import RemoveBackgroundImage from 'justice-for-us/mixins/remove-background-image
 
 export default Ember.Route.extend(RemoveBackgroundImage, {
   model() {
-    // return this.get('store').findAll('story');
+    // return this.get('store').findAll('story'); // when a real API
     return storyData;
   }
 });
