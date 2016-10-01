@@ -29,19 +29,19 @@ export default function() {
     this.reverse('toUp')
   );
 
-  this.transition(
-    this.fromRoute('stories.story.charge'),
-    this.toRoute('stories.story.sentence'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
+  // this.transition( // duplicate?
+  //   this.fromRoute('stories.story.charge'),
+  //   this.toRoute('stories.story.sentence'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // );
 
-  this.transition(
-    this.fromRoute('stories.story.sentence'),
-    this.toRoute('stories.story.effect'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
+  // this.transition( // duplicate?
+  //   this.fromRoute('stories.story.sentence'),
+  //   this.toRoute('stories.story.effect'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // );
 
   this.transition(
     this.use('crossFade')
