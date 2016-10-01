@@ -5,7 +5,7 @@ dev-outline($color)
 body
   background: black
   color: $white
-  // font-family: monospace
+  font-family: monospace
 
 visuallyHidden()
   position absolute !important
@@ -91,6 +91,7 @@ button()
 
 p
   max-width: 700px
+  margin-bottom: $pad!important
   em
     opacity: .4
 
@@ -368,20 +369,24 @@ body.about
     display: inline-block
     margin-bottom: $pad*3
   header
-    border: 1px solid pink
+    //
   h2
     margin: 0
     solid-type()
     margin-bottom: $pad*2
     text-align: center
   .body
-    border: 1px solid green
     text-align: left
   p
     font-family: monospace
   footer
     text-align: center
-    border: 1px solid orange
+    margin-top: $pad*6
+
+.prior
+  // border: 1px solid yellow // revisit
+  width: 100%
+  float: left
 
 .content
   border: 2px solid red
@@ -469,32 +474,32 @@ body.about
         background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
         clip-right()
 
-.range-w
-  position: relative
-  // left: 50%
-  // margin: 0 40px
-  text-align: center
-  header
-    // border: 2px solid red
-    padding: $pad 0
-  h2
-    display: inline-block
-    margin: 0
-    extra-large-type()
-    color: $black
-    text-align: center
-    border: 1px solid black
-    min-width: 100px
-    padding: $pad
-  .range-slider
-    display: block
-    padding: 1.3rem 0
-    background: transparent
-    // border: 1px solid blue
-    position: relative
-    left: 50%
-    margin: 0
-    transform: translate(-50%, 0)
+// .range-w
+//   position: relative
+//   // left: 50%
+//   // margin: 0 40px
+//   text-align: center
+//   header
+//     // border: 2px solid red
+//     padding: $pad 0
+//   h2
+//     display: inline-block
+//     margin: 0
+//     extra-large-type()
+//     color: $black
+//     text-align: center
+//     border: 1px solid black
+//     min-width: 100px
+//     padding: $pad
+//   .range-slider
+//     display: block
+//     padding: 1.3rem 0
+//     background: transparent
+//     // border: 1px solid blue
+//     position: relative
+//     left: 50%
+//     margin: 0
+//     transform: translate(-50%, 0)
 
 footer.button-w
   float: right
@@ -529,6 +534,7 @@ footer.button-w
       padding: $pad
       solid-type()
       font-size: 22px
+  footer
     .location, .priors, .actual, .your
       float: left
       border: 2px solid $black
@@ -558,12 +564,14 @@ footer.button-w
   .overview, .story, .reasoning
     width: 100%
     float: left
+    font-family: monospace
     standard-type()
     
     p, li
       margin: 0
       margin-bottom: $pad
       font-family: monospace!important
+      font-family: monospace
   .story, .overview
     // background: red
     margin-top: $pad*1.5
