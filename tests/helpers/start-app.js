@@ -2,6 +2,12 @@ import Ember from 'ember';
 import Application from '../../app';
 import config from '../../config/environment';
 
+// Stubbing some newer browser features that aren't available in phantomjs
+window.WeakMap = function() {};
+window.AudioContext = function() {};
+window.Map = function() {};
+window.Map.prototype.has = function() {};
+
 export default function startApp(attrs) {
   let application;
 

@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
   actions: {
     transitionToSentence() {
       const currentStoryId = this.get('model.story.id');
-      this.transitionToRoute('experience.story.sentence', currentStoryId);
+      this.transitionToRoute('stories.story.sentence', currentStoryId);
     }
   }
 });

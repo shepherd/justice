@@ -9,36 +9,36 @@ export default function() {
   );
 
   this.transition(
-    this.fromRoute('experience.story.charge'),
-    this.toRoute('experience.story.sentence'),
+    this.fromRoute('stories.story.charge'),
+    this.toRoute('stories.story.sentence'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
 
   this.transition(
-    this.fromRoute('experience.story.sentence'),
-    this.toRoute('experience.story.effects'),
+    this.fromRoute('stories.story.sentence'),
+    this.toRoute('stories.story.effect'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
 
     this.transition(
-    this.fromRoute('experience.story'),
-    this.toRoute('experience.story'),
+    this.fromRoute('stories.story'),
+    this.toRoute('stories.story'),
     this.use('toDown'),
     this.reverse('toUp')
   );
 
   this.transition(
-    this.fromRoute('experience.story.charge'),
-    this.toRoute('experience.story.sentence'),
+    this.fromRoute('stories.story.charge'),
+    this.toRoute('stories.story.sentence'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
 
   this.transition(
-    this.fromRoute('experience.story.sentence'),
-    this.toRoute('experience.story.effects'),
+    this.fromRoute('stories.story.sentence'),
+    this.toRoute('stories.story.effect'),
     this.use('toLeft'),
     this.reverse('toRight')
   );

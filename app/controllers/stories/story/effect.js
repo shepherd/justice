@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
       const currentStoryId = this.get('model.story.id');
 
       // Should check story IDs instead of assuming IDs are always sequential
-      this.transitionToRoute('experience.story.charge', currentStoryId + 1);
+      this.transitionToRoute('stories.story.charge', currentStoryId + 1);
     }
   }
 });

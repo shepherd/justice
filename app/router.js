@@ -7,22 +7,22 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  // /
-  // - /index - default
-  // - /overview
-  // - /how-to
-  // - /why
-
-  // /stories/dynamic_id
-  // - /charge
-  // - /sentence
-  //  -/effect // societal effects ~
-
-  // /conclusion
-  // - /index
-  // - /email-sign-up
-  // - /thank-you
-  // - /return to loading state or welcome page etc.
+  this.route('title', { path: '/' }, function() {
+    this.route('overview');
+    this.route('how-to');
+    this.route('why');
+  });
+  this.route('stories', function() {
+    this.route('story', { path: ':story_id' }, function() {
+      this.route('charge');
+      this.route('sentence');
+      this.route('effect');
+    });
+  });
+  this.route('conclusion', function() {
+    this.route('sign-up');
+    this.route('thank-you');
+  });
 });
 
 export default Router;
