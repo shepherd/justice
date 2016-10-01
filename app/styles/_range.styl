@@ -1,22 +1,61 @@
 
 .range-w
-  margin-top: 60px
+  margin-top: 80px
 
-.slider-selection
+.slider-selection.tick-slider-selection
   background: $highlight
   
+.tooltip
+  // display: none
+
+.slider-tick-label
+  opacity: .2
+
 .tooltip-inner
   background: $color
-  font-size: 40px
+  font-size: 44px
   min-width: 80px
   position: relative
-  bottom: 30px
+  bottom: 0px
   opacity: 1
   cursor: grab
-.tooltip-arrow
-  position: relative
-  bottom: 30px
-  opacity: 1
+  noir-type()
 
+.tooltip.top
+  padding: 0
+  transform: translate(0,-40px)
+
+.tooltip.top .tooltip-arrow
+  position: absolute
+  opacity: 1
+  display: block
+  z-index: 50
+
+  top: 99%
+  left: 50%
+  margin-left: -10px
+  border-width: 10px 10px 0
+  border-top-color: $color
+    
 .tooltip.in
   opacity: 1
+
+.slider-tick
+  width: 2px
+  bottom: -10px
+  
+.slider.slider-horizontal .slider-tick
+  margin-left: 0
+  
+.slider.slider-horizontal .slider-track
+  height: 2px
+  z-index: 1
+  .slider-track-low, .slider-track-hi
+    //
+  
+.slider-handle
+  opacity: 0
+  
+.slider-tick.in-selection
+  background: rgba(255,255,255,.5)
+  z-index: 0 // trying to make ticks go behind the track...
