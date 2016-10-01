@@ -19,6 +19,10 @@ export default Ember.Controller.extend({
 
       // Should check story IDs instead of assuming IDs are always sequential
       this.transitionToRoute('stories.story.charge', currentStoryId + 1);
+    },
+
+    transitionToConclusion() {
+      this.transitionToRoute('conclusion');
     }
   }
 });

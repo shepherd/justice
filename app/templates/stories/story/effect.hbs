@@ -34,6 +34,8 @@
 
   {{#if nextStoryExists}}
     {{next-button action='transitionToNextStory'}}
+  {{else}}
+    {{next-button text='finish' action='transitionToConclusion'}}
   {{/if}}
 
 </div>
