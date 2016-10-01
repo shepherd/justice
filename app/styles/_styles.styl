@@ -170,14 +170,19 @@ text-input()
   filter: blur(3px)
   opacity: .5
 
-.effects-list
+.fact-list
   reset-list-styles()
   margin-bottom: $pad*2
   > li
     border: 1px solid black
     padding: $pad
     display: inline-block
-
+    h3
+      margin: 0
+      noir-type()
+      extra-large-type()
+      float: left
+      margin-right: $pad*2
 .prompt
   // padding: $pad
   // background: rgba(0,0,0,.2)
@@ -236,7 +241,7 @@ text-input()
 
 .record-indicator 
   // border: 1px solid red
-  padding: $pad*3
+  padding: $pad*3.2
   fixed()
   top: $pad*2
   right: $pad*3
@@ -251,16 +256,16 @@ text-input()
 
 .brand-icon.stay
   resonsive-image()
-  max-width: 80px
+  max-width: 60px
   fixed()
-  top: 0
-  left: $pad*3
+  top: $pad
+  left: $pad*4
   z-index: 10
   padding: $pad*2
   color: $white
   dev-outline(blue)
 
-.lego-house, .charge-block, .sentence-block, .effects-block
+.lego-house
   background: $white
   padding: $pad
   color: $black
@@ -301,7 +306,7 @@ text-input()
   color: $black
   // margin-top: $pad*10
   width: 100%
-  max-width: 500px
+  width: 640px
   // margin-left: 40px
   // margin-right: 40px
   position: relative
@@ -329,6 +334,7 @@ body.load
   color: white
 
 body.title
+  //
   .center
     text-align: center
     *

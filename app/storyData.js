@@ -14,7 +14,7 @@ const storyData = [
       "time": "13.3 years",
       "shortTime": "13.3",
       "story": "In New Orleans, a father of seven and local restaurateur was stopped by police over by police while riding his bicycle in 2011. The officers searched the man and found 2.8 grams of marijuana, the equivalent of two joints.",
-      "reasoning": "Because the man had prior non-violent drug offenses – for small amounts of marijuana – a New Orleans jury convicted him under a Louisiana state law that doles out harsher punishments for “habitual offenders.” In fact, the sentencing range for the third offense of possession of marijuana is up to 20 years in prison. Currently, the man does not face the possibility of parole."
+      "backStory": "Because the man had prior non-violent drug offenses – for small amounts of marijuana – a New Orleans jury convicted him under a Louisiana state law that doles out harsher punishments for “habitual offenders.” In fact, the sentencing range for the third offense of possession of marijuana is up to 20 years in prison. Currently, the man does not face the possibility of parole."
     },
     "effects": {
       "title": "Extreme sentencing affects our communities and broader societal welfare.",
@@ -28,13 +28,13 @@ const storyData = [
         {
           "id": 2,
           "number": "700",
-          "visualNumber": "700%",           
+          "visuaNumber": "700%",           
           "copy": "The national state prison population has grown seven-fold since 1970."
         },
         {
           "id": 3,
           "number": "300",
-          "visualNumber": "300%",           
+          "visuaNumber": "300%",           
           "copy": "State spending on corrections has grown 300 percent in the last 20 years."
         }
       ]
@@ -55,7 +55,7 @@ const storyData = [
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
       "story": "The young woman in question grew up in poverty in the small rural town of Terrell, Texas.  Her mother was paraplegic, and from a young age the woman was forced to take care of her siblings.  In this case, prosecutors claimed the young woman served as a drug courier for a drug supplier in Houston.",
-      "reasoning": "In 1999, the woman was arrested as part of a drug task force operation, where all 105 people who were arrested were black.  During trial, no physical evidence was ever presented by investigators. However, because of Texas sentencing laws, the judge increased the punishment because the amount of theoretical crack cocaine (30 kg) being trafficked. The woman is not eligible for sentence reductions."
+      "backStory": "In 1999, the woman was arrested as part of a drug task force operation, where all 105 people who were arrested were black.  During trial, no physical evidence was ever presented by investigators. However, because of Texas sentencing laws, the judge increased the punishment because the amount of theoretical crack cocaine (30 kg) being trafficked. The woman is not eligible for sentence reductions."
     },
     "effects": {
       "title": "The staggering growth and cost of drug-related incarcerations",
@@ -63,19 +63,19 @@ const storyData = [
         {
           "id": 1,
           "number": "50",
-          "visualNumber": "50%",           
+          "visuaNumber": "50%",           
           "copy": "As of 2014, half of all federal inmates are incarcerated on drug-related convictions."
         },
         {
           "id": 2,
           "number": "16",
-          "visualNumber": "16%",           
+          "visuaNumber": "16%",           
           "copy": "In 1970, just 16 percent of federal inmates were locked up on drug-related convictions."
         },
         {
           "id": 3,
           "number": "31,286",
-          "visualNumber": "$31,286",           
+          "visuaNumber": "$31,286",           
           "copy": "On average, it costs $31,286 to keep one person in prison for one year."
         }
       ]
@@ -96,7 +96,7 @@ const storyData = [
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
       "story": "In 1992, a young man touring traveling with the Grateful Dead on a musical tour sold LSD to a friend who had become a confidential informant for police officers. Over the course of 60 days, the man dealt LSD in five transactions, including through the U.S. postal service.",
-      "reasoning": "In this case, the judge included the weight of the paper that carried the LSD when factoring the man’s sentence. That brought the total weight of the LSD above 10 grams, triggering a mandatory minimum sentence of life in prison for “third-strike” offenders. Like many other states, Florida has a “habitual offender” law which allows for life without parole sentences, even for nonviolent crimes. The man has now served over 23 years in prison, with much of that time in solitary confinement."
+      "backStory": "In this case, the judge included the weight of the paper that carried the LSD when factoring the man’s sentence. That brought the total weight of the LSD above 10 grams, triggering a mandatory minimum sentence of life in prison for “third-strike” offenders. Like many other states, Florida has a “habitual offender” law which allows for life without parole sentences, even for nonviolent crimes. The man has now served over 23 years in prison, with much of that time in solitary confinement."
     },
     "effects": {
       "title": "Too many Americans are trapped by the injustices of our system.",
@@ -104,19 +104,19 @@ const storyData = [
         {
           "id": 1,
           "number": "1",
-          "visualNumber": "1 in 100",           
+          "visuaNumber": "1 in 100",           
           "copy": "One in every 100 Americans is in prison or jail."
         },
         {
           "id": 2,
           "number": "4",
-          "visualNumber": "4 out of 5",           
+          "visuaNumber": "4 out of 5",           
           "copy": "About 79 percent of the 3,278 prisoners serving life without parole were sentenced to die in prison for nonviolent drug crimes."
         },
         {
           "id": 3,
           "number": "36",
-          "visualNumber": "36x",           
+          "visuaNumber": "36x",           
           "copy": "Youth housed in adult jails are 36 times as likely to commit suicide than are youth housed in juvenile detention facilities."
         }
       ]
@@ -137,7 +137,7 @@ const storyData = [
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
       "story": "In this case, an elderly man was charged and convicted for growing a total of 34 marijuana plants. He was growing the plants to alleviate chronic pain (and medicinal marijuana is not legal in Alabama). Because the total weight of the plant, including the unusable stalks and stems weighed 2.85 pounds, the conviction triggered a threshold for a more serious offense on anyone in possession of more than 2.2 pounds of marijuana.",
-      "reasoning": "Alabama, too, is one of four states that mandates a life without parole sentence for simple possession of small amounts of marijuana by people with certain prior felony convictions."
+      "backStory": "Alabama, too, is one of four states that mandates a life without parole sentence for simple possession of small amounts of marijuana by people with certain prior felony convictions."
     },
     "effects": {
       "title": "The cycle of injustice is taking its toll.",
@@ -145,19 +145,19 @@ const storyData = [
         {
           "id": 1,
           "number": "76.6",
-          "visualNumber": "76.6%",           
+          "visuaNumber":"76.6%",           
           "copy": "The percentage of prisoners who are rearrested within five years."
         },
         {
           "id": 2,
           "number": "1.784",
-          "visualNumber": "$1.784 billion",           
+          "visuaNumber":"$1.784 billion",           
           "copy": "The total cost to taxpayers to keep the 3,278 prisoners currently serving life without parole for nonviolent offenses incarcerated for the rest of their lives."
         },
         {
           "id": 3,
           "number": "27.6",
-          "visualNumber": "27.6%",           
+          "visuaNumber":"27.6%",           
           "copy": "More than a quarter of drug offenders were incarcerated because of marijuana-related convictions."
         }
       ]
@@ -178,7 +178,7 @@ const storyData = [
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
       "story": "In this case, the man – a successful business owner and truck mechanic –  allowed  a group of marijuana drug smugglers to use his fleet of trucks to carry drugs within his home state of Georgia.",
-      "reasoning": "This was no simple marijuana possession charge: Because federal investigators claimed the man had direct knowledge of the drug enterprise, they charged him with “Conspiracy to Distribute” the total amount of marijuana being trafficked – which exceeded 1,000 kilograms – and which amplified the length of the sentence. Meanwhile, the drivers from the trucking company who cooperated with federal agents (and implicated the man) never spent a day in prison."
+      "backStory": "This was no simple marijuana possession charge: Because federal investigators claimed the man had direct knowledge of the drug enterprise, they charged him with “Conspiracy to Distribute” the total amount of marijuana being trafficked – which exceeded 1,000 kilograms – and which amplified the length of the sentence. Meanwhile, the drivers from the trucking company who cooperated with federal agents (and implicated the man) never spent a day in prison."
     },
     "effects": {
       "title": "The disproportionate impact and effects of our current policies.",
@@ -186,19 +186,19 @@ const storyData = [
         {
           "id": 1,
           "number": "65",
-          "visualNumber": "65%",           
+          "visuaNumber": "65%",           
           "copy": "More than six out of ten of those convicted of second or third strikes are serving time in prison for nonviolent crimes."
         },
         {
           "id": 2,
           "number": "62000",
-          "visualNumber": "$62,000",         
+          "visuaNumber": "$62,000",         
           "copy": "California is expected to spend more than $62,000 on each prison inmate in 2014-15--almost 7 times the $9,200 it will spend for each K-12 student."
         },
         {
           "id": 3,
           "number": "77",
-          "visualNumber": "77%",           
+          "visuaNumber": "77%",           
           "copy": "More than three-fourths of juvenile offenders serving life without parole are Black and Latino."
         }
       ]

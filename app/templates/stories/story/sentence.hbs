@@ -19,7 +19,7 @@
           <div class='name'>The Sentence</div>
         </header>
         <div class='headline'>
-          There is currently no headline for this story
+          {{model.story.sentence.headline}}
         </div>
       </div>
       <footer>
@@ -43,7 +43,7 @@
       </div>
 
       <div class='reasoning'>
-        <p>{{model.story.sentence.reasoning}}</p>
+        <p>{{model.story.sentence.backStory}}</p>
       </div>
 
     </div>
