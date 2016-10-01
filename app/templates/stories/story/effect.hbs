@@ -23,7 +23,10 @@
       <div class='story'>
         <ul class='fact-list'>
           {{#each model.story.effects.facts as |fact|}}
-            <li>{{fact.visualNumber}}: {{fact.copy}}</li>
+            <li>
+              <h3>{{fact.visualNumber}}</h3>
+              <p>{{fact.copy}}</p>
+            </li>
           {{/each}}
         </ul>
       </div>
