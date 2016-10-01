@@ -1,4 +1,3 @@
-
 const storyData = [
   {
     "id": 1,
@@ -8,10 +7,7 @@ const storyData = [
       "description": "Possession of 2.8 grams of marijuana.",
       "overview": "A 49-year-old man was stopped by police and found with a small amount of marijuana. He was convicted of simple possession in 2011.",
       "priors": "Two prior convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.",
-      "prompt": "What do you think is the appropriate sentence?",
-      "min": 5,
-      "max": 60,
-      "step": 5,
+      "prompt": "What do you think is the appropriate sentence?"
     },
     "sentence": {
       "headline": "Father of 7, facing 13+ years for minor, non-violent crime.",
@@ -32,13 +28,13 @@ const storyData = [
         {
           "id": 2,
           "number": "700",
-          "visuaNumber": "700%",           
+          "visualNumber": "700%",           
           "copy": "The national state prison population has grown seven-fold since 1970."
         },
         {
           "id": 3,
           "number": "300",
-          "visuaNumber": "300%",           
+          "visualNumber": "300%",           
           "copy": "State spending on corrections has grown 300 percent in the last 20 years."
         }
       ]
@@ -52,12 +48,7 @@ const storyData = [
       "description": "Facilitating one crack cocaine transaction in 1999.",
       "overview": "A 32-year-old single mother with no previous convictions was found guilty of one count of conspiracy to distribute crack cocaine, and acquitted of six counts of possession of crack cocaine and aiding and abetting.",
       "priors": "",
-      "prompt": "",
-      "min": 0,
-      "specialMin": "",
-      "max": 100,
-      "specialMax": "",
-      "step": 1,
+      "prompt": ""
     },
     "sentence": {
       "headline": "Single mother sentenced to life in prison with no physical evidence.",
@@ -72,19 +63,19 @@ const storyData = [
         {
           "id": 1,
           "number": "50",
-          "visuaNumber": "50%",           
+          "visualNumber": "50%",           
           "copy": "As of 2014, half of all federal inmates are incarcerated on drug-related convictions."
         },
         {
           "id": 2,
           "number": "16",
-          "visuaNumber": "16%",           
+          "visualNumber": "16%",           
           "copy": "In 1970, just 16 percent of federal inmates were locked up on drug-related convictions."
         },
         {
           "id": 3,
           "number": "31,286",
-          "visuaNumber": "$31,286",           
+          "visualNumber": "$31,286",           
           "copy": "On average, it costs $31,286 to keep one person in prison for one year."
         }
       ]
@@ -98,12 +89,7 @@ const storyData = [
       "description": "Conspiracy and possession with intent to distribute LSD.",
       "overview": "A 24-year-old Vegan “Deadhead” is charged with selling LSD at Grateful Dead concert.",
       "priors": "Two prior convictions for the possession of small amounts of marijuana and LSD. No arrest history for violent crimes.",
-      "prompt": "",
-      "min": 0,
-      "specialMin": "",
-      "max": 100,
-      "specialMax": "",
-      "step": 1,
+      "prompt": ""
     },
     "sentence": {
       "headline": "Life in prison, solitary confinement for third-strike offense.",
@@ -118,19 +104,19 @@ const storyData = [
         {
           "id": 1,
           "number": "1",
-          "visuaNumber": "1 in 100",           
+          "visualNumber": "1 in 100",           
           "copy": "One in every 100 Americans is in prison or jail."
         },
         {
           "id": 2,
           "number": "4",
-          "visuaNumber": "4 out of 5",           
+          "visualNumber": "4 out of 5",           
           "copy": "About 79 percent of the 3,278 prisoners serving life without parole were sentenced to die in prison for nonviolent drug crimes."
         },
         {
           "id": 3,
           "number": "36",
-          "visuaNumber": "36x",           
+          "visualNumber": "36x",           
           "copy": "Youth housed in adult jails are 36 times as likely to commit suicide than are youth housed in juvenile detention facilities."
         }
       ]
@@ -144,12 +130,7 @@ const storyData = [
       "description": "Growing about three dozen marijuana plants.",
       "overview": "A 75-year-old disabled veteran is convicted with growing three dozen marijuana plants behind his son’s home in Dothan, Alabama. He says he intended to use the plants to alleviate chronic pain, which prosecutors did not dispute.",
       "priors": "Three prior convictions for a string of robberies committed two decades ago, for which the man served 10 years in prison.",
-      "prompt": "",
-      "min": 0,
-      "specialMin": "",
-      "max": 100,
-      "specialMax": "",
-      "step": 1,
+      "prompt": ""
     },
     "sentence": {
       "headline": "Life in prison, no parole for 75-year-old growing marijuana.",
@@ -164,19 +145,19 @@ const storyData = [
         {
           "id": 1,
           "number": "76.6",
-          "visuaNumber":"76.6%",           
+          "visualNumber": "76.6%",           
           "copy": "The percentage of prisoners who are rearrested within five years."
         },
         {
           "id": 2,
           "number": "1.784",
-          "visuaNumber":"$1.784 billion",           
+          "visualNumber": "$1.784 billion",           
           "copy": "The total cost to taxpayers to keep the 3,278 prisoners currently serving life without parole for nonviolent offenses incarcerated for the rest of their lives."
         },
         {
           "id": 3,
           "number": "27.6",
-          "visuaNumber":"27.6%",           
+          "visualNumber": "27.6%",           
           "copy": "More than a quarter of drug offenders were incarcerated because of marijuana-related convictions."
         }
       ]
@@ -190,12 +171,7 @@ const storyData = [
       "description": "Leasing trucks to marijuana smugglers in Georgia.",
       "overview": "A 30-year-old man owned a towing and trucking company in Georgia. In 2002, prosecutors alleged that the man knowingly allowed marijuana smugglers to use his trucks to transport drugs within the state.",
       "priors": "Trespassing for walking into a fast-food restaurant with a beer. (A $150 fine)",
-      "prompt": "",
-      "min": 0,
-      "specialMin": "",
-      "max": 100,
-      "specialMax": "",
-      "step": 1,
+      "prompt": ""
     },
     "sentence": {
       "headline": "Life in prison for “conspiracy to distribute.”",
@@ -210,19 +186,19 @@ const storyData = [
         {
           "id": 1,
           "number": "65",
-          "visuaNumber": "65%",           
+          "visualNumber": "65%",           
           "copy": "More than six out of ten of those convicted of second or third strikes are serving time in prison for nonviolent crimes."
         },
         {
           "id": 2,
           "number": "62000",
-          "visuaNumber": "$62,000",         
+          "visualNumber": "$62,000",         
           "copy": "California is expected to spend more than $62,000 on each prison inmate in 2014-15--almost 7 times the $9,200 it will spend for each K-12 student."
         },
         {
           "id": 3,
           "number": "77",
-          "visuaNumber": "77%",           
+          "visualNumber": "77%",           
           "copy": "More than three-fourths of juvenile offenders serving life without parole are Black and Latino."
         }
       ]
