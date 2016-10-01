@@ -10,8 +10,7 @@ export default Ember.Route.extend({
 
     return {
       stories,
-      story: stories.findBy('id', id),
-      selectedSentence: 0
+      story: stories.findBy('id', id)
     };
   }
 });
