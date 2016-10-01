@@ -28,13 +28,13 @@ const storyData = [
         {
           "id": 2,
           "number": "700",
-          "visuaNumber": "700%",           
+          "visualNumber": "700%",           
           "copy": "The national state prison population has grown seven-fold since 1970."
         },
         {
           "id": 3,
           "number": "300",
-          "visuaNumber": "300%",           
+          "visualNumber": "300%",           
           "copy": "State spending on corrections has grown 300 percent in the last 20 years."
         }
       ]
@@ -63,19 +63,19 @@ const storyData = [
         {
           "id": 1,
           "number": "50",
-          "visuaNumber": "50%",           
+          "visualNumber": "50%",           
           "copy": "As of 2014, half of all federal inmates are incarcerated on drug-related convictions."
         },
         {
           "id": 2,
           "number": "16",
-          "visuaNumber": "16%",           
+          "visualNumber": "16%",           
           "copy": "In 1970, just 16 percent of federal inmates were locked up on drug-related convictions."
         },
         {
           "id": 3,
           "number": "31,286",
-          "visuaNumber": "$31,286",           
+          "visualNumber": "$31,286",           
           "copy": "On average, it costs $31,286 to keep one person in prison for one year."
         }
       ]
@@ -104,19 +104,19 @@ const storyData = [
         {
           "id": 1,
           "number": "1",
-          "visuaNumber": "1 in 100",           
+          "visualNumber": "1 in 100",           
           "copy": "One in every 100 Americans is in prison or jail."
         },
         {
           "id": 2,
           "number": "4",
-          "visuaNumber": "4 out of 5",           
+          "visualNumber": "4 out of 5",           
           "copy": "About 79 percent of the 3,278 prisoners serving life without parole were sentenced to die in prison for nonviolent drug crimes."
         },
         {
           "id": 3,
           "number": "36",
-          "visuaNumber": "36x",           
+          "visualNumber": "36x",           
           "copy": "Youth housed in adult jails are 36 times as likely to commit suicide than are youth housed in juvenile detention facilities."
         }
       ]
@@ -145,19 +145,19 @@ const storyData = [
         {
           "id": 1,
           "number": "76.6",
-          "visuaNumber":"76.6%",           
+          "visualNumber":"76.6%",           
           "copy": "The percentage of prisoners who are rearrested within five years."
         },
         {
           "id": 2,
           "number": "1.784",
-          "visuaNumber":"$1.784 billion",           
+          "visualNumber":"$1.784 billion",           
           "copy": "The total cost to taxpayers to keep the 3,278 prisoners currently serving life without parole for nonviolent offenses incarcerated for the rest of their lives."
         },
         {
           "id": 3,
           "number": "27.6",
-          "visuaNumber":"27.6%",           
+          "visualNumber":"27.6%",           
           "copy": "More than a quarter of drug offenders were incarcerated because of marijuana-related convictions."
         }
       ]
@@ -186,19 +186,19 @@ const storyData = [
         {
           "id": 1,
           "number": "65",
-          "visuaNumber": "65%",           
+          "visualNumber": "65%",           
           "copy": "More than six out of ten of those convicted of second or third strikes are serving time in prison for nonviolent crimes."
         },
         {
           "id": 2,
           "number": "62000",
-          "visuaNumber": "$62,000",         
+          "visualNumber": "$62,000",         
           "copy": "California is expected to spend more than $62,000 on each prison inmate in 2014-15--almost 7 times the $9,200 it will spend for each K-12 student."
         },
         {
           "id": 3,
           "number": "77",
-          "visuaNumber": "77%",           
+          "visualNumber": "77%",           
           "copy": "More than three-fourths of juvenile offenders serving life without parole are Black and Latino."
         }
       ]
