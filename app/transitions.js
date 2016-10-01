@@ -22,7 +22,7 @@ export default function() {
     this.reverse('toRight')
   );
 
-    this.transition(
+  this.transition(
     this.fromRoute('stories.story'),
     this.toRoute('stories.story'),
     this.use('toDown'),
