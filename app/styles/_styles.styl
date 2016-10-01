@@ -7,12 +7,26 @@ body
   color: $white
   // font-family: monospace
 
+visuallyHidden()
+  position absolute !important
+  clip rect(1px 1px 1px 1px)
+  clip rect(1px, 1px, 1px, 1px)
+  padding 0 !important
+  border 0 !important
+  height 1px !important
+  width 1px !important
+  overflow hidden
+
+.visually-hidden
+  visuallyHidden()
+
 input, textarea, button, select, a
   -webkit-tap-highlight-color: rgba(0,0,0,0)
 
 reset-button-styles()
   background: transparent
   border: 0
+  border-radius: 0
   &:focus
     outline: 0
 
