@@ -1,12 +1,7 @@
 
 export default function() {
 
-  this.transition(
-    this.fromRoute('load'),
-    this.toRoute('title'),
-    this.use('wait', 500, { then: 'fade' }),
-    this.reverse('wait', 200, { then: 'fade' })
-  );
+  // titles
 
   this.transition(
     this.fromRoute('stories.story.charge'),
@@ -23,20 +18,18 @@ export default function() {
   );
 
   this.transition(
-    this.fromRoute('stories.story'),
-    this.toRoute('stories.story'),
+    this.fromRoute('stories.story.effect'),
+    this.toRoute('stories.story.charge'),
     this.use('toDown'),
     this.reverse('toUp')
   );
 
-  this.transition( // trying to get the button to transition in place instead of sliding with it's view....
-    this.hasClass('next-button'),
-    this.use('fade')
-  );
+  // conclusion
 
+  // default?
   this.transition( // default transition for all views
     this.use('wait', 500, { then: 'fade' }),
-    this.reverse('wait', 200, { then: 'fade' })
+    this.reverse('wait', 500, { then: 'fade' })
   );
 
 }
