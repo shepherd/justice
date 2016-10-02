@@ -83,6 +83,11 @@ body.title
     height: 10%
     background: $color
     top: 0
+    transform: 1
+    &.left
+      transform: translate(-100%,0)
+    &.right
+      transform: translate(100%,0)
     &.one, &.two, &.three, &.four, &.five
       left: 0
       width: 7%
@@ -98,6 +103,12 @@ body.title
       top: 60%
     &.five, &.ten
       top: 80%
+
+.title-blocks
+  &.active
+    &.left, &.right
+      transform: translate(0,0)
+      
 
 // $page
 .page
