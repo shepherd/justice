@@ -8,9 +8,9 @@ const storyData = [
       "overview": "A 49-year-old man was stopped by police and found with a small amount of marijuana. He was convicted of simple possession in 2011.",
       "priors": "Two prior convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.",
       "prompt": "What do you think is the appropriate sentence?",
-      "min": 5,
-      "max": 60,
-      "step": 5
+      "min": 0,
+      "max": 40,
+      "step": 1
     },
     "sentence": {
       "headline": "Father of 7, facing 13+ years for minor, non-violent crime.",
@@ -52,9 +52,9 @@ const storyData = [
       "overview": "A 32-year-old single mother with no previous convictions was found guilty of one count of conspiracy to distribute crack cocaine, and acquitted of six counts of possession of crack cocaine and aiding and abetting.",
       "priors": "",
       "prompt": "",
-      "min": 5,
-      "max": 60,
-      "step": 5
+      "min": 0,
+      "max": 40,
+      "step": 1
     },
     "sentence": {
       "headline": "Single mother sentenced to life in prison with no physical evidence.",
@@ -96,9 +96,9 @@ const storyData = [
       "overview": "A 24-year-old Vegan “Deadhead” is charged with selling LSD at Grateful Dead concert.",
       "priors": "Two prior convictions for the possession of small amounts of marijuana and LSD. No arrest history for violent crimes.",
       "prompt": "",
-      "min": 5,
-      "max": 60,
-      "step": 5
+      "min": 0,
+      "max": 40,
+      "step": 1
     },
     "sentence": {
       "headline": "Life in prison, solitary confinement for third-strike offense.",
@@ -140,9 +140,9 @@ const storyData = [
       "overview": "A 75-year-old disabled veteran is convicted with growing three dozen marijuana plants behind his son’s home in Dothan, Alabama. He says he intended to use the plants to alleviate chronic pain, which prosecutors did not dispute.",
       "priors": "Three prior convictions for a string of robberies committed two decades ago, for which the man served 10 years in prison.",
       "prompt": "",
-      "min": 5,
-      "max": 60,
-      "step": 5
+      "min": 0,
+      "max": 40,
+      "step": 1
     },
     "sentence": {
       "headline": "Life in prison, no parole for 75-year-old growing marijuana.",
@@ -184,9 +184,9 @@ const storyData = [
       "overview": "A 30-year-old man owned a towing and trucking company in Georgia. In 2002, prosecutors alleged that the man knowingly allowed marijuana smugglers to use his trucks to transport drugs within the state.",
       "priors": "Trespassing for walking into a fast-food restaurant with a beer. (A $150 fine)",
       "prompt": "",
-      "min": 5,
-      "max": 60,
-      "step": 5
+      "min": 0,
+      "max": 40,
+      "step": 1
     },
     "sentence": {
       "headline": "Life in prison for “conspiracy to distribute.”",
