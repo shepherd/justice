@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 
   actions: {
     didTransition() {
-      Ember.run.later(() => this.controller.set('showData', true), 500);
+      Ember.run.later(() => this.controller.set('showData', true), 300);
     },
 
     willTransition() {
