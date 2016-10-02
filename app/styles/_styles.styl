@@ -52,29 +52,50 @@ body.title
   //   border: 2px solid green
 
 .thing
+  border: 2px solid red
+  padding: 3rem
+  position: fixed
+  top: left
+  display: block
+  z-index: 30
+  color: yellow
+
+.title-screen
   fixed-stretch()
   z-index: 10
-  opacity: 0
+  opacity: 1
   .box
     absolute()
     width: 50%
     height: 50%
-    &.one
-      top: 0
-      left: 0
-      background: $color 
-    &.two
-      top: 0
-      right: 0
-      background: $highlight
-    &.three
-      bottom: 0
-      left: 0
-      background: black
-    &.four
-      right: 0
-      bottom: 0
-      background: $white
+  .one, .two
+    color: $white
+    .eye
+      color: $white
+  .three, .four
+    color: $color
+    .eye
+      color: $color
+  .one
+    top: 0
+    left: 0
+    background: $color
+  .two
+    top: 0
+    right: 0
+    background: $highlight
+  .three
+    bottom: 0
+    left: 0
+    background: black
+    a
+      color: $white
+  .four
+    right: 0
+    bottom: 0
+    background: $white
+  .full-logo
+    absolute-translate-center()
 
 .title-blocks
   .block
@@ -84,29 +105,29 @@ body.title
     background: $color
     top: 0
     transform: 1
-    &.left
-      transform: translate(-100%,0)
-    &.right
-      transform: translate(100%,0)
-    &.one, &.two, &.three, &.four, &.five
-      left: 0
-      width: 7%
-    &.six, &.seven, &.eight, &.nine, &.ten
-      right: 0
-    &.one, &.six
-      top: 0%
-    &.two, &.seven
-      top: 20%
-    &.three, &.eight
-      top: 40%
-    &.four, &.nine
-      top: 60%
-    &.five, &.ten
-      top: 80%
+  .left
+    transform: translate(-100%,0)
+  .right
+    transform: translate(100%,0)
+  .one, .two, .three, .four, .five
+    left: 0
+    width: 7%
+  .six, .seven, .eight, .nine, .ten
+    right: 0
+  .one, .six
+    top: 0%
+  .two, .seven
+    top: 20%
+  .three, .eight
+    top: 40%
+  .four, .nine
+    top: 60%
+  .five, .ten
+    top: 80%
 
 .title-blocks
   &.active
-    &.left, &.right
+    .left, .right
       transform: translate(0,0)
       
 
@@ -158,24 +179,24 @@ body.title
     width: 40px
     height: 40px
     background: $white
-    &.one
-      top: 0
-      right: 100%
-    &.two
-      top: 80px
-      right: 100%
-    &.three
-      top: 160px
-      right: 100%
-    &.four
-      bottom: 160px
-      left: 100%
-    &.five
-      bottom: 80px
-      left: 100%
-    &.six
-      bottom: 0
-      left: 100%
+  .one
+    top: 0
+    right: 100%
+  .two
+    top: 80px
+    right: 100%
+  .three
+    top: 160px
+    right: 100%
+  .four
+    bottom: 160px
+    left: 100%
+  .five
+    bottom: 80px
+    left: 100%
+  .six
+    bottom: 0
+    left: 100%
   .button
     border-color: $black
     color: $black
