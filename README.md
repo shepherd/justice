@@ -13,12 +13,12 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
+<!-- ## Installation
 
 * `git clone <repository-url>` this repository
 * `cd justice-for-us`
 * `npm install`
-* `bower install`
+* `bower install` -->
 
 ## Running / Development
 
@@ -50,4 +50,9 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## Todo
+
+* Extract the bootstrap for slider and remove bootstrap
+
 

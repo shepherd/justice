@@ -15,14 +15,42 @@ text-input()
     max-width: 300px
     background: $gray
     margin-bottom: $pad
+    color: red!important
     &:focus
       background: $white
-
-.form
+    
+form
   width: 100%
-  max-width: 500px
+  max-width: 600px
+  // text-align: center
+  display: inline-block
   .input-w
     width: 100%
     .label
       margin-bottom: $pad
     text-input()
+
+.ember-chimp
+  color: $white
+  label
+    width: 47%
+    // border: 1px solid red
+    margin-right: $pad*2
+  input
+    //
+  input[type="text"], input[type="email"]
+    display: block
+    padding: $pad $pad*2
+    color: $black
+    width: 100%
+  button
+    button()
+    margin-bottom: $pad*8
+  .chimp-says:not(span)
+    opacity: .8
+  .label-text
+    medium-type()
+    margin-bottom: $pad*2
+    text-align: left
+  footer
+    text-align: left

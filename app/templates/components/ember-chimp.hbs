@@ -1,0 +1,27 @@
+
+<label>
+  <div class="label-text">Name</div>
+  {{input key-press="valueDidChange"
+          placeholder="Barack Obama"
+          value=firstname
+          type="text"
+          name="FIRSTNAME"}}
+</label>
+
+<label>
+  <div class="label-text">Email</div>
+  {{input key-press="valueDidChange"
+          placeholder="email@address.domain"
+          value=value
+          type="email"
+          name="EMAIL"}}
+</label>
+
+{{#if chimpSays}}
+  <div class="chimp-says">{{chimpSays}}<span class='alert-star'>*</span></div>
+{{/if}}
+
+<footer>
+  
+  <button type="submit">{{if isLoading loadingText buttonText}}</button>
+</footer>
