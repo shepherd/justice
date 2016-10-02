@@ -20,8 +20,8 @@ export default function() {
   this.transition(
     this.fromRoute('stories.story.effect'),
     this.toRoute('stories.story.charge'),
-    this.use('toDown'),
-    this.reverse('toUp')
+    this.use('toUp'),
+    this.reverse('toDown')
   );
 
   // conclusion

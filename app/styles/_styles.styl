@@ -52,29 +52,50 @@ body.title
   //   border: 2px solid green
 
 .thing
+  border: 2px solid red
+  padding: 3rem
+  position: fixed
+  top: left
+  display: block
+  z-index: 30
+  color: yellow
+
+.title-screen
   fixed-stretch()
   z-index: 10
-  opacity: 0
+  opacity: 1
   .box
     absolute()
     width: 50%
     height: 50%
-    &.one
-      top: 0
-      left: 0
-      background: $color 
-    &.two
-      top: 0
-      right: 0
-      background: $highlight
-    &.three
-      bottom: 0
-      left: 0
-      background: black
-    &.four
-      right: 0
-      bottom: 0
-      background: $white
+  .one, .two
+    color: $white
+    .eye
+      color: $white
+  .three, .four
+    color: $color
+    .eye
+      color: $color
+  .one
+    top: 0
+    left: 0
+    background: $color
+  .two
+    top: 0
+    right: 0
+    background: $highlight
+  .three
+    bottom: 0
+    left: 0
+    background: black
+    a
+      color: $white
+  .four
+    right: 0
+    bottom: 0
+    background: $white
+  .full-logo
+    absolute-translate-center()
 
 .title-blocks
   .block
@@ -84,29 +105,29 @@ body.title
     background: $color
     top: 0
     transform: 1
-    &.left
-      transform: translate(-100%,0)
-    &.right
-      transform: translate(100%,0)
-    &.one, &.two, &.three, &.four, &.five
-      left: 0
-      width: 7%
-    &.six, &.seven, &.eight, &.nine, &.ten
-      right: 0
-    &.one, &.six
-      top: 0%
-    &.two, &.seven
-      top: 20%
-    &.three, &.eight
-      top: 40%
-    &.four, &.nine
-      top: 60%
-    &.five, &.ten
-      top: 80%
+  .left
+    transform: translate(-100%,0)
+  .right
+    transform: translate(100%,0)
+  .one, .two, .three, .four, .five
+    left: 0
+    width: 7%
+  .six, .seven, .eight, .nine, .ten
+    right: 0
+  .one, .six
+    top: 0%
+  .two, .seven
+    top: 20%
+  .three, .eight
+    top: 40%
+  .four, .nine
+    top: 60%
+  .five, .ten
+    top: 80%
 
 .title-blocks
   &.active
-    &.left, &.right
+    .left, .right
       transform: translate(0,0)
       
 
@@ -158,24 +179,24 @@ body.title
     width: 40px
     height: 40px
     background: $white
-    &.one
-      top: 0
-      right: 100%
-    &.two
-      top: 80px
-      right: 100%
-    &.three
-      top: 160px
-      right: 100%
-    &.four
-      bottom: 160px
-      left: 100%
-    &.five
-      bottom: 80px
-      left: 100%
-    &.six
-      bottom: 0
-      left: 100%
+  .one
+    top: 0
+    right: 100%
+  .two
+    top: 80px
+    right: 100%
+  .three
+    top: 160px
+    right: 100%
+  .four
+    bottom: 160px
+    left: 100%
+  .five
+    bottom: 80px
+    left: 100%
+  .six
+    bottom: 0
+    left: 100%
   .button
     border-color: $black
     color: $black
@@ -349,68 +370,6 @@ body.title
   z-index: 0
 
 .background-image-full
-  background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
+  //
 .background-image-pattern
-  background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
   clip-left()
-
-.experience-story
-  .background-image-full
-    background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
-  .background-image-pattern
-    background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
-    clip-left()
-
-  // $background
-  &.experience-story-1
-    //
-    .background-image-full
-      background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
-    .background-image-pattern
-      background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
-      clip-left()
-
-  &.experience-story-1-charge
-    // covered by previous
-
-  &.experience-story-1-sentence
-    //
-    .background-image-full
-      background-image: url('http://1.bp.blogspot.com/-1V5-FuxNEEU/TjWeZkOQzGI/AAAAAAAAAWk/dBcFhtR28xg/s1600/parking+garage+HDR3.jpg')
-    .background-image-pattern
-      background-image: url('https://picproj2722.files.wordpress.com/2012/10/empty.jpg')
-      clip-right()
-  &.experience-story-1-effects
-      //
-      .background-image-full
-        background-image: url('http://sites.psu.edu/wp-content/uploads/sites/12008/2010/06/empty-playground2.jpg')
-      .background-image-pattern
-        background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
-        clip-right()
-
-  // STORY 2
-  &.experience-story-2
-    //
-    .background-image-full
-      background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
-    .background-image-pattern
-      background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
-      clip-right()
-
-  &.experience-story-2-charge
-    // covered by previous
-
-  &.experience-story-2-sentence
-    //
-    .background-image-full
-      background-image: url('http://1.bp.blogspot.com/-1V5-FuxNEEU/TjWeZkOQzGI/AAAAAAAAAWk/dBcFhtR28xg/s1600/parking+garage+HDR3.jpg')
-    .background-image-pattern
-      background-image: url('https://picproj2722.files.wordpress.com/2012/10/empty.jpg')
-      clip-right()
-  &.experience-story-2-effects
-      //
-      .background-image-full
-        background-image: url('http://sites.psu.edu/wp-content/uploads/sites/12008/2010/06/empty-playground2.jpg')
-      .background-image-pattern
-        background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
-        clip-right()
