@@ -25,17 +25,27 @@
           <div class='name'>The Sentence</div>
         </header>
         <div class='headline'>
-          {{model.story.sentence.headline}}
+          {{#liquid-if showData class='story-headers'}}
+            {{model.story.sentence.headline}}
+          {{/liquid-if}}
         </div>
       </div>
       <footer class='stats'>
         <div class='actual'>
           <span>Actual Sentence</span>
-          <h2>{{model.story.sentence.shortTime}}</h2>
+          <h2>
+            {{#liquid-if showData class='story-headers'}}
+              {{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}
+            {{/liquid-if}}
+          </h2>
         </div>
         <div class='your'>
           <span>Your Sentence</span>
-          <h2>{{selectedSentence}}</h2>
+          <h2>
+            {{#liquid-if showData class='story-headers'}}
+              {{selectedSentence}}
+            {{/liquid-if}}
+          </h2>
         </div>
         {{!-- Maybe this? --}}
         {{!-- <div class='your'>

@@ -5,8 +5,11 @@ export default Ember.Route.extend({
 
   actions: {
     didTransition() {
-      const currentStoryId = Ember.get(this.currentModel, 'story.id');
-      this.get('backgroundImages').registerCurrentPath(currentStoryId, 'effects');
+      Ember.run.later(() => this.controller.set('showData', true), 300);
+    },
+
+    willTransition() {
+      this.controller.set('showData', false);
     }
   }
 });

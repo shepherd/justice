@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   participantState: Ember.inject.service(),
+  showData: false,
 
   selectedSentence: Ember.computed('model.story.id', 'participantState.values.[]', {
     // Have to specify a getter/setter here because we're inadvertently setting
