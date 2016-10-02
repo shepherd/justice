@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     // the actual data, because we're handling that in the "selectSentence" action
     get() {
       const currentStoryId = this.get('model.story.id');
-      return this.get('participantState').getValueFor(currentStoryId);
+      return this.get('participantState').getValueFor(currentStoryId) || 0;
     },
     set(key, value) {
       return value;
