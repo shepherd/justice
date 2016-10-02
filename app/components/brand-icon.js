@@ -22,6 +22,6 @@ export default Ember.Component.extend({
   },
   click() {
     this.get('audio').getSound('jail-door').play();
-    alert('You have tapped the brand-icon.');
+    this.sendAction();
   }
 });
