@@ -39,6 +39,11 @@ dev-outline($color)
 .center
   fixed-translate-center()
   dev-outline(blue)
+  
+.center
+  &.charge, &.sentence, &.effects
+    .button
+      float: right
 
 // $title
 body.title
@@ -104,7 +109,7 @@ body.title
     height: 10%
     background: $color
     top: 0
-    transform: 1
+    transition: .6s
   .left
     transform: translate(-100%,0)
   .right
@@ -348,6 +353,8 @@ body.title
 // $charge
 .center.charge
   dev-outline(pink)
+  .button
+    margin-top: 75px
   //
 
 // $sentence
