@@ -24,6 +24,13 @@ export default function() {
     this.reverse('toDown')
   );
 
+  // story data
+  this.transition(
+    this.hasClass('story-headers'),
+    this.toValue(true),
+    this.use('fade'),
+  );
+
   // conclusion
 
   // default?

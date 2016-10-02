@@ -5,7 +5,7 @@
 <div class='background-image-pattern'
   style='background-image: url("/images/stories/{{model.story.id}}/charge/right.png")'>
 </div>
- 
+
 <div class='center charge'>
 
   <div class='lego-house'>
@@ -25,17 +25,23 @@
           <div class='name'>The Crime</div>
         </header>
         <div class='charge'>
-          {{model.story.charge.description}}
+          {{#liquid-if showData class='story-headers'}}
+            {{model.story.charge.description}}
+          {{/liquid-if}}
         </div>
       </div>
       <footer class='stats'>
         <div class='location'>
           <span>Location</span>
-          {{model.story.location}}
+          {{#liquid-if showData class='story-headers'}}
+            {{model.story.location}}
+          {{/liquid-if}}
         </div>
         <div class='priors'>
           <span>Priors</span>
-          {{happy-bool model.story.charge.priors}}
+          {{#liquid-if showData class='story-headers'}}
+            {{happy-bool model.story.charge.priors}}
+          {{/liquid-if}}
         </div>
       </footer>
 
