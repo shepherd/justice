@@ -51,6 +51,31 @@ body.title
   //   top: 0
   //   border: 2px solid green
 
+.thing
+  fixed-stretch()
+  z-index: 10
+  opacity: 0
+  .box
+    absolute()
+    width: 50%
+    height: 50%
+    &.one
+      top: 0
+      left: 0
+      background: $color 
+    &.two
+      top: 0
+      right: 0
+      background: $highlight
+    &.three
+      bottom: 0
+      left: 0
+      background: black
+    &.four
+      right: 0
+      bottom: 0
+      background: $white
+
 .title-blocks
   .block
     absolute()
@@ -96,6 +121,8 @@ body.title
     line-height: 1.3
   .body
     text-align: left
+    p
+      margin-bottom: $pad*2
   p
     font-family: monospace
     line-height: 1.5
