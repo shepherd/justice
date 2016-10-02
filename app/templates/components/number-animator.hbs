@@ -1,0 +1,13 @@
+{{#unless showLife}}
+  {{firstDigit}}{{secondDigit}}
+  {{#if decimal}}
+    {{#if showDecimal}}
+      .
+    {{/if}}
+    {{#if showDecimalValue}}
+      {{decimal}}
+    {{/if}}
+  {{/if}}
+{{else}}
+  life
+{{/unless}}
