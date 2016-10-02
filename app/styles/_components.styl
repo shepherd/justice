@@ -15,18 +15,17 @@
   max-width: 150px
   .eye
     color: $color
-  &.title-screen
-    color: $color
-    position: fixed
-    top: 20%
-    left: 50%
-    transform: translate(-50%,0)
 
 @keyframes frantic-noise-movement
   0%, 100%
     transform: translate(0,0)
   50%
     transform: translate(10%,0)
+
+.page-logo
+  position: fixed
+  top: 20%
+  horizontal-absolute-translate-center()
 
 .noise-layer
   background-image: url(http://i.stack.imgur.com/PEnJm.png)
