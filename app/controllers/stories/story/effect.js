@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  showData: false,
+
   nextStoryExists: Ember.computed('model.story.id', 'model.stories', function() {
     const currentStoryId = this.get('model.story.id');
     const stories = this.get('model.stories');
