@@ -28,15 +28,14 @@ export default function() {
   this.transition(
     this.hasClass('story-headers'),
     this.toValue(true),
-    this.use('fade'),
+    this.use('fade', { duration: 1000 }),
   );
 
   // conclusion
 
   // default?
   this.transition( // default transition for all views
-    this.use('wait', 500, { then: 'fade' }),
-    this.reverse('wait', 500, { then: 'fade' })
+    this.use('fade'),
   );
 
 }
