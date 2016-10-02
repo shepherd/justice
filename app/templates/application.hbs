@@ -14,3 +14,11 @@
   </div>
 
 </div>
+
+{{#each stories as |story|}}
+  {{#each types as |type|}}
+    {{#each sides as |side|}}
+      <img class='visually-hidden' src="/images/stories/{{story}}/{{type}}/{{side}}.png" alt="">
+    {{/each}}
+  {{/each}}
+{{/each}}
