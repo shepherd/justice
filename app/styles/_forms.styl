@@ -1,0 +1,28 @@
+
+reset-text-input()
+  border: 0
+  outline: 0
+  border-radius: 0
+  appearance: none
+
+text-input()
+  input[type='text'],
+  input[type='email']
+    reset-text-input()
+    display: block
+    width: 100%
+    padding: $pad
+    max-width: 300px
+    background: $gray
+    margin-bottom: $pad
+    &:focus
+      background: $white
+
+.form
+  width: 100%
+  max-width: 500px
+  .input-w
+    width: 100%
+    .label
+      margin-bottom: $pad
+    text-input()

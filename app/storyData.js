@@ -119,7 +119,7 @@ const storyData = [
         {
           "id": 2,
           "number": "4",
-          "visualNumber": "4 out of 5",           
+          "visualNumber": "4/5",           
           "copy": "About 79 percent of the 3,278 prisoners serving life without parole were sentenced to die in prison for nonviolent drug crimes."
         },
         {
@@ -162,15 +162,15 @@ const storyData = [
         },
         {
           "id": 2,
-          "number": "1.784",
-          "visualNumber":"$1.784 billion",           
-          "copy": "The total cost to taxpayers to keep the 3,278 prisoners currently serving life without parole for nonviolent offenses incarcerated for the rest of their lives."
-        },
-        {
-          "id": 3,
           "number": "27.6",
           "visualNumber":"27.6%",           
           "copy": "More than a quarter of drug offenders were incarcerated because of marijuana-related convictions."
+        },
+        {
+          "id": 3,
+          "number": "1.784",
+          "visualNumber":"$1.784 billion",           
+          "copy": "The total cost to taxpayers to keep the 3,278 prisoners currently serving life without parole for nonviolent offenses incarcerated for the rest of their lives."
         }
       ]
     }

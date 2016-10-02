@@ -1,6 +1,5 @@
 
-
-<div class='center'>
+<div class='center sentence'>
 
   <div class='lego-house'>
 
@@ -14,7 +13,7 @@
     <div class='crime-w'>
 
       <div class='crime'>
-        <header>
+        <header class='heading'>
           <div class='number'>{{model.story.id}}</div>
           <div class='name'>The Sentence</div>
         </header>
@@ -22,7 +21,7 @@
           {{model.story.sentence.headline}}
         </div>
       </div>
-      <footer>
+      <footer class='stats'>
         <div class='actual'>
           <span>Actual Sentence</span>
           <h2>{{model.story.sentence.shortTime}}</h2>
@@ -42,7 +41,7 @@
         <p>{{model.story.sentence.story}}</p>
       </div>
 
-      <div class='reasoning'>
+      <div class='back-story'>
         <p>{{model.story.sentence.backStory}}</p>
       </div>
 

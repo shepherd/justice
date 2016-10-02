@@ -1,5 +1,5 @@
-
-<div class='center'>
+ 
+<div class='center charge'>
 
   <div class='lego-house'>
 
@@ -11,8 +11,9 @@
     <div class='chunk six'></div>
 
     <div class='crime-w'>
+
       <div class='crime'>
-        <header>
+        <header class='heading'>
           <div class='number'>{{model.story.id}}</div>
           <div class='name'>The Crime</div>
         </header>
@@ -20,7 +21,7 @@
           {{model.story.charge.description}}
         </div>
       </div>
-      <footer>
+      <footer class='stats'>
         <div class='location'>
           <span>Location</span>
           {{model.story.location}}
@@ -36,7 +37,7 @@
       </section>
 
       {{#if model.story.charge.priors}}
-        <section class='prior'>
+        <section class='priors-story'>
           <p>{{model.story.charge.priors}}</p>
         </section>
       {{/if}}
@@ -70,6 +71,5 @@
     </footer>
 
   {{/liquid-if}}
-
 
 </div>

@@ -11,8 +11,7 @@ absolute()
 fixed()
   position: fixed
 
-fixed-spread()
-  position: fixed
+stretch()
   top: 0
   right: 0
   bottom: 0
@@ -20,24 +19,62 @@ fixed-spread()
   width: 100%
   height: 100%
   
+fixed-stretch()
+  fixed()
+  stretch()
+  
+absolute-stretch()
+  absolute()
+  stretch()
+
 reset-list-styles()
   list-style: none
   margin: 0
   padding: 0
   
 center-center()
-  float: none //
+  float: none
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 
-absolute-transform-center()
+absolute-translate-center()
   center-center()
   position: absolute
 
-fixed-transform-center()
+fixed-translate-center()
   center-center()
   position: fixed
-  
+
+visuallyHidden()
+  position absolute !important
+  clip rect(1px 1px 1px 1px)
+  clip rect(1px, 1px, 1px, 1px)
+  padding 0 !important
+  border 0 !important
+  height 1px !important
+  width 1px !important
+  overflow hidden
+
 reset-translate()
   transform: translate(0, 0)
+
+reset-button-styles()
+  background: transparent
+  border: 0
+  border-radius: 0
+  text-decoration: none
+  outline: 0
+  cursor: pointer
+  &:focus
+    outline: 0
+    
+horizontal-absolute-translate-center()
+  float: none
+  left: 50%
+  transform: translate(-50%, 0)
+  
+balance()
+  float: none
+  display: inline-block
+  vertical-align: middle

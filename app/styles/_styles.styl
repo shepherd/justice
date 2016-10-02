@@ -1,258 +1,28 @@
 
+// $dev
 dev-outline($color)
   // border: 1px solid $color
-
-*:not(input)
-  user-select: none
-
-body
-  background: #222
-  color: $white
-  font-family: monospace
-
-visuallyHidden()
-  position absolute !important
-  clip rect(1px 1px 1px 1px)
-  clip rect(1px, 1px, 1px, 1px)
-  padding 0 !important
-  border 0 !important
-  height 1px !important
-  width 1px !important
-  overflow hidden
-
-.visually-hidden
-  visuallyHidden()
-
-input, textarea, button, select, a
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
-
-reset-button-styles()
-  background: transparent
-  border: 0
-  border-radius: 0
-  &:focus
-    outline: 0
-
-button
-  reset-button-styles()
-
-body.ember-application
-  transition: .3s
-  background: black
-
-body
-  transition: background 1s ease-in-out
-  standard-type()
-
-button()
-  position: relative
-  display: inline-block
-  background: transparent
-  font-family: inherit
-  font-size: 16px
-  padding: $pad*1.3 $pad $pad*1.15
-  border-radius: 0
-  border: 3px solid $white
-  color: $white
-  min-width: 160px
-  text-align: center
-  cursor: pointer
-  text-decoration: none
-  text-transform: uppercase
-  min-width: 160px
-  border-radius: 3px
-  solid-type()
-  letter-spacing: .2em
-  font-weight: 700
-  span
-    float: none
-    display: inline-block
-    vertical-align: middle
-  .special-char
-    position: relative
-    bottom: 2px
-  &:active, &:focus, &:hover
-    // background: $highlight
-    // color: $white
-    // border: 2px solid $highlight
-    opacity: .8
-  &:before
-    position: absolute
-    content: ''
-    display: block
-    width: 100%
-    height: 100%
-    z-index: 30!important
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-
-.button
-  button()
-
-.center
-  fixed-transform-center()
 
 .temp
   opacity: .1
 
-p
-  max-width: 700px
-  margin-bottom: $pad!important
-  em
-    opacity: .4
-
-h1
-  solid-type()
-
-reset-text-input()
-  border: 0
-  outline: 0
-  border-radius: 0
-  appearance: none
-
-text-input()
-  input[type='text'],
-  input[type='email']
-    reset-text-input()
-    display: block
-    width: 100%
-    padding: $pad
-    max-width: 300px
-    background: $gray
-    margin-bottom: $pad
-    &:focus
-      background: $white
-
-.form
-  width: 100%
-  max-width: 500px
-  .input-w
-    width: 100%
-    .label
-      margin-bottom: $pad
-    text-input()
+// =============
+.outfield
+  relative()
+  fixed-stretch()
+  background: #222
+  // dev-outline(pink)
 
 .justice-wrapper
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  width: 100%
-  height: 100%
+  relative()
+  absolute-stretch()
   max-width: 1024px // basic landscape ipad
-  max-height: 660px
-  left: 50%
-  top: 50%
-  transform: translate(-50%, -50%)
-  padding: $pad
+  max-height: 660px // basic landscape ipad
+  absolute-translate-center()
   background: black
+  padding: $pad
   overflow: hidden
-  
-.lower-right
-  fixed()
-  right: $pad*3
-  bottom: $pad*3
-
-.bg
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background-image: url('http://i43.tinypic.com/fllf8j.jpg')
-  background-size: cover
-  background-position: center center
-  filter: blur(3px)
-  opacity: .5
-
-.fact-list
-  reset-list-styles()
-  margin-bottom: $pad*2
-  > li
-    border: 1px solid black
-    padding: $pad
-    display: inline-block
-    h3
-      margin: 0
-      noir-type()
-      extra-large-type()
-      float: left
-      margin-right: $pad*2
-.prompt
-  // padding: $pad
-  // background: rgba(0,0,0,.2)
-
-.experience-crime-1
-  .justice-wrapper
-    background: $gray
-
-.ember-load-indicator
-  fixed-transform-center()
-  top: 47%;
-  max-width: 100px
-  color: $white
-  svg
-    display: block
-    width: 100%
-    height: auto
-    fill: currentColor
-
-// components
-.full-logo
-  resonsive-image()
-  max-width: 150px
-  .eye
-    color: $color
-  &.title-screen
-    color: $color
-    position: fixed
-    top: 20%
-    left: 50%
-    transform: translate(-50%,0)
-
-@keyframes frantic-noise-movement
-  0%, 100%
-    transform: translate(0,0)
-  50%
-    transform: translate(10%,0)
-
-.noise-layer
-  background-image: url(http://i.stack.imgur.com/PEnJm.png)
-  position: absolute
-  width: 300%
-  height: 300%
-  top: -100%
-  left: -100%
-  animation: frantic-noise-movement .2s infinite
-  opacity: 0
-  z-index: 0
-  background-size: 300px
-
-@keyframes record-pulse
-  0%, 100%
-    box-shadow: 0 0 2px 2px alpha($highlight, 40%)
-  50%
-    box-shadow: 0 0 3px 3px alpha($highlight, 60%)
-
-.record-indicator 
-  // border: 1px solid red
-  padding: $pad*3.2
-  fixed()
-  top: $pad*2
-  right: $pad*3
-  z-index: 10
-  dev-outline(yellow)
-  .light
-    width: $pad*3
-    height: $pad*3
-    border-radius: 50%
-    background: $highlight
-    animation: record-pulse 2s infinite
+  // dev-outline(blue)
 
 .brand-icon.stay
   resonsive-image()
@@ -265,12 +35,84 @@ text-input()
   color: $white
   dev-outline(blue)
 
+// $center // general centering divider
+.center
+  fixed-translate-center()
+  dev-outline(blue)
+
+// $title
+body.title
+  //
+  .full-logo
+    margin-bottom: $pad*2
+  // header
+  //   fixed()
+  //   width: 100%
+  //   top: 0
+  //   border: 2px solid green
+
+.title-blocks
+  .block
+    absolute()
+    width: 12%
+    height: 10%
+    background: $color
+    top: 0
+    &.one, &.two, &.three, &.four, &.five
+      left: 0
+      width: 7%
+    &.six, &.seven, &.eight, &.nine, &.ten
+      right: 0
+    &.one, &.six
+      top: 0%
+    &.two, &.seven
+      top: 20%
+    &.three, &.eight
+      top: 40%
+    &.four, &.nine
+      top: 60%
+    &.five, &.ten
+      top: 80%
+
+// $page
+.page
+  width: 100%
+  max-width: 66%
+  text-align: center
+  reset-translate()
+  top: 39%
+  horizontal-absolute-translate-center()
+  dev-outline(yellow)
+  .full-logo
+    display: inline-block
+    margin-bottom: $pad*3
+  header
+    dev-outline(purple)
+  h2
+    margin: 0
+    solid-type()
+    margin-bottom: $pad*2
+    font-size: 26px
+    line-height: 1.3
+  .body
+    text-align: left
+  p
+    font-family: monospace
+    line-height: 1.5
+  footer
+    margin-top: $pad*6
+    dev-outline(blue)
+  
+// $stories
 .lego-house
+  relative()
   background: $white
-  padding: $pad
+  padding: $pad*4 $pad*5
   color: $black
+  width: 640px
   display: inline-block
   min-height: 240px
+  dev-outline(green)
   .chunk
     position: absolute
     width: 40px
@@ -300,157 +142,160 @@ text-input()
     &:focus
       border-color: $highlight
 
-.lego-house
-  background: $white
-  padding: $pad $pad*3
-  color: $black
-  // margin-top: $pad*10
+// .lego-house
+//   background: $white
+//   padding: $pad $pad*3
+//   color: $black
+//   // margin-top: $pad*10
+//   width: 100%
+//   width: 640px
+//   // margin-left: 40px
+//   // margin-right: 40px
+//   position: relative
+//   left: 50%
+//   transform: translate(-50%, 0)
+//   // border: 1px solid red
+//   h1
+//     margin: 0
+
+.crime-w
   width: 100%
-  width: 640px
-  // margin-left: 40px
-  // margin-right: 40px
-  position: relative
-  left: 50%
-  transform: translate(-50%, 0)
-  // border: 1px solid red
-  h1
-    margin: 0
+  min-height: 100px
+  // padding: $pad*3 $pad $pad
+  font-family: monospace
 
-.application-outlet
-  dev-outline(blue)
-  fixed-spread()
-
-.charge-block
-  position: relative
-  margin: 40px
-
-body.load
-  // background: $white
-
-.brand-icon.load-icon
-  resonsive-image()
-  fixed-transform-center()
-  max-width: 100px
-  color: white
-
-body.title
-  //
-  .center
-    text-align: center
-    *
-      display: inline-block
-    .full-logo
-      margin-bottom: $pad*2
-  header
-    position: fixed
-    top: 0
-      
-.title-blocks
-  .block
-    absolute()
-    width: 12%
-    height: 10%
-    background: $color
-    top: 0
-    &.one, &.two, &.three, &.four, &.five
-      left: 0
-      width: 7%
-    &.six, &.seven, &.eight, &.nine, &.ten
-      right: 0
-    &.one, &.six
-      top: 0%
-    &.two, &.seven
-      top: 20%
-    &.three, &.eight
-      top: 40%
-    &.four, &.nine
-      top: 60%
-    &.five, &.ten
-      top: 80%
-
-
-.sentence-block
-  // border: 2px solid green
-  
-.effects-block
-  // border: 2px solid orange
-
-.range-slider
-  // border: 2px solid blue
-  width: 100%
-
-// $pages
-body.about
-  .branding
-    max-width: 200px
-
-.info
-  width: 100%
-  max-width: 66%
-  text-align: center
-  reset-translate()
-  top: 39%
-  left: 50%
-  transform: translate(-50%, 0)
-  .full-logo
-    display: inline-block
-    margin-bottom: $pad*3
-  header
-    //
-  h2
-    margin: 0
-    solid-type()
-    margin-bottom: $pad*2
-    text-align: center
-    font-size: 26px
-    line-height: 1.3
-  .body
-    text-align: left
-  p
-    font-family: monospace
-    line-height: 1.5
-  footer
-    text-align: center
-    margin-top: $pad*6
-
-.prior
-  // border: 1px solid yellow // revisit
+.crime
   width: 100%
   float: left
+  border: 2px solid $black
+  .heading
+    // border: 1px solid orange
+    div
+      display: inline-block
+      uppercase()
+    .number, .name
+      //
+    .number
+      border-right: 2px solid $black
+      border-bottom: 2px solid $black
+      min-width: 30px
+      text-align: center
+      padding: $pad*.5 $pad
+      solid-type()
+    .name
+      //
+  .charge, .headline
+    padding: $pad
+    solid-type()
+    font-size: 22px
+    line-height: 1.1
 
-.content
-  border: 2px solid red
-  // position: relative
-  // margin-top: $pad*14
-  // padding: $pad*2
-
-.outfield
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
+.stats
+  // border: 10px solid blue
+  overflow: hidden // clear-fix
   width: 100%
-  height: 100%
-  height: 100%
-  background: #222
+  float: left
+  .location, .priors, .actual, .your
+    float: left
+    border: 2px solid $black
+    border-top: 0
+    padding: $pad*.25 $pad $pad*.5
+    min-width: 30%
+    font-size: 15px
+    text-transform: uppercase
+    span
+      display: block
+      small-type()
+      margin: $pad*.5 0 0
+  .priors
+    border-left: 0
+
+.actual, .your
+  //
+  span
+    font-size: 12px
+  h2
+    noir-type()
+    margin: 0
+    font-size: 50px
+.actual
+  h2
+    color: $highlight
+.overview, .story, .priors-story, .back-story
+  width: 100%
+  float: left
+  font-family: monospace
+  margin-top: $pad*2
+  standard-type()
+  p, li
+    margin: 0
+    font-family: monospace!important
+    font-family: monospace
+.story, .overview
+  //
   
+.back-story, .prompt
+  // background: blue
+  margin-bottom: $pad
+.prompt
+  width: 100%
+  float: left
+  color: $color
+  margin-top: $pad*2
+
+.button
+  margin-top: $pad*2
+
+.fact-list
+  reset-list-styles()
+  margin: $pad*2 0
+  margin-bottom: $pad*2
+  > li
+    // border: $line solid black
+    padding: $pad
+    display: inline-block
+    // margin-bottom: $pad*1.5
+    &:nth-of-type(1)
+      border-right: 0
+      margin-right: 3%
+    &:nth-of-type(1), &:nth-of-type(2)
+      width: 48%
+      float: left
+    &:nth-of-type(3)
+      width: 70%
+    h3
+      margin: 0
+      noir-type()
+      extra-large-type()
+      margin-right: $pad*2   
+      
+
+// $charge
+.center.charge
+  dev-outline(pink)
+  //
+
+// $sentence
+.center.sentence
+  dev-outline(purple)
+  //
+    
+// $effects
+.center.effects
+  dev-outline(pink)
+  //
+
+
+.background-image-full, .background-image-pattern
+  fixed-translate-center()
+  background-size: cover
+  background-position: center center
+  z-index: 0
+
 .experience-story
   //
-  .background-image-full, .background-image-pattern
-    position: fixed
-    width: 100%
-    height: 100%
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    // z-index: 30
-    background-size: cover
-    background-position: center center
-    z-index: 0
-    
-  // STORY 1
+
+  // $background
   &.experience-story-1
     //
     .background-image-full
@@ -503,131 +348,3 @@ body.about
       .background-image-pattern
         background-image: url('http://www.corvetteforum.com/wp-content/uploads/2016/01/856908-parkinglot.jpg')
         clip-right()
-
-// .range-w
-//   position: relative
-//   // left: 50%
-//   // margin: 0 40px
-//   text-align: center
-//   header
-//     // border: 2px solid red
-//     padding: $pad 0
-//   h2
-//     display: inline-block
-//     margin: 0
-//     extra-large-type()
-//     color: $black
-//     text-align: center
-//     border: 1px solid black
-//     min-width: 100px
-//     padding: $pad
-//   .range-slider
-//     display: block
-//     padding: 1.3rem 0
-//     background: transparent
-//     // border: 1px solid blue
-//     position: relative
-//     left: 50%
-//     margin: 0
-//     transform: translate(-50%, 0)
-
-footer.button-w
-  float: right
-  margin-right: $pad*3
-
-.crime-w
-  // border: 1px solid red
-  width: 100%
-  min-height: 100px
-  padding: $pad*3 $pad $pad
-  font-family: monospace
-  .crime
-    width: 100%
-    float: left
-    border: 2px solid $black
-    header
-      // border: 1px solid orange
-      div
-        display: inline-block
-        text-transform: uppercase
-      .name, .number
-        font-size: 12px
-      .name
-        // text-transform: uppercase
-      .number
-        border-right: 2px solid $black
-        border-bottom: 2px solid $black
-        min-width: 30px
-        text-align: center
-        padding: $pad*.5 $pad
-    .charge, .headline
-      padding: $pad
-      solid-type()
-      font-size: 22px
-  footer
-    .location, .priors, .actual, .your
-      float: left
-      border: 2px solid $black
-      border-top: 0
-      padding: $pad*.25 $pad $pad*.5
-      min-width: 30%
-      font-size: 13px
-      text-transform: uppercase
-      span
-        display: block
-        font-size: 9px
-        margin: $pad*.5 0
-    .priors
-      border-left: 0
-  .actual, .your
-    //
-    span
-      font-size: 12px
-    h2
-      noir-type()
-      margin: 0
-      font-size: 50px
-  .actual
-    h2
-      color: $highlight
-
-  .overview, .story, .reasoning
-    width: 100%
-    float: left
-    font-family: monospace
-    standard-type()
-    
-    p, li
-      margin: 0
-      margin-bottom: $pad
-      font-family: monospace!important
-      font-family: monospace
-  .story, .overview
-    // background: red
-    margin-top: $pad*1.5
-  .reasoning, .prompt
-    // background: blue
-    margin-bottom: $pad
-  .prompt
-    width: 100%
-    float: left
-    color: $color
-    p
-      margin: 0
-      margin-bottom: $pad
-  .button
-    margin-top: $pad*2
-
-.fact-list
-  margin 0
-  padding: 0
-  list-style: none
-  margin: $pad*2 0
-  li //
-    margin-bottom: $pad*1.5
-
-.ember-view
-  dev-outline(red)
-
-      
-      

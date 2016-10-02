@@ -5,13 +5,12 @@ html, body
 
 html
   box-sizing: border-box
-  
   *, *:before, *:after
     box-sizing: inherit
 
 body
   margin: 0
-  
+
 a
   color: inherit
   
@@ -29,7 +28,10 @@ resonsive-image()
 
 .image-w
   resonsive-image()
-  
+
+*:not(input, textarea)
+  user-select: none
+
 .liquid-container, .liquid-child
   position: relative
   width: 100%
