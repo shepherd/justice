@@ -331,13 +331,23 @@ body.title
   text-align: left
 
 .background-image-full, .background-image-pattern
-  fixed-translate-center()
+  fixed-stretch()
   background-size: cover
   background-position: center center
   z-index: 0
 
+.background-image-full
+  background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
+.background-image-pattern
+  background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
+  clip-left()
+
 .experience-story
-  //
+  .background-image-full
+    background-image: url('http://imgc.allpostersimages.com/images/P-473-488-90/37/3790/B2EIF00Z/posters/empty-school-room-in-michigan.jpg')
+  .background-image-pattern
+    background-image: url('http://az616578.vo.msecnd.net/files/2016/08/14/636067988638898174-1015453924_635976524204341496-1176429151_school.jpg')
+    clip-left()
 
   // $background
   &.experience-story-1
