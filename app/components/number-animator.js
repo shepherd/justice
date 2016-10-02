@@ -1,7 +1,5 @@
 import Ember from 'ember';
 
-let speed = 200;
-
 export default Ember.Component.extend({
   classNames: ['number-animator'],
   showDecimal: false,
@@ -27,6 +25,8 @@ export default Ember.Component.extend({
   }),
 
   didInsertElement() {
+    let speed = 200;
+
     if (this.get('endValue') === 'Life') {
       this.set('life', true);
       speed = 30;
