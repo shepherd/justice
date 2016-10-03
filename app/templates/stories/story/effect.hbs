@@ -8,44 +8,41 @@
 
 <div class='center effects'>
 
-<div class='lego-house'>
+<div class='lego-house {{if showData 'active'}}'>
 
-  {{#liquid-spacer}}
-    {{#if showData}}
-      <div class='chunk one'></div>
-      <div class='chunk two'></div>
-      <div class='chunk three'></div>
-      <div class='chunk four'></div>
-      <div class='chunk five'></div>
-      <div class='chunk six'></div>
+  <div class='chunk one'></div>
+  <div class='chunk two'></div>
+  <div class='chunk three'></div>
+  <div class='chunk four'></div>
+  <div class='chunk five'></div>
+  <div class='chunk six'></div>
 
-      <div class='crime-w'>
+  <div class='crime-w'>
 
-        <div class='crime eff'>
-          <header class='heading'>
-            <div class='number'>{{model.story.id}}</div>
-            <div class='name'>The Effects</div>
-          </header>
-        </div>
+    <div class='crime eff'>
+      <header class='heading'>
+        <div class='number timed one {{if showData 'active'}}'>{{model.story.id}}</div>
+        <div class='name timed two {{if showData 'active'}}'>The Effects</div>
+      </header>
+    </div>
 
-        <div class='title'>
-          <p>{{model.story.effects.title}}</p>
-        </div>
+    <div class='title timed three {{if showData 'active'}}'>
+      <p>{{model.story.effects.title}}</p>
+    </div>
 
-        <div class='story'>
-          <ul class='fact-list'>
-            {{#each model.story.effects.facts as |fact|}}
-              <li>
-                <h3>{{fact.visualNumber}}</h3>
-                <p>{{fact.copy}}</p>
-              </li>
-            {{/each}}
-          </ul>
-        </div>
+    <div class='story'>
+      <ul class='fact-list'>
+        {{#each model.story.effects.facts as |fact|}}
+          <li>
+            <h3 class='timed four {{if showData 'active'}}'>{{fact.visualNumber}}</h3>
+            <p class='timed five {{if showData 'active'}}'>{{fact.copy}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
 
-      </div>
-    {{/if}}
-  {{/liquid-spacer}}
+  </div>
+
 </div>
 
 

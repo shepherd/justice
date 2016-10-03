@@ -8,7 +8,7 @@
 
 <div class='center sentence'>
 
-  <div class='lego-house'>
+  <div class='lego-house {{if showData 'active'}}'>
 
     <div class='chunk one'></div>
     <div class='chunk two'></div>
@@ -25,26 +25,26 @@
           <div class='name'>The Sentence</div>
         </header>
         <div class='headline'>
-          {{#liquid-if showData class='story-headers'}}
+          <div class='timed one {{if showData 'active'}}'>
             {{model.story.sentence.headline}}
-          {{/liquid-if}}
+          </div>
         </div>
       </div>
       <footer class='stats'>
         <div class='actual'>
           <span>Actual Sentence</span>
           <h2>
-            {{#liquid-if showData class='story-headers'}}
+            <div class='timed two {{if showData 'active'}}'>
               {{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}
-            {{/liquid-if}}
+            </div>
           </h2>
         </div>
         <div class='your'>
           <span>Your Sentence</span>
           <h2>
-            {{#liquid-if showData class='story-headers'}}
+            <div class='timed three {{if showData 'active'}}'>
               {{selectedSentence}}
-            {{/liquid-if}}
+            </div>
           </h2>
         </div>
         {{!-- Maybe this? --}}
@@ -55,11 +55,11 @@
       </footer>
 
       <div class='story'>
-        <p>{{model.story.sentence.story}}</p>
+        <p class='timed four {{if showData 'active'}}'>{{model.story.sentence.story}}</p>
       </div>
 
       <div class='back-story'>
-        <p>{{model.story.sentence.backStory}}</p>
+        <p class='timed five {{if showData 'active'}}'>{{model.story.sentence.backStory}}</p>
       </div>
 
     </div>

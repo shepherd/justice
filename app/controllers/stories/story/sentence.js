@@ -13,6 +13,12 @@ export default Ember.Controller.extend({
     transitionToEffects() {
       const currentStoryId = this.get('model.story.id');
       this.transitionToRoute('stories.story.effect', currentStoryId);
+    },
+    didTransition() {
+      Ember.run.later(() => this.controller.set('showData', true), 500);
+    },
+    willTransition() {
+      this.controller.set('showData', false);
     }
   }
 });

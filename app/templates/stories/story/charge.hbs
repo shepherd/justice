@@ -8,7 +8,7 @@
 
 <div class='center charge'>
 
-  <div class='lego-house'>
+  <div class='lego-house {{if showData 'active'}}'>
 
     <div class='chunk one'></div>
     <div class='chunk two'></div>
@@ -25,38 +25,38 @@
           <div class='name'>The Crime</div>
         </header>
         <div class='charge'>
-          {{#liquid-if showData class='story-headers'}}
+          <div class='timed one {{if showData 'active'}}'>
             {{model.story.charge.description}}
-          {{/liquid-if}}
+          </div>
         </div>
       </div>
       <footer class='stats'>
         <div class='location'>
           <span>Location</span>
-          {{#liquid-if showData class='story-headers'}}
+          <div class='timed two {{if showData 'active'}}'>
             {{model.story.location}}
-          {{/liquid-if}}
+          </div>
         </div>
         <div class='priors'>
           <span>Priors</span>
-          {{#liquid-if showData class='story-headers'}}
+          <div class='timed three {{if showData 'active'}}'>
             {{happy-bool model.story.charge.priors}}
-          {{/liquid-if}}
+          </div>
         </div>
       </footer>
 
       <section class='overview'>
-        <p>{{model.story.charge.overview}}</p>
+        <p class='timed four {{if showData 'active'}}'>{{model.story.charge.overview}}</p>
       </section>
 
       {{#if model.story.charge.priors}}
         <section class='priors-story'>
-          <p>{{model.story.charge.priors}}</p>
+          <p class='timed five {{if showData 'active'}}'>{{model.story.charge.priors}}</p>
         </section>
       {{/if}}
 
       <section class='prompt'>
-        <p>{{model.story.charge.prompt}}</p>
+        <p class='timed six {{if showData 'active'}}'>{{model.story.charge.prompt}}</p>
       </section>
 
     </div>

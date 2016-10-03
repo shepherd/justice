@@ -178,6 +178,9 @@ body.title
   width: 640px
   display: inline-block
   min-height: 240px
+  transform: translate(0, -($pad*4) )
+  transition: .2s
+  opacity: 0
   dev-outline(green)
   .chunk
     position: absolute
@@ -207,6 +210,11 @@ body.title
     color: $black
     &:focus
       border-color: $highlight
+  &.active
+    transform: translate(0,0)
+    opacity: 1
+
+
 
 // .lego-house
 //   background: $white
@@ -287,6 +295,33 @@ body.title
       margin: $pad*.5 0 0
   .priors, .your
     border-left: 0
+
+$time = 5s
+
+delay($delay)
+  transition-delay: $delay
+
+.story-headers, .timed
+  opacity: 0
+  transition: 1s
+  transform: translate(0,-5px)
+  &.one
+    delay(.2s)
+  &.two
+    delay(.4s)
+  &.three
+    delay(.6s)
+  &.four
+    delay(.8s)
+  &.five
+    delay(1s)
+  &.six
+    delay(1.2s)
+  &.seven
+    delay(1.4s)
+  &.active
+    transform: translate(0,0)
+    opacity: 1
 
 .actual, .your
   //
