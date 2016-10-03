@@ -6,6 +6,32 @@ dev-outline($color)
 .temp
   opacity: .1
 
+.cover
+  relative()
+  fixed-stretch()
+  background: $highlight
+  color: $white
+  solid-type()
+  h2
+    absolute-translate-center()
+    font-size: 20px
+  display: none
+  @media (orientation: portrait)
+    &.rotate
+      display: block
+      z-index: 50
+      background: $color
+  @media (max-width: 1018px) and (max-height: 660px)
+    &.too-small
+      display: block
+      
+  @media (max-width: 660px) and (max-height: 1018px) and (orientation: portrait)
+    &.too-small
+      display: block
+      z-inex: 30
+    &.rotate
+      z-index: 20
+
 // =============
 .outfield
   relative()
