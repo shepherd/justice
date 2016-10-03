@@ -104,7 +104,7 @@ const storyData = [
       "headline": "Life in prison, solitary confinement for third-strike offense.",
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
-      "story": "In 1992, a young man touring traveling with the Grateful Dead on a musical tour sold LSD to a friend who had become a confidential informant for police officers. Over the course of 60 days, the man dealt LSD in five transactions, including through the U.S. postal service.",
+      "story": "In 1992, a young man traveling with the Grateful Dead on a musical tour sold LSD to a friend who had become a confidential informant for police officers. Over the course of 60 days, the man dealt LSD in five transactions, including through the U.S. postal service.",
       "backStory": "In this case, the judge included the weight of the paper that carried the LSD when factoring the man’s sentence. That brought the total weight of the LSD above 10 grams, triggering a mandatory minimum sentence of life in prison for “third-strike” offenders. Like many other states, Florida has a “habitual offender” law which allows for life without parole sentences, even for nonviolent crimes. The man has now served over 23 years in prison, with much of that time in solitary confinement."
     },
     "effects": {

@@ -22,5 +22,10 @@
 {{/if}}
 
 <footer>
-  <button type="submit">{{if isLoading loadingText buttonText}}</button>
+  <button type="submit">{{if isLoading loadingText buttonText}}</button><br>
+
+  {{#link-to 'application' class='play-agains'}}
+    <span>Play Again</span>
+  {{/link-to}}
 </footer>
+
