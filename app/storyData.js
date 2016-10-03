@@ -6,7 +6,7 @@ const storyData = [
     "charge": {
       "description": "Possession of 2.8 grams of marijuana.",
       "overview": "A 49-year-old man was stopped by police and found with a small amount of marijuana. He was convicted of simple possession in 2011.",
-      "priors": "Two prior convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.",
+      "priors": "Prior convictions include: two convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.",
       "prompt": "What do you think is the appropriate sentence?",
       "min": 0,
       "max": 40,
@@ -16,7 +16,7 @@ const storyData = [
       "headline": "Father of 7, facing 13+ years for minor, non-violent crime.",
       "time": "13.3 years",
       "shortTime": "13.3",
-      "story": "In New Orleans, a father of seven and local restaurateur was stopped by police over by police while riding his bicycle in 2011. The officers searched the man and found 2.8 grams of marijuana, the equivalent of two joints.",
+      "story": "In New Orleans, a father of seven and local restaurateur was stopped by police while riding his bicycle in 2011. The officers searched the man and found 2.8 grams of marijuana, the equivalent of two joints.",
       "backStory": "Because the man had prior non-violent drug offenses – for small amounts of marijuana – a New Orleans jury convicted him under a Louisiana state law that doles out harsher punishments for “habitual offenders.” In fact, the sentencing range for the third offense of possession of marijuana is up to 20 years in prison. Currently, the man does not face the possibility of parole."
     },
     "effects": {
@@ -60,7 +60,7 @@ const storyData = [
       "headline": "Single mother sentenced to life in prison with no physical evidence.",
       "time": "Life without the possibility of parole.",
       "shortTime": "Life",
-      "story": "The young woman in question grew up in poverty in the small rural town of Terrell, Texas.  Her mother was paraplegic, and from a young age the woman was forced to take care of her siblings.  In this case, prosecutors claimed the young woman served as a drug courier for a drug supplier in Houston.",
+      "story": "The young woman in question grew up in poverty in the small rural town of Terrell, Texas.  Her mother was a paraplegic, and from a young age the woman was forced to take care of her siblings.  In this case, prosecutors claimed the young woman served as a drug courier for a drug supplier in Houston.",
       "backStory": "In 1999, the woman was arrested as part of a drug task force operation, where all 105 people who were arrested were black.  During trial, no physical evidence was ever presented by investigators. However, because of Texas sentencing laws, the judge increased the punishment because the amount of theoretical crack cocaine (30 kg) being trafficked. The woman is not eligible for sentence reductions."
     },
     "effects": {
@@ -94,7 +94,7 @@ const storyData = [
     "charge": {
       "description": "Conspiracy and possession with intent to distribute LSD.",
       "overview": "A 24-year-old Vegan “Deadhead” is charged with selling LSD at Grateful Dead concert.",
-      "priors": "Two prior convictions for the possession of small amounts of marijuana and LSD. No arrest history for violent crimes.",
+      "priors": "Prior convictions include: two convictions for the possession of small amounts of marijuana and LSD. No arrest history for violent crimes.",
       "prompt": "",
       "min": 0,
       "max": 40,
@@ -137,8 +137,8 @@ const storyData = [
     "location": "Alabama",
     "charge": {
       "description": "Growing about three dozen marijuana plants.",
-      "overview": "A 75-year-old disabled veteran is convicted with growing three dozen marijuana plants behind his son’s home in Dothan, Alabama. He says he intended to use the plants to alleviate chronic pain, which prosecutors did not dispute.",
-      "priors": "Three prior convictions for a string of robberies committed two decades ago, for which the man served 10 years in prison.",
+      "overview": "A 75-year-old disabled veteran is convicted for growing three dozen marijuana plants behind his son’s home in Dothan, Alabama. He says he intended to use the plants to alleviate chronic pain, which prosecutors did not dispute.",
+      "priors": "Prior convictions include: three convictions for a string of robberies committed two decades ago, for which the man served 10 years in prison.",
       "prompt": "",
       "min": 0,
       "max": 40,
@@ -182,7 +182,7 @@ const storyData = [
     "charge": {
       "description": "Leasing trucks to marijuana smugglers in Georgia.",
       "overview": "A 30-year-old man owned a towing and trucking company in Georgia. In 2002, prosecutors alleged that the man knowingly allowed marijuana smugglers to use his trucks to transport drugs within the state.",
-      "priors": "Trespassing for walking into a fast-food restaurant with a beer. (A $150 fine)",
+      "priors": "Prior convictions include: trespassing for walking into a fast-food restaurant with a beer (a $150 fine).",
       "prompt": "",
       "min": 0,
       "max": 40,
