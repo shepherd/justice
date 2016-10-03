@@ -7,8 +7,6 @@ export default Ember.Component.extend({
   showLife: false,
   showDecimalValue: false,
 
-  yearsText: '',
-
   value: Ember.computed.reads('startValue'),
 
   firstDigit: Ember.computed('value', function() {
@@ -44,15 +42,7 @@ export default Ember.Component.extend({
         if (this.get('life')) {
           this.set('showLife', true);
         } else {
-          Ember.run.later(() => this.set('showDecimal', true), speed);
-
-          speed = speed * 3;
-
-          Ember.run.later(() => this.set('showDecimalValue', true), speed);
-
-          Array.prototype.map.call('years', (letter, index) => {
-            Ember.run.later(() => this.set('yearsText', this.get('yearsText') + letter), speed * (index + 3));
-          });
+          Ember.run.later(() => this.set('showYears', true), speed);
         }
       }
     };
