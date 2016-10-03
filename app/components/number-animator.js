@@ -19,11 +19,6 @@ export default Ember.Component.extend({
     return String(value).charAt(1);
   }),
 
-  decimal: Ember.computed('startValue', function() {
-    const value = this.get('endValue');
-    return String(value).charAt(3);
-  }),
-
   didInsertElement() {
     let speed = 100;
 
