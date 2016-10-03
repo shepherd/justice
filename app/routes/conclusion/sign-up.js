@@ -11,14 +11,18 @@ export default Ember.Route.extend({
     emberChimpDidSubmit(promise) {
       promise
       .then(response => {
-        if (response.result === 'success') {
-          console.log("Ember Chimp submitted Successfully!");
-          // transition to "conclusion.thank-you"
-        } else {
-          console.log("Ember Chimp error message:" + response.msg);
-        }
+        // This stuff doesn't work, it errors even when the request succeeds
+        // if (response.result === 'success') {
+          // console.log("Ember Chimp submitted Successfully!");
+          // this.send('transitionToTitle');
+        // } else {
+          // console.log("Ember Chimp error message:" + response.msg);
+        // }
+      // })
+      // .catch(error => console.log("Ember Chimp had an Ajax Error."));
+        Ember.run.later(() => this.send('transitionToTitle'), 5000);
       })
-      .catch(error => console.log("Ember Chimp had an Ajax Error."));
+      .catch(() => Ember.run.later(() => this.send('transitionToTitle'), 5000));
     }
   }
 });
