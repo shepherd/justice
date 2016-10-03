@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   actions: {
     transitionToTitle() {
       this.get('participantState').clearState();
-      this.transitionTo('application');
+      this.transitionTo('title.index');
     }
   }
 });

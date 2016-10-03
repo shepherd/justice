@@ -8,7 +8,7 @@ export default Ember.Component.extend({
   icon: true, // specify false to remove
 
   audio: Ember.inject.service(),
-  sound: 'alert', // default unless specified
+  sound: 'jail-door', // default unless specified
 
   initAudioFile: Ember.on('init', function() {
     this.get('audio').load('/audio/jail-door.mp3').asSound('jail-door');
