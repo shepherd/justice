@@ -1,10 +1,12 @@
 
 <div class='background-image-full'
-  style='background-image: url("/images/stories/{{model.story.id}}/sentence/left.png")'>
+  style='background-image: url("/images/stories/{{model.story.id}}/right.png")'>
 </div>
 <div class='background-image-pattern'
-  style='background-image: url("/images/stories/{{model.story.id}}/sentence/right.png")'>
+  style='background-image: url("/images/stories/{{model.story.id}}/left.jpg")'>
 </div>
+
+{{noise-layer}}
 
 <div class='center sentence'>
 
@@ -66,7 +68,7 @@
 
   </div>
 
-  <footer class='below-lego-house'>
+  <footer class='below-lego-house {{if showData 'active'}}'>
     {{next-button action='transitionToEffects'}}
   </footer>
 
