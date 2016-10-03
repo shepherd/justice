@@ -13,7 +13,7 @@ export default Ember.Route.extend(RemoveBackgroundImage, {
   actions: {
     transitionToTitle() {
       this.get('participantState').clearState();
-      this.transitionTo('title');
+      this.transitionTo('application');
     }
   }
 });
