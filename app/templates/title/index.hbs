@@ -1,10 +1,33 @@
 
-<header>
-  <h1 class='visually-hidden'>Index</h1>
 
-  <h2>boxes here...</h2>
-</header>
 
-<footer>
-  {{next-button text='Black box should animate to black screen and begin experience...' action='transitionToWelcome' class='temp'}}
-</footer>
+<div class='center page'>
+  
+  <header>
+    <h1 class='visually-hidden'>Index</h1>
+
+    <h2>boxes here...</h2>
+  </header>
+
+  <footer>
+    {{next-button text='Black box should animate to black screen and begin experience...' action='transitionToWelcome' class='temp'}}
+  </footer>
+
+</div>
+
+
+
+<div class='title-screen'>
+  <div class='box one'>
+    {{full-logo}}
+  </div>
+  <div class='box two'>
+    {{full-logo}}
+  </div>
+  {{#link-to 'title.welcome' class='box three'}}
+    {{full-logo}}
+  {{/link-to}}
+  <div class='box four'>
+    {{full-logo}}
+  </div>
+</div>
