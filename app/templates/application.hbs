@@ -15,10 +15,8 @@
 
 </div>
 
+{{!-- hacky preload  --}}
 {{#each stories as |story|}}
-  {{#each types as |type|}}
-    {{#each sides as |side|}}
-      <img class='visually-hidden' src="/images/stories/{{story}}/{{type}}/{{side}}.png" alt="">
-    {{/each}}
-  {{/each}}
+  <img class='visually-hidden' src="/images/stories/{{story}}/left.jpg" alt="">
+  <img class='visually-hidden' src="/images/stories/{{story}}/right.png" alt="">
 {{/each}}
