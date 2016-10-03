@@ -1,11 +1,5 @@
 {{#unless showLife}}
-  {{firstDigit}}{{secondDigit}}
-  {{#if decimal}}
-    {{#if showDecimal}}
-      .
-    {{/if}}
-    {{if showDecimalValue decimal}}
-  {{/if}}
+  {{firstDigit}}{{secondDigit}}{{#if decimal}}{{#if showDecimal}}.{{/if}}{{if showDecimalValue decimal}}{{/if}}
 {{else}}
   life
 {{/unless}}
