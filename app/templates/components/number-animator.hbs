@@ -1,5 +1,8 @@
 {{#unless showLife}}
-  {{firstDigit}}{{secondDigit}}{{#if decimal}}{{#if showDecimal}}.{{/if}}{{if showDecimalValue decimal}} {{yearsText}}{{/if}}
+  {{firstDigit}}{{secondDigit}}{{#if decimal}}{{#if showDecimal}}.{{/if}}{{if showDecimalValue decimal}}{{/if}}
+  {{#if yearsText}}
+    <div class="years-text">{{yearsText}}</div>
+  {{/if}}
 {{else}}
   life
 {{/unless}}
