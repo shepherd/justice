@@ -24,7 +24,7 @@ dev-outline($color)
   @media (max-width: 1018px) and (max-height: 660px)
     &.too-small
       display: block
-      
+
   @media (max-width: 660px) and (max-height: 1018px) and (orientation: portrait)
     &.too-small
       display: block
@@ -472,9 +472,29 @@ delay($delay)
   z-index: 0
 
 .background-image-full
-  //
+  &.image-1
+    background-image: url("/images/stories/1/right.png")
+  &.image-2
+    background-image: url("/images/stories/2/right.png")
+  &.image-3
+    background-image: url("/images/stories/3/right.png")
+  &.image-4
+    background-image: url("/images/stories/4/right.png")
+  &.image-5
+    background-image: url("/images/stories/5/right.png")
+
 .background-image-pattern
   clip-left()
+  &.image-1
+    background-image: url("/images/stories/1/left.jpg")
+  &.image-2
+    background-image: url("/images/stories/2/left.jpg")
+  &.image-3
+    background-image: url("/images/stories/3/left.jpg")
+  &.image-4
+    background-image: url("/images/stories/4/left.jpg")
+  &.image-5
+    background-image: url("/images/stories/5/left.jpg")
 
 .button-w, .below-lego-house
   opacity: 0
