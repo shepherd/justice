@@ -1,7 +1,7 @@
 
 
 
-<div class='center page'>
+{{!-- <div class='center page'>
   
   <header>
     <h1 class='visually-hidden'>Index</h1>
@@ -14,20 +14,20 @@
   </footer>
 
 </div>
-
+ --}}
 
 
 <div class='title-screen'>
-  {{#link-to 'title.welcome' class='box one'}}
+  <div class='box one' {{action 'transitionToWelcome'}}>
     {{full-logo}}
-  {{/link-to}}
-  {{#link-to 'title.welcome' class='box two'}}
+  </div>
+  <div class='box two' {{action 'transitionToWelcome'}}>
     {{full-logo}}
-  {{/link-to}}
-  {{#link-to 'title.welcome' class='box three'}}
+  </div>
+  <div class='box three' {{action 'transitionToWelcome'}}>
     {{full-logo}}
-  {{/link-to}}
-  {{#link-to 'title.welcome' class='box four'}}
+  </div>
+  <div class='box four' {{action 'transitionToWelcome'}}>
     {{full-logo}}
-  {{/link-to}}
+  </div>
 </div>
