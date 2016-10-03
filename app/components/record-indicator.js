@@ -22,6 +22,6 @@ export default Ember.Component.extend({
   },
   click() {
     this.get('audio').getSound('jail-door').play();
-    alert('When tapping the recording-indicator, it may show the user info as recorded.');
+    // alert('When tapping the recording-indicator, it may show the user info as recorded.');
   }
 });

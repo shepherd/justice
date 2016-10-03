@@ -22,7 +22,6 @@ Router.map(function() {
   });
   this.route('conclusion', function() {
     this.route('sign-up');
-    this.route('thank-you');
   });
 });
 
