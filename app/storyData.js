@@ -15,7 +15,7 @@ const storyData = [
     "sentence": {
       "headline": "Father of 7, facing 13+ years for minor, non-violent crime.",
       "time": "13.3 years",
-      "shortTime": "13.3",
+      "shortTime": "13",
       "story": "In New Orleans, a father of seven and local restaurateur was stopped by police while riding his bicycle in 2011. The officers searched the man and found 2.8 grams of marijuana, the equivalent of two joints.",
       "backStory": "Because the man had prior non-violent drug offenses – for small amounts of marijuana – a New Orleans jury convicted him under a Louisiana state law that doles out harsher punishments for “habitual offenders.” In fact, the sentencing range for the third offense of possession of marijuana is up to 20 years in prison. Currently, the man does not face the possibility of parole."
     },
