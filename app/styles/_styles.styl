@@ -12,9 +12,17 @@ dev-outline($color)
   background: $highlight
   color: $white
   solid-type()
-  h2
+  .center
     absolute-translate-center()
+    width: 100%
+    max-width: 600px
+    padding: $pad*2
+    .full-logo
+      .eye
+        color: $white
+  h2
     font-size: 20px
+    margin-bottom: $pad*2
   display: none
   @media (orientation: portrait)
     &.rotate
@@ -46,8 +54,9 @@ dev-outline($color)
 .justice-wrapper
   relative()
   absolute-stretch()
-  // max-width: 1024px // basic landscape ipad
-  // max-height: 660px // basic landscape ipad
+  width: 1024px // basic landscape ipad
+  height: 660px // basic landscape ipad
+  // border: 10px solid yellow
   absolute-translate-center()
   background: black
   padding: $pad
@@ -115,7 +124,7 @@ body.title
   left: 0
   width: 100%
   height: 100%
-  height: 100vh
+  // height: 100vh
   z-index: 1000
   opacity: 1
   border: 1px solid blackk
@@ -358,7 +367,7 @@ delay($delay)
 
 .story-headers, .timed
   opacity: 0
-  transition: 1s
+  transition: .5s
   transform: translate(0,-3px)
   &.one
     delay(.2s)
@@ -509,3 +518,19 @@ delay($delay)
   margin-bottom: $pad*3
   padding: 0
   cursor: pointer
+
+.progress-bar
+  height: $pad
+  background: #111
+  fixed()
+  bottom: 0
+  left: 0
+  width: 100%
+  .meter
+    absolute()
+    top: 0
+    left: 0
+    bottom: 0
+    width: 0%
+    background: $color-light
+

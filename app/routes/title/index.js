@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-
+  pace: null,
   audio: Ember.inject.service(),
 
   initAudioFile: Ember.on('init', function() {
@@ -23,9 +23,17 @@ export default Ember.Route.extend({
       this.get('audio').getSound('track').play();
       this.transitionTo('title.welcome');
     },
-
     didTransition() {
       this.controllerFor('title').activateBlocks();
+      let thisRoute = this;
+      let timer = Ember.run.later( (function() {
+        thisRoute.transitionTo('title.welcome');
+      } ), 5000 );
+      Ember.set(this, 'pace', timer);
+    },
+    willTransition() {
+      Ember.run.cancel( this.get('pace') );
     }
+
   }
 });
