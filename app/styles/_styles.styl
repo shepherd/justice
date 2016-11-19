@@ -25,15 +25,17 @@ body
     margin-top: $pad
     .inner-w
       border: 1px solid $color
-  section.container
-    .inner-w
-      min-height: 300px
-      @media $break-point-1
-        min-height: 400px
+  &.landing
+    section.container
+      .inner-w
+        min-height: 300px
+        @media $break-point-1
+          min-height: 400px
 
   .menu
     //
   .module
+    width: 100%
     border: 1px solid $color
     .input-w
       .label
@@ -41,13 +43,16 @@ body
       input
         background: transparent
         border: 1px solid $color
-  
+  .ember-load-indicator
+    .branding
+      border: 1px solid $color
+
 a
   color: $highlight
   text-decoration: underline
 
 p
-  //
+  max-width: 900px
   &:not(first-of-type)
     margin-top: $pad*2
     
@@ -65,3 +70,44 @@ p
 .menu
   li
     display: inline-block
+    a
+      padding: $pad 0
+
+.ember-load-indicator
+  fixed-stretch()
+  background: $color-light
+  z-index: 50
+  .branding
+    absolute-translate-center()
+    padding: $pad*2
+    max-width: 100px
+
+.brand-icon
+  display: none
+
+.record-indicator
+  display: none
+
+
+.social-list
+  li
+    display: inline-block
+    a
+      color: $color
+     
+.stats
+  display: flex
+
+.actual, .your
+  display: block
+  border: 1px solid $color
+  padding: $pad
+
+.actual
+  margin-right: $pad*4
+  
+.next-button
+  margin-bottom: $pad*6
+  border: 1px solid $highlight
+  padding: $pad*2 $pad*3
+  min-width: 120px

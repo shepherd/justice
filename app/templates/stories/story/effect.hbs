@@ -1,46 +1,35 @@
 
-<div class='background-image-full image-{{model.story.id}}'></div>
+{{!-- <div class='background-image-full image-{{model.story.id}}'></div>
 <div class='background-image-pattern image-{{model.story.id}}'></div>
 
-{{noise-layer}}
+{{noise-layer}} --}}
 
-<div class='center effects'>
 
-  <div class='lego-house {{if showData 'active'}}'>
+<section class="container">
+<div class="inner-w">
+  
+  <div class='crime-w'>
 
-    <div class='chunk left one'></div>
-    <div class='chunk left two'></div>
-    <div class='chunk left three'></div>
-    <div class='chunk left four'></div>
-    <div class='chunk right five'></div>
-    <div class='chunk right six'></div>
-    <div class='chunk right seven'></div>
-    <div class='chunk right eight'></div>
+    <div class='crime eff'>
+      <header class='heading'>
+        <div class='number timed one {{if showData 'active'}}'>{{model.story.id}}: Societal Effects</div>
+        {{!-- <div class='name timed two {{if showData 'active'}}'>Societal Effects</div> --}}
+      </header>
+    </div>
 
-    <div class='crime-w'>
+    <div class='title timed three {{if showData 'active'}}'>
+      <p>{{model.story.effects.title}}</p>
+    </div>
 
-      <div class='crime eff'>
-        <header class='heading'>
-          <div class='number timed one {{if showData 'active'}}'>{{model.story.id}}</div>
-          <div class='name timed two {{if showData 'active'}}'>Societal Effects</div>
-        </header>
-      </div>
-
-      <div class='title timed three {{if showData 'active'}}'>
-        <p>{{model.story.effects.title}}</p>
-      </div>
-
-      <div class='story'>
-        <ul class='fact-list'>
-          {{#each model.story.effects.facts as |fact|}}
-            <li>
-              <h3 class='timed four {{if showData 'active'}}'>{{fact.visualNumber}}</h3>
-              <p class='timed five {{if showData 'active'}}'>{{fact.copy}}</p>
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-
+    <div class='story'>
+      <ul class='fact-list'>
+        {{#each model.story.effects.facts as |fact|}}
+          <li>
+            <h3 class='timed four {{if showData 'active'}}'>{{fact.visualNumber}}</h3>
+            <p class='timed five {{if showData 'active'}}'>{{fact.copy}}</p>
+          </li>
+        {{/each}}
+      </ul>
     </div>
 
   </div>
@@ -54,3 +43,23 @@
   </footer>
 
 </div>
+</section>
+
+
+{{!-- <div class='center effects'>
+
+  <div class='lego-house {{if showData 'active'}}'>
+
+    <div class='chunk left one'></div>
+    <div class='chunk left two'></div>
+    <div class='chunk left three'></div>
+    <div class='chunk left four'></div>
+    <div class='chunk right five'></div>
+    <div class='chunk right six'></div>
+    <div class='chunk right seven'></div>
+    <div class='chunk right eight'></div>
+
+  </div>
+
+</div>
+ --}}

@@ -1,0 +1,79 @@
+
+<section class='container two'>
+<div class='inner-w'>
+
+  <h2>Action Center</h2>
+
+  <p>Various action modules would be here.</p>
+  <p><em>This could have subroutes as well to get directly to a certain action like /action-center/share-with-twitter</em></p>
+
+  <form action='' class='module'>
+
+    <label for='input-1' class='input-w'>
+      <span class='label'>First</span>
+      <input id='input-1' type='text'>
+    </label>
+
+    <label for='input-2' class='input-w'>
+      <span class='label'>Last</span>
+      <input id='input-2' type='text'>
+    </label>
+
+    <label for='input-3' class='input-w'>
+      <span class='label'>Email</span>
+      <input id='input-3' type='email'>
+    </label>
+
+    <a>Submit</a>
+
+  </form>
+
+  <div class="module">
+    <p>Some other CTA</p>
+    <ul class="social-list">
+      <li>
+        <a href="">
+          <svg class='icon-x'><use xlink:href='#icon-instagram'></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg class='icon-x'><use xlink:href='#icon-twitter'></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg class='icon-x'><use xlink:href='#icon-facebook'></use></svg>
+        </a>
+      </li>
+    </ul>
+    {{#link-to 'title.welcome'}}
+      <span>Start the experience</span>
+    {{/link-to}}
+  </div>
+
+  <div class="module">
+    <p>Tell us your zipcode so we can find your senator's contact...</p>
+
+    <form action='' class='module'>
+      
+      <label for='input-4' class='input-w'>
+        <span class='label'>Zipcode</span>
+        <input id='input-4' type='text'>
+      </label>
+
+      <a>Submit</a>
+
+    </form>
+
+  </div>
+
+  <div class="module">
+    <p>Some other CTA</p>
+    {{#link-to 'title.welcome'}}
+      <span>OR start the experience</span>
+    {{/link-to}}
+  </div>
+
+</div>
+</section>

@@ -1,10 +1,71 @@
-
+{{!-- 
 <div class='background-image-full image-{{model.story.id}}'></div>
-<div class='background-image-pattern image-{{model.story.id}}'></div>
+<div class='background-image-pattern image-{{model.story.id}}'></div> --}}
 
-{{noise-layer}}
+{{!-- {{noise-layer}} --}}
 
-<div class='center sentence'>
+<section class="container">
+<div class="inner-w">
+  
+  <div class='crime-w'>
+
+    <div class='crime'>
+      <header class='heading'>
+        <div class='number'>{{model.story.id}}: The Sentence: {{model.story.sentence.headline}}</div>
+        {{!-- <div class='name'>The Sentence</div> --}}
+      </header>
+{{!--       <div class='headline'>
+        <div class='timed one {{if showData 'active'}}'>
+          {{model.story.sentence.headline}}
+        </div>
+      </div> --}}
+    </div>
+    <footer class='stats'>
+      <div class='actual'>
+        <h2>
+          <div class='timed two {{if showData 'active'}}'>
+            {{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}
+          </div>
+        </h2>
+        <span>Actual Sentence</span>
+      </div>
+      <div class='your'>
+        <h2>
+          <div class='timed three {{if showData 'active'}}'>
+            {{selectedSentence}} <div class="years-text">years</div>
+          </div>
+        </h2>
+        <span>Your Sentence</span>
+      </div>
+      {{!-- Maybe this? --}}
+      {{!-- <div class='your'>
+        <span>Difference</span>
+        <h2>{{difference model.story.sentence.shortTime model.selectedSentence}}</h2>
+      </div> --}}
+    </footer>
+
+    <div class='story'>
+      <p class='timed four {{if showData 'active'}}'>{{model.story.sentence.story}}</p>
+    </div>
+
+    <div class='back-story'>
+      <p class='timed five {{if showData 'active'}}'>{{model.story.sentence.backStory}}</p>
+    </div>
+
+  </div>
+
+
+  <footer class='below-lego-house {{if showData 'active'}}'>
+    {{next-button action='transitionToEffects'}}
+  </footer>
+
+
+</div>
+</section>
+
+
+
+{{!-- <div class='center sentence'>
 
   <div class='lego-house {{if showData 'active'}}'>
 
@@ -16,58 +77,6 @@
     <div class='chunk right six'></div>
     <div class='chunk right seven'></div>
     <div class='chunk right eight'></div>
-
-    <div class='crime-w'>
-
-      <div class='crime'>
-        <header class='heading'>
-          <div class='number'>{{model.story.id}}</div>
-          <div class='name'>The Sentence</div>
-        </header>
-        <div class='headline'>
-          <div class='timed one {{if showData 'active'}}'>
-            {{model.story.sentence.headline}}
-          </div>
-        </div>
-      </div>
-      <footer class='stats'>
-        <div class='actual'>
-          <span>Actual Sentence</span>
-          <h2>
-            <div class='timed two {{if showData 'active'}}'>
-              {{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}
-            </div>
-          </h2>
-        </div>
-        <div class='your'>
-          <span>Your Sentence</span>
-          <h2>
-            <div class='timed three {{if showData 'active'}}'>
-              {{selectedSentence}} <div class="years-text">years</div>
-            </div>
-          </h2>
-        </div>
-        {{!-- Maybe this? --}}
-        {{!-- <div class='your'>
-          <span>Difference</span>
-          <h2>{{difference model.story.sentence.shortTime model.selectedSentence}}</h2>
-        </div> --}}
-      </footer>
-
-      <div class='story'>
-        <p class='timed four {{if showData 'active'}}'>{{model.story.sentence.story}}</p>
-      </div>
-
-      <div class='back-story'>
-        <p class='timed five {{if showData 'active'}}'>{{model.story.sentence.backStory}}</p>
-      </div>
-
-    </div>
-
   </div>
 
-  <footer class='below-lego-house {{if showData 'active'}}'>
-    {{next-button action='transitionToEffects'}}
-  </footer>
-
-</div>
+</div> --}}

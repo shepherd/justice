@@ -1,68 +1,63 @@
 
-<div class='background-image-full image-{{model.story.id}}'></div>
-<div class='background-image-pattern image-{{model.story.id}}'></div>
+{{!-- <div class='background-image-full image-{{model.story.id}}'></div>
+<div class='background-image-pattern image-{{model.story.id}}'></div> --}}
 
-{{noise-layer}}
+{{!-- {{noise-layer}} --}}
 
-<div class='center charge'>
 
-  <div class='lego-house {{if showData 'active'}}'>
+<section class="container">
+<div class="inner-w">
+  
+  <div class='crime-w'>
 
-    <div class='chunk left one'></div>
-    <div class='chunk left two'></div>
-    <div class='chunk left three'></div>
-    <div class='chunk left four'></div>
-    <div class='chunk right five'></div>
-    <div class='chunk right six'></div>
-    <div class='chunk right seven'></div>
-    <div class='chunk right eight'></div>
-
-    <div class='crime-w'>
-
-      <div class='crime'>
-        <header class='heading'>
-          <div class='number'>{{model.story.id}}</div>
-          <div class='name'>The Crime</div>
-        </header>
-        <div class='charge'>
-          <div class='timed one {{if showData 'active'}}'>
-            {{model.story.charge.description}}
-          </div>
+    <div class='crime'>
+      <header class='heading'>
+        {{!-- <div class='number'>{{model.story.id}}</div> --}}
+        <div class='name'>{{model.story.id}}: The Crime: {{model.story.charge.description}}</div>
+      </header>
+{{!--       <div class='charge'>
+        <div class='timed one {{if showData 'active'}}'>
+          {{model.story.charge.description}}
         </div>
-      </div>
-      <footer class='stats'>
-        <div class='location'>
-          <span>Location</span>
-          <div class='timed two {{if showData 'active'}}'>
-            {{model.story.location}}
-          </div>
-        </div>
-        <div class='priors'>
-          <span>Priors</span>
-          <div class='timed three {{if showData 'active'}}'>
-            {{happy-bool model.story.charge.priors}}
-          </div>
-        </div>
-      </footer>
-
-      <section class='overview'>
-        <p class='timed four {{if showData 'active'}}'>{{model.story.charge.overview}}</p>
-      </section>
-
-      {{#if model.story.charge.priors}}
-        <section class='priors-story'>
-          <p class='timed five {{if showData 'active'}}'>{{model.story.charge.priors}}</p>
-        </section>
-      {{/if}}
-
-      <section class='prompt'>
-        <p class='timed six {{if showData 'active'}}'>{{model.story.charge.prompt}}</p>
-      </section>
-
+      </div> --}}
     </div>
+    <footer class='stats'>
+      <div class='location'>
+        <span>Location: {{model.story.location}}</span>
+{{!--         <div class='timed two {{if showData 'active'}}'>
+          {{model.story.location}}
+        </div> --}}
+      </div>
+      <div class='priors'>
+        <span>Priors: {{happy-bool model.story.charge.priors}}</span>
+{{!--         <div class='timed three {{if showData 'active'}}'>
+          {{happy-bool model.story.charge.priors}}
+        </div> --}}
+      </div>
+    </footer>
+
+    <section class='overview'>
+      <p class='timed four {{if showData 'active'}}'>{{model.story.charge.overview}}</p>
+    </section>
+
+    {{#if model.story.charge.priors}}
+      <section class='priors-story'>
+        <p class='timed five {{if showData 'active'}}'>{{model.story.charge.priors}}</p>
+      </section>
+    {{/if}}
+
+    <section class='prompt'>
+      <p class='timed six {{if showData 'active'}}'>{{model.story.charge.prompt}}</p>
+    </section>
 
   </div>
 
+</div>
+</section>
+
+<section class="container">
+<div class="inner-w">
+  
   <div class='range-w'>
     {{ui-slider
       tooltip='always'
@@ -82,3 +77,23 @@
   </footer>
 
 </div>
+</section>
+
+
+
+{{!-- <div class='center charge'>
+
+  <div class='lego-house {{if showData 'active'}}'>
+
+    <div class='chunk left one'></div>
+    <div class='chunk left two'></div>
+    <div class='chunk left three'></div>
+    <div class='chunk left four'></div>
+    <div class='chunk right five'></div>
+    <div class='chunk right six'></div>
+    <div class='chunk right seven'></div>
+    <div class='chunk right eight'></div>
+
+  </div>
+
+</div> --}}

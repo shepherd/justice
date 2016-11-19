@@ -28,6 +28,7 @@ Router.map(function() {
     this.route('splash');
     this.route('news');
     this.route('other');
+    this.route('action-center');
   });
 });
 

@@ -4,22 +4,28 @@
   font-family: monospace
   font-size: 0.3em
 
-.ember-load-indicator
-  fixed-translate-center()
-  top: 47%;
-  max-width: 100px
-  color: $white
-  svg
-    display: block
-    width: 100%
-    height: auto
-    fill: currentColor
+// .ember-load-indicator
+//   fixed-translate-center()
+//   top: 47%;
+//   max-width: 100px
+//   color: $white
+//   svg
+//     display: block
+//     width: 100%
+//     height: auto
+//     fill: currentColor
 
 .full-logo
   resonsive-image()
   max-width: 150px
   .eye
     color: $color
+
+[class^="icon-"], [class*=" icon-"]
+  height: 32px
+  width: 32px
+  display: inline-block
+  fill: currentColor
 
 @keyframes frantic-noise-movement
   0%, 100%
@@ -46,6 +52,7 @@
   opacity: .2
   z-index: 0
   background-size: 300px
+  display: none
 
 @keyframes record-pulse
   0%, 100%
@@ -71,6 +78,7 @@
 .range-slider
   width: 100%
   dev-outline(orange)
+  border: 1px solid $color
 
 button()
   relative()
@@ -97,4 +105,9 @@ button()
     opacity: .8
 
 .button
-  button()
+  // button()
+  margin: 0
+  padding: 0
+  color: $highlight
+  margin-top: $pad
+  text-decoration: underline
