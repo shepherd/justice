@@ -1,5 +1,23 @@
 
-<div class='center page'>
+<section class="container">
+<div class="inner-w">
+  
+  <header>
+    <h1 class='visually-hidden'>How-to</h1>
+  
+    <p>This will take 5 minutes and contains real-life stories.</p>
+  
+    <p>Mention that there is audio.</p>
+  </header>
+
+  {{#link-to 'title.why'}}
+    <span>> why</span>
+  {{/link-to}}
+
+</div>
+</section>
+
+{{!-- <div class='center page'>
   <header>
     <h1 class='visually-hidden'>How-to</h1>
   
@@ -8,9 +26,9 @@
     <h2>The use of headphones is advised.</h2>
   </header>
 
-{{!--   <footer>
+  <footer>
     {{next-button action='transitionToWhy' class='temp'}}
-  </footer> --}}
-</div>
+  </footer>
+</div> --}}
 
 {{progress-bar time='7'}}

@@ -1,0 +1,42 @@
+
+
+<header class='container site-header'>
+<div class='inner-w'>
+  
+  <h1>Landing Page</h1>
+
+  <br>
+  {{full-logo}}
+  <br>
+
+  <nav>
+    <ul class="menu">
+      <li>
+        {{#link-to 'landing'}}
+          <span>/landing</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'landing.news'}}
+          <span>/news</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'landing.other'}}
+          <span>/other</span>
+        {{/link-to}}
+      </li>
+      <li>
+        {{#link-to 'title.welcome'}}
+          <span>Start the experience</span>
+        {{/link-to}}
+      </li>
+    </ul>
+  </nav>
+
+</div>
+</header>
+
+
+
+{{liquid-outlet}}

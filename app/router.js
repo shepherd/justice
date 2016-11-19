@@ -7,8 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('title', { path: '/' }, function() {
-    this.route('welcome');
+  this.route('title', { path: '/intro'},  function() {
+    this.route('welcome', { path: '/'} );
     this.route('overview');
     this.route('how-to');
     this.route('why');
@@ -22,6 +22,12 @@ Router.map(function() {
   });
   this.route('conclusion', function() {
     this.route('sign-up');
+  });
+  this.route('landing', { path: '/' }, function() {
+    this.route('welcome');
+    this.route('splash');
+    this.route('news');
+    this.route('other');
   });
 });
 

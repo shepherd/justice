@@ -1,18 +1,38 @@
 
-<div class='center page'>
+<section class="container">
+<div class="inner-w">
+  
   <header>
     <h1 class='visually-hidden'>Index</h1>
-  
+
+    <p>An interactive experience that puts you within the U.S. criminal justice system.</p>
+  </header>
+
+  {{#link-to 'title.overview'}}
+    <span>> overview</span>
+  {{/link-to}}
+
+</div>
+</section>
+
+{{!-- <div class='center page'>
+  <header>
+    <h1 class='visually-hidden'>Index</h1>
+
     <h2>An interactive experience that puts you within the U.S. criminal justice system.</h2>
   </header>
-  
-{{!--   <footer>
+
+  {{#link-to 'title.overview'}}
+    <span>> overview</span>
+  {{/link-to}}
+
+  <footer>
     {{next-button text='Begin' action='transitionToOverview' class='temp'}}
     
     <div {{action 'playTrack'}} class='button'>play</div>
     <div {{action 'stopTrack'}} class='button'>stop</div>
 
-  </footer> --}}
-</div>
+  </footer>
+</div> --}}
 
 {{progress-bar time='8'}}

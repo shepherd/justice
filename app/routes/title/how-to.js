@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       console.log('did:', 'start');
       let thisRoute = this;
       let timer = Ember.run.later(( function() {
-        thisRoute.transitionTo('title.why');
+        // thisRoute.transitionTo('title.why');
       }), 7000);
       Ember.set(this, 'pace', timer);
     },

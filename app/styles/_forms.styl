@@ -13,11 +13,12 @@ text-input()
     width: 100%
     padding: $pad
     max-width: 300px
-    background: $gray
+    // background: $gray
     margin-bottom: $pad
-    color: red!important
+    color: $color
+    font-weight: normal
     &:focus
-      background: $white
+      // background: $white
     
 form
   width: 100%
@@ -30,33 +31,33 @@ form
       margin-bottom: $pad
     text-input()
 
-.ember-chimp
-  color: $white
-  label
-    width: 47%
-    // border: 1px solid red
-    margin-right: $pad*2
-  input
-    //
-  input[type="text"], input[type="email"]
-    display: block
-    padding: $pad $pad*2
-    color: $black
-    width: 100%
-  button
-    button()
-    margin-bottom: $pad*3
-  .chimp-says:not(span)
-    opacity: .8
-  .label-text
-    medium-type()
-    margin-bottom: $pad*2
-    text-align: left
-  footer
-    text-align: left
-    margin-top: $pad*2!important // $shame
+// .ember-chimp
+//   color: $white
+//   label
+//     width: 47%
+//     // border: 1px solid red
+//     margin-right: $pad*2
+//   input
+//     //
+//   input[type="text"], input[type="email"]
+//     display: block
+//     padding: $pad $pad*2
+//     color: $black
+//     width: 100%
+//   button
+//     button()
+//     margin-bottom: $pad*3
+//   .chimp-says:not(span)
+//     opacity: .8
+//   .label-text
+//     medium-type()
+//     margin-bottom: $pad*2
+//     text-align: left
+//   footer
+//     text-align: left
+//     margin-top: $pad*2!important // $shame
 
-  .play-agains
-    display: block
-    margin-bottom: $pad*3
-    color: $color
+//   .play-agains
+//     display: block
+//     margin-bottom: $pad*3
+//     color: $color
