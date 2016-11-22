@@ -54,7 +54,7 @@ body
 
 a
   color: $highlight
-  text-decoration: underline
+  text-decoration: none
 
 p
   max-width: 900px
@@ -178,6 +178,7 @@ body
 
 .branding.eye
   max-width: 30px
+  border: 1px solid red
 
 .story-header .inner-w
   display: flex
@@ -200,6 +201,8 @@ body.title
   color: $white
   .full-logo
     margin-top: $pad*4
+    color: $color
+    margin-bottom: $pad*5
   .button
     border-color: $color
     color: $color
@@ -217,7 +220,8 @@ body.title
 
 .stories
   .brand-icon
-    max-width: 36px
+    max-width: 70px
+    // border: 1px solid red
     svg
       display: block
       width: 100%
@@ -245,7 +249,9 @@ body.title
 
 .eye
   color: $color
-  max-width: 40px
+  max-width: 70px
+  margin-top: $pad*2
+  // border: 2px solid red
   svg
     fill: currentColor
     display: block

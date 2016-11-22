@@ -15,7 +15,7 @@ export default Ember.Component.extend({
   }),
 
   click() {
-    this.get('audio').getSound('jail-door').play();
+    // this.get('audio').getSound('jail-door').play();
     this.sendAction();
   }
 });
