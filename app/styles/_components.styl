@@ -79,6 +79,9 @@
   width: 100%
   dev-outline(orange)
   
+a 
+  &:hover
+    text-decoration: none
 
 button()
   relative()
@@ -99,8 +102,12 @@ button()
   letter-spacing: .2em
   font-weight: 700
   transition: .3s
+  // text-decoration: none
+  &:hover
+    text-decoration: none
   span
     balance()
+    border: 0
   &:active, &:focus, &:hover
     opacity: .8
 
@@ -110,4 +117,4 @@ button()
   padding: 0
   color: $highlight
   margin-top: $pad
-  text-decoration: underline
+  // text-decoration: underline

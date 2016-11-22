@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import BaseRoute from 'justice-for-us/routes/base';
 
-export default Ember.Route.extend({
+export default BaseRoute.extend({
 
   actions: {
     didTransition() {

@@ -5,7 +5,7 @@
 {{!-- {{noise-layer}} --}}
 
 
-<section class='container'>
+<section class='container information'>
 <div class='inner-w'>
 
   <div class='crime-w'>
@@ -50,11 +50,11 @@
       <p class='timed six {{if showData "active"}}'>{{model.story.charge.prompt}}</p>
     </section>
 
-    <a {{action 'openDetails' }} class="button">
+{{!--     <a {{action 'openDetails' }} class="button">
       <svg class='icon-x'><use xlink:href='#icon-details'></use></svg>
-      <span>View the details</span>
+      <span>details</span>
     </a>
-
+ --}}
   </div>
 
 </div>
@@ -64,7 +64,7 @@
 <div class="inner-w">
 
   {{selectedSentence}}
-  
+
   <div class='range-w'>
     {{ui-slider
       tooltip='always'
@@ -79,7 +79,7 @@
     }}
   </div>
 
-  <footer class='button-w {{if showData "active"}}'>
+  <footer class='button-w slider-button {{if showData "active"}}'>
     {{next-button action='transitionToSentence'}}
   </footer>
 

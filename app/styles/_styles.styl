@@ -3,6 +3,18 @@
 dev-outline($color)
   border: 3px solid $color
 
+$break-point-1 = '(min-width: 500px) and (min-height: 500px)'
+$break-point-2 = '(min-width: 900px) and (min-height: 600px)'
+
+html, body
+  //
+  @media $break-point-2
+    height: 100%
+    background: gray
+    background-size: cover
+    background-position: center center
+    background-image: url('/images/stories/4/right.png')
+
 body
   // background: $black
   transition: 0s
@@ -132,7 +144,7 @@ p
     width: 16px
     height: 16px
     margin-right: $pad
-  &:active
+  &:active, &:hover
     background: $highlight
     color: $white
   
@@ -175,6 +187,9 @@ body
   &.modal-open
     overflow: hidden
     position: fixed
+  @media $break-point-2
+    &.modal-open
+      position: relative
 
 .branding.eye
   max-width: 30px
@@ -207,7 +222,7 @@ body.title
     border-color: $color
     color: $color
     text-decoration: none
-    &:active
+    &:active, &:hover
       background: $color
       color: $white
   .eye-branding
@@ -246,7 +261,6 @@ body.title
     path
       color: $color
 
-
 .eye
   color: $color
   max-width: 70px
@@ -257,3 +271,46 @@ body.title
     display: block
     width: 100%
     height: 100%
+
+.xxx
+  //
+  @media $break-point-1
+    .information
+      .button
+        display: none
+
+  @media $break-point-2
+    // background: $white
+    width: 100%
+    max-width: 800px
+    absolute-translate-center()
+    .information
+      background: $white
+      .button
+        display: none
+
+.crime-w
+  @media $break-point-2
+    background: $white
+    padding: $pad*4
+
+.details
+  .crime
+    border-bottom: $thick solid $black
+  .heading
+    border: 1px solid orange
+    display: flex
+    .number
+      border: 1px solid blue
+      width: 30px
+      margin-right: $pad
+    .name
+      border: 1px solid red
+    //
+      
+.slider-button
+  // border: 1px solid red
+  padding: 0 $pad*5
+  clear-floats()
+  .button
+    float: right
