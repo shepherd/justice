@@ -1,16 +1,20 @@
 
-<section class="container">
+<section class="container page">
 <div class="inner-w">
   
   <header>
     <h1 class='visually-hidden'>Index</h1>
-
-    <p>An interactive experience that puts you within the U.S. criminal justice system.</p>
+    
+    {{#blast-text}}
+      <p>An interactive experience that puts you within the U.S. criminal justice system.</p>
+    {{/blast-text}}
   </header>
-
-  {{#link-to 'title.overview'}}
-    <span>> overview</span>
-  {{/link-to}}
+  
+  <footer>
+    {{#link-to 'title.overview' class='button'}}
+      <span>> overview</span>
+    {{/link-to}}
+  </footer>
 
 </div>
 </section>

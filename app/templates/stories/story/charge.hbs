@@ -7,7 +7,7 @@
 
 <section class="container">
 <div class="inner-w">
-  
+
   <div class='crime-w'>
 
     <div class='crime'>
@@ -50,6 +50,11 @@
       <p class='timed six {{if showData 'active'}}'>{{model.story.charge.prompt}}</p>
     </section>
 
+    <a {{action 'openDetails' }} class="button">
+      <svg class='icon-x'><use xlink:href='#icon-details'></use></svg>
+      <span>View the details</span>
+    </a>
+
   </div>
 
 </div>
@@ -57,6 +62,8 @@
 
 <section class="container">
 <div class="inner-w">
+
+  {{selectedSentence}}
   
   <div class='range-w'>
     {{ui-slider
@@ -72,13 +79,61 @@
     }}
   </div>
 
-  <footer class='button-w {{if showData 'active'}}'>
+  <footer class='button-w {{if showData "active"}}'>
     {{next-button action='transitionToSentence'}}
   </footer>
 
 </div>
 </section>
 
+
+
+<section class='details {{if detailsOpen "open"}}'>
+
+  <div class='crime'>
+    <header class='heading'>
+      <div class='number'>{{model.story.id}}</div>
+      <div class='name'>The Crime: {{model.story.charge.description}}</div>
+    </header>
+    <div class='charge'>
+      <div class='timed one {{if showData 'active'}}'>
+        {{model.story.charge.description}}
+      </div>
+    </div>
+  </div>
+  <footer class='stats'>
+    <div class='location'>
+      <span>Location:</span>
+      <div class='timed two {{if showData "active"}}'>
+        {{model.story.location}}
+      </div>
+    </div>
+    <div class='priors'>
+      <span>Priors:</span>
+      <div class='timed three {{if showData "active"}}'>
+        {{happy-bool model.story.charge.priors}}
+      </div>
+    </div>
+  </footer>
+
+  <section class='overview'>
+    <p class='timed four {{if showData "active"}}'>{{model.story.charge.overview}}</p>
+  </section>
+
+  {{#if model.story.charge.priors}}
+    <section class='priors-story'>
+      <p class='timed five {{if showData "active"}}'>{{model.story.charge.priors}}</p>
+    </section>
+  {{/if}}
+
+  <div class="button-w">
+    <a {{action 'closeDetails'}} class='button'>
+      <svg class='icon-x'><use xlink:href='#icon-close'></use></svg>
+      <span>Close details</span>
+    </a>
+  </div>
+
+</section>
 
 
 {{!-- <div class='center charge'>

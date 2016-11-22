@@ -1,18 +1,20 @@
 
-<section class="container">
+<section class="container page">
 <div class="inner-w">
   
   <header>
     <h1 class='visually-hidden'>How-to</h1>
-  
-    <p>This will take 5 minutes and contains real-life stories.</p>
-  
-    <p>Mention that there is audio.</p>
+    {{#blast-text}}
+      <p>This will take 5 minutes and contains real-life stories.</p>
+      <p>Mention that there is audio.</p>
+    {{/blast-text}}
   </header>
 
-  {{#link-to 'title.why'}}
-    <span>> why</span>
-  {{/link-to}}
+  <footer>
+    {{#link-to 'title.why' class='button'}}
+      <span>> why</span>
+    {{/link-to}}
+  </footer>
 
 </div>
 </section>

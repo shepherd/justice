@@ -1,16 +1,19 @@
 
-<section class="container">
+<section class="container page">
 <div class="inner-w">
-  
+
   <header>
     <h1 class='visually-hidden'>Overview</h1>
-  
+    {{#blast-text}}
     <p>This is a simulation of decisions made every day within the U.S. criminal justice system.</p>
+    {{/blast-text}}
   </header>
 
-  {{#link-to 'title.how-to'}}
-    <span>> how-to</span>
-  {{/link-to}}
+  <footer>
+    {{#link-to 'title.how-to' class='button'}}
+      <span>> how-to</span>
+    {{/link-to}}
+  </footer>
 
 </div>
 </section>
@@ -18,7 +21,7 @@
 
 <div class='center page'>
 
-  
+
 {{!--   <footer>
     {{next-button action='transitionToHowTo' class='temp'}}
   </footer> --}}

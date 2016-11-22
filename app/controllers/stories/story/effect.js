@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
       this.transitionToRoute('stories.story.charge', currentStoryId + 1);
     },
     transitionToConclusion() {
-      this.transitionToRoute('conclusion.sign-up');
+      this.transitionToRoute('landing.action-center');
     },
     didTransition() {
       Ember.run.later(() => this.controller.set('showData', true), 500);

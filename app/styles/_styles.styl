@@ -55,7 +55,7 @@ p
   max-width: 900px
   &:not(first-of-type)
     margin-top: $pad*2
-    
+
 .module
   // background: $white
   padding: $pad
@@ -82,11 +82,11 @@ p
     padding: $pad*2
     max-width: 100px
 
-.brand-icon
-  display: none
+// .brand-icon
+//   display: none
 
-.record-indicator
-  display: none
+// .record-indicator
+//   display: none
 
 
 .social-list
@@ -111,3 +111,72 @@ p
   border: 1px solid $highlight
   padding: $pad*2 $pad*3
   min-width: 120px
+
+.button
+  border: 1px solid $highlight
+  padding: $pad $pad*2
+  margin-top: $pad
+  display: flex
+  align-items: center
+  // max-width: 200px
+  .icon-x
+    width: 16px
+    height: 16px
+    margin-right: $pad
+  &:active
+    background: $highlight
+    color: $white
+  
+.page
+  // background: $black
+  // color: $white
+  footer
+    margin-top: $pad*6
+    
+.details
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: $white
+  width: 100%
+  height: 100%
+  // border: 1px solid red
+  z-index: 20000
+  padding: $pad*2
+  padding-bottom: $pad*8
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  display: none
+
+  p
+    margin-bottom: $pad*2
+  .button-w
+    margin-top: $pad*4
+  &.open
+    display: block
+
+body
+  &.modal-open
+    overflow: hidden
+    position: fixed
+
+.branding.eye
+  max-width: 30px
+
+.story-header .inner-w
+  display: flex
+  flex-direction: row
+  flex-grow: 1
+  align-content: stretch
+  align-items: center
+  > *
+    // border: 1px solid lime
+  .branding.eye
+    // align-self: flex-start
+  .something
+    flex-grow: 1
+    text-align: center
+  .home-button
+    // align-self: flex-end

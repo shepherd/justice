@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
   participantState: Ember.inject.service(),
   showData: false,
 
+  detailsOpen: false,
+
   selectedSentence: Ember.computed('model.story.id', 'participantState.values.[]', {
     // Have to specify a getter/setter here because we're inadvertently setting
     // (via 2-way binding) from the slider, but we don't want that to change
@@ -45,6 +47,20 @@ export default Ember.Controller.extend({
       }
 
       this.transitionToRoute('stories.story.sentence', currentStoryId);
+    },
+
+    openDetails() {
+      this.set('detailsOpen', true);
+      console.log('detailsOpen:', this.get('detailsOpen') );
+      $('body').find('.details').animate( {
+        scrollTop: 0
+      }, 1); // not sure why this can't be 0...
+      $('body').addClass('modal-open');
+    },
+    closeDetails() {
+      this.set('detailsOpen', false);
+      console.log('detailsOpen:', this.get('detailsOpen') );
+      $('body').removeClass('modal-open');
     }
   }
 });
