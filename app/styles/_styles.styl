@@ -5,18 +5,20 @@ dev-outline($color)
 
 body
   // background: $black
+  transition: 0s
 
 .container
   width: 100%
+  padding: 0
 
 .inner-w
   width: 100%
   max-width: 1100px
   margin: 0 auto
   clear-floats()
-  padding: $pad
+  padding: $pad*2
 
-.wire-frames
+.wire-fframes
   background: $color-light
   //
   .container
@@ -31,7 +33,6 @@ body
         min-height: 300px
         @media $break-point-1
           min-height: 400px
-
   .menu
     //
   .module
@@ -46,6 +47,10 @@ body
   .ember-load-indicator
     .branding
       border: 1px solid $color
+  .range-slider
+    border: 1px solid $color
+  .ember-load-indicator
+    background: $color-light
 
 a
   color: $highlight
@@ -59,7 +64,6 @@ p
 .module
   // background: $white
   padding: $pad
-  border: 1px solid $color
   float: left
   &:not(first-of-type)
     margin-top: $pad*2
@@ -75,7 +79,7 @@ p
 
 .ember-load-indicator
   fixed-stretch()
-  background: $color-light
+  
   z-index: 50
   .branding
     absolute-translate-center()
@@ -116,9 +120,14 @@ p
   border: 1px solid $highlight
   padding: $pad $pad*2
   margin-top: $pad
-  display: flex
+  display: inline-flex
   align-items: center
   // max-width: 200px
+  flex-shrink: 1
+  solid-type()
+  uppercase()
+  font-size: 16px
+  letter-spacing: .06em
   .icon-x
     width: 16px
     height: 16px
@@ -130,6 +139,8 @@ p
 .page
   // background: $black
   // color: $white
+  header
+    text-align: center
   footer
     margin-top: $pad*6
     
@@ -149,6 +160,9 @@ p
   overflow: scroll
   -webkit-overflow-scrolling: touch
   display: none
+  max-width: 800px
+  max-height: 800px
+  absolute-translate-center()
 
   p
     margin-bottom: $pad*2
@@ -180,3 +194,60 @@ body
     text-align: center
   .home-button
     // align-self: flex-end
+      
+body.title
+  background: black
+  color: $white
+  .full-logo
+    margin-top: $pad*4
+  .button
+    border-color: $color
+    color: $color
+    text-decoration: none
+    &:active
+      background: $color
+      color: $white
+  .eye-branding
+    color: $color
+    max-width: 30px
+    svg
+      display: block
+      width: 100%
+      height: 100%
+
+.stories
+  .brand-icon
+    max-width: 36px
+    svg
+      display: block
+      width: 100%
+      height: 100%
+
+.module
+  width: 100%
+  // border: 1px solid $color
+  padding: 0
+  .input-w
+    .label
+      color: $color
+    input
+      background: transparent
+      border: 1px solid $color!important // $shame
+
+.welcome-logo
+  color: $blue
+  svg
+    // fill: currentColor
+  .text
+    path
+      color: $color
+
+
+.eye
+  color: $color
+  max-width: 40px
+  svg
+    fill: currentColor
+    display: block
+    width: 100%
+    height: 100%

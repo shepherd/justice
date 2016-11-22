@@ -5,8 +5,8 @@
 {{!-- {{noise-layer}} --}}
 
 
-<section class="container">
-<div class="inner-w">
+<section class='container'>
+<div class='inner-w'>
 
   <div class='crime-w'>
 
@@ -16,7 +16,7 @@
         <div class='name'>{{model.story.id}}: The Crime: {{model.story.charge.description}}</div>
       </header>
 {{!--       <div class='charge'>
-        <div class='timed one {{if showData 'active'}}'>
+        <div class='timed one {{if showData "active"}}'>
           {{model.story.charge.description}}
         </div>
       </div> --}}
@@ -24,30 +24,30 @@
     <footer class='stats'>
       <div class='location'>
         <span>Location: {{model.story.location}}</span>
-{{!--         <div class='timed two {{if showData 'active'}}'>
+{{!--         <div class='timed two {{if showData "active"}}'>
           {{model.story.location}}
         </div> --}}
       </div>
       <div class='priors'>
         <span>Priors: {{happy-bool model.story.charge.priors}}</span>
-{{!--         <div class='timed three {{if showData 'active'}}'>
+{{!--         <div class='timed three {{if showData "active"}}'>
           {{happy-bool model.story.charge.priors}}
         </div> --}}
       </div>
     </footer>
 
     <section class='overview'>
-      <p class='timed four {{if showData 'active'}}'>{{model.story.charge.overview}}</p>
+      <p class='timed four {{if showData "active"}}'>{{model.story.charge.overview}}</p>
     </section>
 
     {{#if model.story.charge.priors}}
       <section class='priors-story'>
-        <p class='timed five {{if showData 'active'}}'>{{model.story.charge.priors}}</p>
+        <p class='timed five {{if showData "active"}}'>{{model.story.charge.priors}}</p>
       </section>
     {{/if}}
 
     <section class='prompt'>
-      <p class='timed six {{if showData 'active'}}'>{{model.story.charge.prompt}}</p>
+      <p class='timed six {{if showData "active"}}'>{{model.story.charge.prompt}}</p>
     </section>
 
     <a {{action 'openDetails' }} class="button">
@@ -96,7 +96,7 @@
       <div class='name'>The Crime: {{model.story.charge.description}}</div>
     </header>
     <div class='charge'>
-      <div class='timed one {{if showData 'active'}}'>
+      <div class='timed one {{if showData "active"}}'>
         {{model.story.charge.description}}
       </div>
     </div>
@@ -126,7 +126,7 @@
     </section>
   {{/if}}
 
-  <div class="button-w">
+  <div class='button-w'>
     <a {{action 'closeDetails'}} class='button'>
       <svg class='icon-x'><use xlink:href='#icon-close'></use></svg>
       <span>Close details</span>
@@ -138,7 +138,7 @@
 
 {{!-- <div class='center charge'>
 
-  <div class='lego-house {{if showData 'active'}}'>
+  <div class='lego-house {{if showData "active"}}'>
 
     <div class='chunk left one'></div>
     <div class='chunk left two'></div>

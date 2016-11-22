@@ -18,8 +18,8 @@ export default Ember.Component.extend({
       Ember.$('body').find('.brand-icon').animate({
         'opacity': 1
       }, 500);
-    }, 2000);
-  },
+    }, 0); // no longer relevant
+   },
   click() {
     this.get('audio').getSound('jail-door').play();
     this.sendAction();
