@@ -10,6 +10,10 @@ export default Ember.Component.extend({
   audio: Ember.inject.service(),
   sound: 'jail-door', // default unless specified
 
+  didInsertElement() {
+    this.$().css('opacity', 0);
+  },
+
   initAudioFile: Ember.on('init', function() {
     // this.get('audio').load('/audio/jail-door.mp3').asSound('jail-door');
   }),
