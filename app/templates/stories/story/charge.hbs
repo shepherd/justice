@@ -8,33 +8,35 @@
 <section class='container information'>
 <div class='inner-w'>
 
-  <div class='crime-w'>
+  <div class='document'>
 
-    <div class='crime'>
-      <header class='heading'>
-        {{!-- <div class='number'>{{model.story.id}}</div> --}}
-        <div class='name'>{{model.story.id}}: The Crime: {{model.story.charge.description}}</div>
-      </header>
-{{!--       <div class='charge'>
-        <div class='timed one {{if showData "active"}}'>
-          {{model.story.charge.description}}
+    <header>
+      <div class='table'>
+        <div class='number'>{{model.story.id}}</div>
+        <div class='name'>The Crime:</div>
+        <div class='charge'>
+          <div class='timed one {{if showData "active"}}'>
+            {{model.story.charge.description}}
+          </div>
         </div>
-      </div> --}}
-    </div>
-    <footer class='stats'>
-      <div class='location'>
-        <span>Location: {{model.story.location}}</span>
-{{!--         <div class='timed two {{if showData "active"}}'>
-          {{model.story.location}}
-        </div> --}}
       </div>
-      <div class='priors'>
-        <span>Priors: {{happy-bool model.story.charge.priors}}</span>
-{{!--         <div class='timed three {{if showData "active"}}'>
-          {{happy-bool model.story.charge.priors}}
-        </div> --}}
+      
+      <div class='table'>
+        <div class='location'>
+          <span class='heading'>Location:</span>
+          <div class='content timed two {{if showData "active"}}'>
+            {{model.story.location}}
+          </div>
+        </div>
+        <div class='priors'>
+          <span class='heading'>Priors:</span>
+          <div class='content timed three {{if showData "active"}}'>
+            {{happy-bool model.story.charge.priors}}
+          </div>
+        </div>
       </div>
-    </footer>
+
+    </header>
 
     <section class='overview'>
       <p class='timed four {{if showData "active"}}'>{{model.story.charge.overview}}</p>
@@ -50,7 +52,7 @@
       <p class='timed six {{if showData "active"}}'>{{model.story.charge.prompt}}</p>
     </section>
 
-{{!--     <a {{action 'openDetails' }} class="button">
+{{!--     <a {{action 'openDetails' }} class='button'>
       <svg class='icon-x'><use xlink:href='#icon-details'></use></svg>
       <span>details</span>
     </a>
@@ -60,8 +62,8 @@
 </div>
 </section>
 
-<section class="container">
-<div class="inner-w">
+<section class='container'>
+<div class='inner-w'>
 
   {{selectedSentence}}
 
@@ -87,7 +89,7 @@
 </section>
 
 
-
+{{!-- 
 <section class='details {{if detailsOpen "open"}}'>
 
   <div class='crime'>
@@ -133,7 +135,7 @@
     </a>
   </div>
 
-</section>
+</section> --}}
 
 
 {{!-- <div class='center charge'>

@@ -5,21 +5,23 @@
 {{noise-layer}} --}}
 
 
-<section class="container">
+<section class='container'>
 <div class="inner-w">
   
+  <div class='document eff'>
+    <header>
+      <div class='table'>
+        <div class='number'>{{model.story.id}}</div>
+        <div class='name'>Societal Effects:</div>
+        <div class='charge'>
+          {{model.story.effects.title}}
+        </div>
+      </div>
+    </header>
+  </div>
+
+
   <div class='crime-w'>
-
-    <div class='crime eff'>
-      <header class='heading'>
-        <div class='number timed one {{if showData 'active'}}'>{{model.story.id}}: Societal Effects</div>
-        {{!-- <div class='name timed two {{if showData 'active'}}'>Societal Effects</div> --}}
-      </header>
-    </div>
-
-    <div class='title timed three {{if showData 'active'}}'>
-      <p>{{model.story.effects.title}}</p>
-    </div>
 
     <div class='story'>
       <ul class='fact-list'>

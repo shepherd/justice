@@ -5,13 +5,13 @@ export default Ember.Component.extend({
   classNames: ['button', 'next-button'],
 
   text: 'Next', // default unless specified
-  icon: true, // specify false to remove
+  icon: false, // specify false to remove // can't decide on default
 
   audio: Ember.inject.service(),
   sound: 'jail-door', // default unless specified
 
   initAudioFile: Ember.on('init', function() {
-    this.get('audio').load('/audio/jail-door.mp3').asSound('jail-door');
+    // this.get('audio').load('/audio/jail-door.mp3').asSound('jail-door');
   }),
 
   click() {

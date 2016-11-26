@@ -7,42 +7,35 @@
 <section class="container">
 <div class="inner-w">
   
-  <div class='crime-w'>
+  <div class='document'>
 
-    <div class='crime'>
-      <header class='heading'>
-        <div class='number'>{{model.story.id}}: The Sentence: {{model.story.sentence.headline}}</div>
-        {{!-- <div class='name'>The Sentence</div> --}}
-      </header>
-{{!--       <div class='headline'>
-        <div class='timed one {{if showData 'active'}}'>
-          {{model.story.sentence.headline}}
+    <header>
+      <div class='table'>
+        <div class='number'>{{model.story.id}}</div>
+        <div class='name'>The Sentence:</div>
+        <div class="charge">
+          <div class='timed one {{if showData 'active'}}'>
+            {{model.story.sentence.headline}}
+          </div>
         </div>
-      </div> --}}
-    </div>
-    <footer class='stats'>
-      <div class='actual'>
-        <h2>
-          <div class='timed two {{if showData 'active'}}'>
-            {{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}
-          </div>
-        </h2>
-        <span>Actual Sentence</span>
       </div>
-      <div class='your'>
-        <h2>
-          <div class='timed three {{if showData 'active'}}'>
-            {{selectedSentence}} <div class="years-text">years</div>
+
+      <div class='table'>
+        <div class='actual'>
+          <div class='heading'>Actual Sentence:</div>
+          <div class='content timed two {{if showData 'active'}}'>
+            <div class='outcome'>{{number-animator startValue=selectedSentence endValue=model.story.sentence.shortTime}}</div>
           </div>
-        </h2>
-        <span>Your Sentence</span>
+        </div>
+        <div class='your'>
+          <div class='heading'>Your Sentence:</div>
+          <div class='content timed three {{if showData 'active'}}'>
+            <span class='outcome'>{{selectedSentence}}</span>
+            <span class="years-text">years</span>
+          </div>
+        </div>
       </div>
-      {{!-- Maybe this? --}}
-      {{!-- <div class='your'>
-        <span>Difference</span>
-        <h2>{{difference model.story.sentence.shortTime model.selectedSentence}}</h2>
-      </div> --}}
-    </footer>
+    </header>
 
     <div class='story'>
       <p class='timed four {{if showData 'active'}}'>{{model.story.sentence.story}}</p>

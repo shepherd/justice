@@ -14,11 +14,12 @@ export default Ember.Component.extend({
     Ember.$('body').find('.brand-icon').css('opacity', 0);
   },
   didRender() {
-    Ember.run.later( function() {
-      Ember.$('body').find('.brand-icon').animate({
-        'opacity': 1
-      }, 500);
-    }, 0); // no longer relevant
+    let x = this.$();
+    // Ember.run.later( function() {
+    //   x.animate({
+    //     'opacity': 1
+    //   }, 500);
+    // }, 0);
    },
   click() {
     this.get('audio').getSound('jail-door').play();

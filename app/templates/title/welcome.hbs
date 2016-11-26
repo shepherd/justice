@@ -9,17 +9,15 @@
 
   <main>
     {{#blast-text}}
-      <p>An interactive experience that puts you within the U.S. criminal justice system.</p>
-      <p>Version 0.0.2</p>
-      <p>This should currently only be viewed on a small screen.</p>
-      <p><em>I'm working on getting the buttons to show only after the text has all been rendered.</em></p>
+      <p>This is an interactive experience that puts you within the U.S. criminal justice system.</p>
     {{/blast-text}}
   </main>
 
   <footer>
-    {{#link-to 'title.overview' class='button'}}
-      <span>> overview</span>
-    {{/link-to}}
+{{!--     {{#link-to 'title.overview' class='button'}}
+      <span>Next</span>
+    {{/link-to}} --}}
+    {{next-button text='Begin' action='transitionToOverview' class='button'}}
   </footer>
 
 </div>

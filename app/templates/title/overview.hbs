@@ -5,31 +5,23 @@
   <header>
     <h1 class='visually-hidden'>Overview</h1>
     
-    {{brand-icon class='eye'}}
+    {{brand-mark}}
   </header>
 
   <main>
     {{#blast-text}}
-    <p>This is a simulation of decisions made every day within the U.S. criminal justice system.</p>
+    <p>You will make decisions made every day within the U.S. criminal justice system.</p>
     {{/blast-text}}
   </main>
 
   <footer>
-    {{#link-to 'title.how-to' class='button'}}
-      <span>> how-to</span>
-    {{/link-to}}
+{{!--     {{#link-to 'title.how-to' class='button'}}
+      <span>Next</span>
+    {{/link-to}} --}}
+    {{next-button action='transitionToHowTo' class='button'}}
   </footer>
 
 </div>
 </section>
-
-
-<div class='center page'>
-
-
-{{!--   <footer>
-    {{next-button action='transitionToHowTo' class='temp'}}
-  </footer> --}}
-</div>
 
 {{progress-bar time='7'}}

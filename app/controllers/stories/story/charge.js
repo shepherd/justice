@@ -49,18 +49,18 @@ export default Ember.Controller.extend({
       this.transitionToRoute('stories.story.sentence', currentStoryId);
     },
 
-    openDetails() {
-      this.set('detailsOpen', true);
-      console.log('detailsOpen:', this.get('detailsOpen') );
-      $('body').find('.details').animate( {
-        scrollTop: 0
-      }, 1); // not sure why this can't be 0...
-      $('body').addClass('modal-open');
-    },
-    closeDetails() {
-      this.set('detailsOpen', false);
-      console.log('detailsOpen:', this.get('detailsOpen') );
-      $('body').removeClass('modal-open');
-    }
+    // openDetails() {
+    //   this.set('detailsOpen', true);
+    //   console.log('detailsOpen:', this.get('detailsOpen') );
+    //   $('body').find('.details').animate( {
+    //     scrollTop: 0
+    //   }, 1); // not sure why this can't be 0...
+    //   $('body').addClass('modal-open');
+    // },
+    // closeDetails() {
+    //   this.set('detailsOpen', false);
+    //   console.log('detailsOpen:', this.get('detailsOpen') );
+    //   $('body').removeClass('modal-open');
+    // }
   }
 });

@@ -5,20 +5,18 @@
   <header>
     <h1 class='visually-hidden'>How-to</h1>
 
-    {{brand-icon class='eye'}}
+    {{brand-mark}}
   </header>
 
   <main>
     {{#blast-text}}
-      <p>This will take 5 minutes and contains real-life stories.</p>
-      <p>Mention that there is audio.</p>
+      <p>The scenarios reflect real-life stories.</p>
+      <p>The use of headphones is recommended.</p>
     {{/blast-text}}
   </main>
 
   <footer>
-    {{#link-to 'title.why' class='button'}}
-      <span>> why</span>
-    {{/link-to}}
+    {{next-button action='transitionToFirstStory' class='button'}}
   </footer>
 
 </div>

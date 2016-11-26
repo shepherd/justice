@@ -73,6 +73,27 @@ p
   &:not(first-of-type)
     margin-top: $pad*2
 
+responsive-img()
+  display: block
+  width: 100%
+  height: auto
+.img-w
+  img
+    responsive-img()
+
+responsive-svg()
+  display: block
+  width: 100%
+  height: 100%
+  fill: currentColor
+.svg-w
+  svg
+    responsive-svg()
+
+.brand-mark
+  display: inline-block
+  max-width: 40px
+
 .module
   // background: $white
   padding: $pad
@@ -91,7 +112,6 @@ p
 
 .ember-load-indicator
   fixed-stretch()
-  
   z-index: 50
   .branding
     absolute-translate-center()
@@ -104,7 +124,6 @@ p
 // .record-indicator
 //   display: none
 
-
 .social-list
   li
     display: inline-block
@@ -113,20 +132,16 @@ p
      
 .stats
   display: flex
-
-.actual, .your
-  display: block
-  border: 1px solid $color
-  padding: $pad
-
-.actual
-  margin-right: $pad*4
   
 .next-button
   margin-bottom: $pad*6
   border: 1px solid $highlight
   padding: $pad*2 $pad*3
   min-width: 120px
+  text-align: center
+  span
+    display: inline-block
+    width: 100%;
 
 .button
   border: 1px solid $highlight
@@ -146,42 +161,65 @@ p
     margin-right: $pad
   &:active, &:hover
     background: $highlight
-    color: $white
-  
+    color: $white 
+
 .page
-  // background: $black
-  // color: $white
+  // border: 1px solid red
+  padding: $pad*2
+  text-align: center
   header
-    text-align: center
+    .full-logo
+      display: inline-block
+      color: $color
+      margin: $pad*4 0 $pad*4
+    .brand-mark
+      color: $color
+  main
+    text-align: left
+    color: $white
+    p
+      solid-type()
   footer
     margin-top: $pad*6
-    
-.details
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  background: $white
-  width: 100%
-  height: 100%
-  // border: 1px solid red
-  z-index: 20000
-  padding: $pad*2
-  padding-bottom: $pad*8
-  overflow: scroll
-  -webkit-overflow-scrolling: touch
-  display: none
-  max-width: 800px
-  max-height: 800px
-  absolute-translate-center()
 
-  p
-    margin-bottom: $pad*2
-  .button-w
-    margin-top: $pad*4
-  &.open
-    display: block
+  .button
+    border-color: $color
+    color: $color
+    text-decoration: none
+    &:active, &:hover
+      background: $color
+      color: $white
+
+
+
+
+
+// .details
+//   position: fixed
+//   top: 0
+//   right: 0
+//   bottom: 0
+//   left: 0
+//   background: $white
+//   width: 100%
+//   height: 100%
+//   // border: 1px solid red
+//   z-index: 20000
+//   padding: $pad*2
+//   padding-bottom: $pad*8
+//   overflow: scroll
+//   -webkit-overflow-scrolling: touch
+//   display: none
+//   max-width: 800px
+//   max-height: 800px
+//   absolute-translate-center()
+
+//   p
+//     margin-bottom: $pad*2
+//   .button-w
+//     margin-top: $pad*4
+//   &.open
+//     display: block
 
 body
   &.modal-open
@@ -193,18 +231,20 @@ body
 
 .branding.eye
   max-width: 30px
-  border: 1px solid red
+  // border: 1px solid red
 
-.story-header .inner-w
-  display: flex
-  flex-direction: row
-  flex-grow: 1
-  align-content: stretch
-  align-items: center
-  > *
-    // border: 1px solid lime
-  .branding.eye
-    // align-self: flex-start
+.story-header 
+  .inner-w
+    display: flex
+    flex-direction: row
+    flex-grow: 1
+    align-content: stretch
+    align-items: center
+    padding-bottom: 0
+    > *
+      // border: 1px solid lime
+  .brand-mark
+    max-width: 30px
   .something
     flex-grow: 1
     text-align: center
@@ -214,24 +254,6 @@ body
 body.title
   background: black
   color: $white
-  .full-logo
-    margin-top: $pad*4
-    color: $color
-    margin-bottom: $pad*5
-  .button
-    border-color: $color
-    color: $color
-    text-decoration: none
-    &:active, &:hover
-      background: $color
-      color: $white
-  .eye-branding
-    color: $color
-    max-width: 30px
-    svg
-      display: block
-      width: 100%
-      height: 100%
 
 .stories
   .brand-icon
@@ -261,6 +283,9 @@ body.title
     path
       color: $color
 
+.progress-bar
+  display: none
+
 .eye
   color: $color
   max-width: 70px
@@ -272,8 +297,17 @@ body.title
     width: 100%
     height: 100%
 
+.ember-view
+  // border: 2px solid orange
+
 .xxx
   //
+  position: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  // border: 3px solid purple
   @media $break-point-1
     .information
       .button
@@ -294,23 +328,79 @@ body.title
     background: $white
     padding: $pad*4
 
-.details
-  .crime
-    border-bottom: $thick solid $black
-  .heading
-    border: 1px solid orange
-    display: flex
-    .number
-      border: 1px solid blue
-      width: 30px
-      margin-right: $pad
-    .name
-      border: 1px solid red
+.document
+  //
+  header
+    clear-floats()
+  .table
+    float: left
+    border: $thick solid $black
+    padding: 0
+    margin: 0
+    clear-floats()
+    width: auto
+    &:first-of-type
+      border-bottom: $thick solid $black
+      width: auto
+      width: 100%
+    &:nth-of-type(2)
+      border-top: 0
+  header
     //
+    uppercase()
+    .number
+      min-width: 22px
+      border-right: $thick solid $black
+      border-bottom: $thick solid $black
+      display: inline-block
+      text-align: center
+    .name
+      display: inline-block
+    .charge
+      padding: $pad
+      solid-type()
+      line-height: 1
+    .location, .priors, .actual, .your
+      float: left
+      padding: 0 $pad
+      min-width: $pad*26
+      > *
+        // border: 1px solid red
+      .heading
+        display: inline-block
+        small-type()
+        height: 5px
+        line-height: 5px
+        // border: 1px solid red
+      .content
+        // height: 10px
+        // line-height: 10px
+        // margin-bottom: $pad
+    .actual, .your
+      .heading
+        // border: 1px solid blue
+      .content
+        // border: 1px solid green
+        noir-type()
+        font-size: 40px
+        line-height: 26px
+    .location, .actual
+      border-right: $thick solid $black
       
+        
+.fact-list
+  li
+    // border: 1px solid blue
+    margin-top: $pad*3
+  h3
+    noir-type()
+    font-size: 30px
+  
 .slider-button
   // border: 1px solid red
   padding: 0 $pad*5
   clear-floats()
   .button
     float: right
+
+
