@@ -15,6 +15,13 @@ html, body
     background-position: center center
     background-image: url('/images/stories/4/right.png')
 
+/*
+ * iOS 9.3 fix
+*/
+[data-ember-action]
+  cursor: pointer
+  background: blue
+
 body
   // background: $black
   transition: 0s
@@ -191,7 +198,15 @@ responsive-svg()
       // color: $white
 
 
-
+.home-button
+  position: absolute
+  z-index: 2000
+  top: 0
+  right: 0
+  padding: $pad*2
+  border: 2px solid red
+  min-width: 100px
+  text-align: right
 
 
 // .details

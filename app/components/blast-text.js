@@ -20,14 +20,14 @@ export default Ember.Component.extend({
         if ( counter >= thisLength ) {
           Ember.$('body').find('.next-button').velocity({
             opacity: [1, 0],
-            translateY: [0, -3]
+            translateY: [0, 0] // thinking about this...
           }, {
             delay: 500
           });
-          // send action up to controller or to component to show button instead of querying the dom
+          // $todo
+          // send action up to controller or to component to show button instead of querying the dom from here...
         }
       }, speed * index);
-
     });
   },
   didInsertElement() {
