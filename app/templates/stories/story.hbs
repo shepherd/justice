@@ -8,10 +8,11 @@
     {{!-- something... --}}
   </div>
 
-
-  {{#link-to 'conclusion.sign-up' class='home-button'}}
-    <span>HOME</span>
-  {{/link-to}}
+  {{warn-link
+    text='HOME'
+    href='http://justicefor.us'
+    class='home-button'
+    message='Are you sure you want to leave this area?'}}
 
 </div>
 </header>
