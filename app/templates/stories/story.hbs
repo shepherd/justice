@@ -1,8 +1,12 @@
 
+{{noise-layer}}
+
+
+
 <header class='container story-header'>
 <div class='inner-w'>
   
-  {{brand-mark}}
+  {{brand-mark class='color'}}
 
   <div class='something'>
     {{!-- something... --}}
@@ -10,15 +14,20 @@
 
   {{warn-link
     text='HOME'
-    x='http://justicefor.us'
+    href='http://justicefor.us'
     class='home-button'
-    message='Are you sure you want to leave this area?'}}
+    message='Are you sure you want to leave? Any saved data about your progress will be reset.'
+  }}
 
 </div>
 </header>
 
 
 
-<section class='yyy'>
+<section class='story-outlet'>
+<div class="inner-w">
+  
   {{outlet}}
+
+</div>
 </section>

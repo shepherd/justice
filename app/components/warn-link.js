@@ -1,25 +1,33 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'div',
+  tagName: 'div', // this should probably be an 'a' tag with attribute binding
   classNames: ['warn-link'],
   message: "Are you sure?",
-  x: null,
+  href: null,
   click() {
-    alert('hello');
-    // let destination = this.get('x');
-    // if ( destination ) {
-    //   let thisMessage = this.get('message');
-    //   var confirmation = confirm(thisMessage)
-    //   if ( confirmation ) {
-    //     // location.href = destination;
-    //     window.location(destination);
-    //     return true;
-    //   }
-    //   console.log('User pressed home, but deciced not to leave the experience');
-    //   return false;
-    // }
-    // alert('There is no destination for this link.');
-    // return false;
+    let destination = this.get('href');
+    if ( destination ) {
+      let thisMessage = this.get('message');
+      var confirmation = confirm(thisMessage);
+      if ( confirmation ) {
+        Ember.$('body').velocity({
+          opacity: 0 // fading out the body in an attempt to smooth the transition to the new URL
+        }, {
+          duration: 300,
+          complete() {
+            location.href = destination;
+            // window.location(destination); // wehich version is best?
+          }
+        });
+        return true;
+        // $todo
+        // this should trigger the action that clears the user
+      }
+      console.log('User pressed home, but deciced not to leave the experience');
+      return false;
+    }
+    alert('There is no destination for this link.');
+    return false;
   }
 });

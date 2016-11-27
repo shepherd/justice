@@ -1,14 +1,16 @@
 
 {{!-- <div class='background-image-full image-{{model.story.id}}'></div>
-<div class='background-image-pattern image-{{model.story.id}}'></div> --}}
+<div class='background-image-pattern image-{{model.story.id}}'></div>
 
-{{!-- {{noise-layer}} --}}
+{{noise-layer}} --}}
 
 
 <section class='container information'>
 <div class='inner-w'>
 
   <div class='document'>
+
+    {{lego-block-edges}}
 
     <header>
       <div class='table'>
@@ -20,7 +22,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class='table'>
         <div class='location'>
           <span class='heading'>Location:</span>
@@ -62,10 +64,8 @@
 </div>
 </section>
 
-<section class='container'>
+<section class='container range-area'>
 <div class='inner-w'>
-
-  {{selectedSentence}}
 
   <div class='range-w'>
     {{ui-slider
@@ -142,14 +142,7 @@
 
   <div class='lego-house {{if showData "active"}}'>
 
-    <div class='chunk left one'></div>
-    <div class='chunk left two'></div>
-    <div class='chunk left three'></div>
-    <div class='chunk left four'></div>
-    <div class='chunk right five'></div>
-    <div class='chunk right six'></div>
-    <div class='chunk right seven'></div>
-    <div class='chunk right eight'></div>
+
 
   </div>
 

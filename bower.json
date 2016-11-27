@@ -6,6 +6,7 @@
     "seiyria-bootstrap-slider": "~6.0.6",
     "bootstrap": "^3.3.7",
     "blast-text": "^2.0.0",
-    "velocity": "^1.3.2"
+    "velocity": "^1.3.2",
+    "hammer-time": "^1.1.0"
   }
 }

@@ -1,0 +1,34 @@
+
+.wire-fframes
+  background: $color-light
+  //
+  .container
+    border: 2px solid $color
+    padding: $pad
+    margin-top: $pad
+    .inner-w
+      border: 1px solid $color
+  &.landing
+    section.container
+      .inner-w
+        min-height: 300px
+        @media $break-point-1
+          min-height: 400px
+  .menu
+    //
+  .module
+    width: 100%
+    border: 1px solid $color
+    .input-w
+      .label
+        color: $color
+      input
+        background: transparent
+        border: 1px solid $color
+  .ember-load-indicator
+    .branding
+      border: 1px solid $color
+  .range-slider
+    border: 1px solid $color
+  .ember-load-indicator
+    background: $color-light

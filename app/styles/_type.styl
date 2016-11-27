@@ -33,6 +33,7 @@ large-type()
 medium-type()
   font-size: 20px
   solid-type()
+
 p
   // max-width: 740px
   em
@@ -40,3 +41,11 @@ p
 
 h1
   solid-type()
+
+fat-type()
+  solid-type()
+  font-size: 19px
+  @media $break-point-1
+    font-size: 22px
+  @media $break-point-2
+    font-size: 24px

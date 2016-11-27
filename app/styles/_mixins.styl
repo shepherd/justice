@@ -87,3 +87,20 @@ balance()
   float: none
   display: inline-block
   vertical-align: middle
+  
+responsive-img()
+  display: block
+  width: 100%
+  height: auto
+.img-w, .image-w
+  img
+    responsive-img()
+
+responsive-svg()
+  display: block
+  width: 100%
+  height: 100%
+  fill: currentColor
+.svg-w
+  svg
+    responsive-svg()

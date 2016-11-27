@@ -26,7 +26,7 @@ export default Ember.Route.extend({
       this.controllerFor('title').activateBlocks();
 
       console.log('did:', 'start');
-      let thisRoute = this;
+      // let thisRoute = this;
       let timer = Ember.run.later(( function() {
         // thisRoute.transitionTo('title.overview');
       }), 8000);

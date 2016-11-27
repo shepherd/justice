@@ -9,19 +9,20 @@
 <div class="inner-w">
   
   <div class='document eff'>
+
+    {{lego-block-edges}}
+
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
         <div class='name'>Societal Effects:</div>
         <div class='charge'>
-          {{model.story.effects.title}}
+          <span class='timed three {{if showData 'active'}}' >
+            {{model.story.effects.title}}
+          </span>
         </div>
       </div>
     </header>
-  </div>
-
-
-  <div class='crime-w'>
 
     <div class='story'>
       <ul class='fact-list'>
@@ -33,7 +34,6 @@
         {{/each}}
       </ul>
     </div>
-
   </div>
 
   <footer class='below-lego-house {{if showData 'active'}}'>
@@ -46,22 +46,3 @@
 
 </div>
 </section>
-
-
-{{!-- <div class='center effects'>
-
-  <div class='lego-house {{if showData 'active'}}'>
-
-    <div class='chunk left one'></div>
-    <div class='chunk left two'></div>
-    <div class='chunk left three'></div>
-    <div class='chunk left four'></div>
-    <div class='chunk right five'></div>
-    <div class='chunk right six'></div>
-    <div class='chunk right seven'></div>
-    <div class='chunk right eight'></div>
-
-  </div>
-
-</div>
- --}}

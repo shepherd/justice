@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     Ember.$('body').find('.brand-icon').css('opacity', 0);
   },
   didRender() {
-    let x = this.$();
+    // let x = this.$();
     // Ember.run.later( function() {
     //   x.animate({
     //     'opacity': 1

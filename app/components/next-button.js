@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   sound: 'jail-door', // default unless specified
 
   didInsertElement() {
-    this.$().css('opacity', 0);
+    // this.$().css('opacity', 0);
   },
 
   initAudioFile: Ember.on('init', function() {

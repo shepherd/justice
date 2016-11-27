@@ -1,44 +1,14 @@
 
+{{svg-icon-sprite}}
+
 {{ember-load-remover}}
 
-{{outlet}}
-
-<!--
-
-<div class='outfield'>
-
-  <div class='justice-wrapper'>
-{{!--     <div class='background-image-full'></div>
-    <div class='background-image-pattern'></div> --}}
-    {{!-- {{noise-layer}} --}}
-
-    <div class='application-outlet'>
-      {{outlet}}
-    </div>
-  </div>
-
+<div class='application-outlet'>
+  {{outlet class='butt'}}
 </div>
 
--->
-
-{{!-- hacky preload  --}}
+{{!-- hacky preload // $todo - should be reassessed --}}
 {{#each stories as |story|}}
-  <img class='visually-hidden' src='/images/stories/{{story}}/left.jpg' alt=''>
-  <img class='visually-hidden' src='/images/stories/{{story}}/right.png' alt=''>
+  <img class='visually-hidden' src='/images/stories/{{story}}/left.jpg' alt='Decorative background image'>
+  <img class='visually-hidden' src='/images/stories/{{story}}/right.png' alt='Decorative background image'>
 {{/each}}
-
-{{!-- <div class='cover too-small'>
-  <div class='center'>
-    {{full-logo}}
-    <h2>This beta* version of JusticeForUs was created solely for iPad and tablet-sized screens. </h2>
-    <p>Please view it on an iPad or other appropriate screen-size for now. Please visit <a href='http://www.justicefor.us'>http://justicefor.us</a> for more information about the project.</p>
-  </div>
-</div>
-
-<div class='cover rotate'>
-  <div class='center'>
-    {{full-logo}}
-    <h2>Try rotating your device</h2>
-    <p>This beta* version of JusticeForUs was created solely for iPad and tablet-sized screens. Please view it on an iPad or other appropriate screen-size for now. Please visit <a href='http://www.justicefor.us'>http://justicefor.us</a> for more information about the project.</p>
-  </div>
-</div> --}}
