@@ -11,15 +11,15 @@ export default Ember.Component.extend({
       let thisMessage = this.get('message');
       var confirmation = confirm(thisMessage);
       if ( confirmation ) {
-        Ember.$('body').velocity({
-          opacity: 0 // fading out the body in an attempt to smooth the transition to the new URL
-        }, {
-          duration: 300,
-          complete() {
-            location.href = destination;
-            // window.location(destination); // wehich version is best?
-          }
-        });
+        // Ember.$('body').velocity({
+        //   opacity: 0 // fading out the body in an attempt to smooth the transition to the new URL
+        // }, {
+        //   duration: 300,
+        //   complete() {
+        //     location.href = destination;
+        //     // window.location(destination); // wehich version is best?
+        //   }
+        // });
         return true;
         // $todo
         // this should trigger the action that clears the user

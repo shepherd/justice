@@ -1,13 +1,17 @@
-{{!-- 
-<div class='background-image-full image-{{model.story.id}}'></div>
-<div class='background-image-pattern image-{{model.story.id}}'></div> --}}
 
-{{!-- {{noise-layer}} --}}
+<div class='background-image-full image-{{model.story.id}}'></div>
+<div class='background-image-pattern image-{{model.story.id}}'></div>
+
+
+
+{{noise-layer}}
+
+
 
 <section class="container">
 <div class="inner-w">
-  
-  <div class='document'>
+
+  <div class='document {{if showData 'active'}}'>
 
     {{lego-block-edges}}
 
@@ -49,22 +53,17 @@
 
   </div>
 
-
-  <footer class='below-lego-house {{if showData 'active'}}'>
-    {{next-button action='transitionToEffects'}}
-  </footer>
-
-
 </div>
 </section>
 
 
 
-{{!-- <div class='center sentence'>
+<section class='container action-area'>
+<div class='inner-w'>
 
-  <div class='lego-house {{if showData 'active'}}'>
-
-
+  <div class='button-w timed six {{if showData 'active'}}'>
+    {{next-button action='transitionToEffects'}}
   </div>
 
-</div> --}}
+</div>
+</section>

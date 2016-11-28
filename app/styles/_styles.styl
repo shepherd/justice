@@ -1,7 +1,7 @@
 
 // $dev
 dev-outline($color)
-  border: 2px solid $color
+  border: 0px solid $color
 
 
 full-background($image)
@@ -26,11 +26,13 @@ html
 
 body
   background-color: $black
-  transition: 0s // no idea what is triggering transitions...
+  transition: 0s // no idea what is triggering transitions... but this is to stop them
   background: $white
   dev-outline(gray)
   @media $break-point-2
-    full-background('/images/stories/4/right.png') // testing
+    // fixed-translate-center()
+    // width: 100%
+    // full-background('/images/stories/4/right.png') // testing
 
 // $structure
 .container
@@ -69,8 +71,10 @@ p
     dev-outline(blue)
 
 .brand-mark
+  position: relative
   display: inline-block
   max-width: 40px
+  z-index: 1
 
 .menu
   li
@@ -137,6 +141,8 @@ p
   line-height: 30px
   text-align: right
   color: $gray
+  @media $break-point-2
+    color: $highlight
 
 
 
@@ -152,11 +158,25 @@ p
     a
       color: $color
 
-.below-lego-house
-  text-align: right
-  border: 1px solid blue
+.action-area
+  // text-align: right
+  dev-outline(lime)
+  *
+    // border: 1px solid red
+  .button-w
+    float: right
   .next-button
+    button()
     display: inline-block
+    color: $highlight
+    border: $thick solid $highlight
+  @media $break-point-2
+    .next-button
+      color: $white
+      border: $thick solid $white
+      &:hover
+        opacity: .8
+
 
 .stats
   display: flex
@@ -170,24 +190,29 @@ p
   span
     display: inline-block
     width: 100%;
+  @media $break-point-2
+    color: $white
+    border: $thick solid $white
+
 
 .button
-  border: $thick solid $highlight
-  padding: $pad $pad*2
-  margin-top: $pad
-  display: inline-flex
-  align-items: center
-  // max-width: 200px
-  flex-shrink: 1
-  solid-type()
-  uppercase()
-  font-size: 16px
-  letter-spacing: .06em
+  button()
+  // border: $thick solid $highlight
+  // padding: $pad $pad*2
+  // margin-top: $pad
+  // display: inline-flex
+  // align-items: center
+  // // max-width: 200px
+  // flex-shrink: 1
+  // solid-type()
+  // uppercase()
+  // font-size: 16px
+  // letter-spacing: .06em
   .icon-x
     width: 16px
     height: 16px
     margin-right: $pad
-  &:active, &:hover
+  // &:active, &:hover
     // background: $highlight
     // color: $white
 
@@ -212,6 +237,12 @@ delay($delay)
     delay(1.7s)
   &.seven
     delay(2s)
+  &.eight
+    delay(2.3s)
+  &.nine
+    delay(2.6s)
+  &.ten
+    delay(2.9s)
   &.active
     transform: translate(0,0)
     opacity: 1
@@ -256,9 +287,30 @@ delay($delay)
 .brand-mark
   &.color
     color: $highlight
+  @media $break-point-2
+    &.color
+      color: $white
 
+.background-image-full, .background-image-pattern
+  fixed-stretch()
+  background-size: cover
+  background-position: center center
+  z-index: -1
+  display: none
+  @media $break-point-2
+    display: block
 
-
+.background-image-full
+  &.image-1
+    background-image: url("/images/stories/1/right.png")
+  &.image-2
+    background-image: url("/images/stories/2/right.png")
+  &.image-3
+    background-image: url("/images/stories/3/right.png")
+  &.image-4
+    background-image: url("/images/stories/4/right.png")
+  &.image-5
+    background-image: url("/images/stories/5/right.png")
 
 // .details
 //   position: fixed
@@ -302,6 +354,7 @@ delay($delay)
   // border: 1px solid red
 
 .story-header
+  //
   .inner-w
     display: flex
     flex-direction: row
@@ -310,8 +363,6 @@ delay($delay)
     align-items: center
     padding-bottom: 0
     position: relative
-    > *
-      // border: 1px solid lime
   .brand-mark
     max-width: 30px
   .something
@@ -319,6 +370,9 @@ delay($delay)
     text-align: center
   .home-button
     // align-self: flex-end
+  @media $break-point-2
+    .inner-w
+      max-width: 100%
 
 body.title
   background: black
@@ -371,9 +425,17 @@ body.title
 
 .information
   max-width: 650px
+  relative()
+  z-index: 2
+  @media $break-point-2
+    .inner-w
+      padding: 0
 
 .range-area
   max-width: 650px
+  @media $break-point-2
+    .button-w
+      margin-top: 36px
 
 .body
   background: $black
@@ -392,20 +454,27 @@ body.title
 
 .document
   position: relative
-  border: 1px solid lightgreen
+  dev-outline(lightgreen)
   max-width: 650px
-  min-height: 320px
   background: white
+  @media $break-point-2
+    min-height: 320px
+    opacity: 0
+    transform: translate(0, -($pad*4) )
+    transition: .2s
+    &.active
+      transform: translate(0,0)
+      opacity: 1
   .chunk
     position: absolute
     width: 40px
     height: 40px
     background: $white
-    // display: none
+    display: none
     transition: 3s
     z-index: -1
     @media $break-point-2
-      // display: block
+      display: block
 
   .left
     right: calc(100% - 40px)
@@ -502,10 +571,18 @@ body.title
     font-size: 30px
 
 .slider-button
-  // border: 1px solid red
+  border: 1px solid red
   padding: 0 $pad*5
   clear-floats()
   .button
     float: right
+  @media $break-point-2
+    padding: 0
+    width: auto
+    float: right
+    .button
+      margin-top: 36px
+      color: $white
+      border: $thick solid $white
 
 

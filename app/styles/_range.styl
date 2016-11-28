@@ -4,10 +4,14 @@
   // width: 70%
   // float: left
   padding: 0 $pad*5
+  @media $break-point-2
+    padding: 0
+    width: 70%
+    display: inline-block
 
 .slider-selection.tick-slider-selection
   background: $highlight
-  
+
 .tooltip
   // display: none
   top: 30px
@@ -43,7 +47,7 @@
   border-width: 10px 10px 0
   border-top-color: $color
   // display: none
-    
+
 .tooltip.in
   opacity: 1
 
@@ -51,19 +55,19 @@
   width: 2px
   bottom: -8px
   display: none
-  
+
 .slider.slider-horizontal .slider-tick
   margin-left: 0
-  
+
 .slider.slider-horizontal .slider-track
   // height: 4px
   z-index: 1
   .slider-track-low, .slider-track-hi
     //
-  
+
 .slider-handle
   opacity: 0
-  
+
 .slider-tick.in-selection
   // background: rgba(255,255,255,.5)
   display: none
@@ -71,5 +75,5 @@
 
 .slider-tick-label-container
   display: none
-  
+
 

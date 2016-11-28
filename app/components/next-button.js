@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   tagName: 'button',
-  classNames: ['button', 'next-button'],
+  classNames: ['next-button'],
 
   text: 'Next', // default unless specified
   icon: false, // specify false to remove // can't decide on default

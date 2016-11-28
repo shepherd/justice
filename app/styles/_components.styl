@@ -2,18 +2,7 @@
 .years-text
   display: inline
   font-family: monospace
-  font-size: 0.3em
-
-// .ember-load-indicator
-//   fixed-translate-center()
-//   top: 47%;
-//   max-width: 100px
-//   color: $white
-//   svg
-//     display: block
-//     width: 100%
-//     height: auto
-//     fill: currentColor
+  font-size: 0.3em // move this $todo
 
 .full-logo
   resonsive-image()
@@ -21,6 +10,7 @@
   .eye
     color: $color
 
+// SVG icons
 [class^="icon-"], [class*=" icon-"]
   height: 32px
   width: 32px
@@ -32,14 +22,6 @@
     transform: translate(0,0)
   50%
     transform: translate(10%,0)
-
-.page-logo
-  // position: fixed
-  // top: 20%
-  // horizontal-absolute-translate-center()
-  // color: $color
-  // .eye
-  //   color: $color
 
 .noise-layer
   background-image: url('../images/noise.png')
@@ -53,35 +35,32 @@
   z-index: 0
   background-size: 300px
   display: none
+  @media $break-point-2
+    display: block
 
-@keyframes record-pulse
-  0%, 100%
-    box-shadow: 0 0 2px 2px alpha($highlight, 40%)
-  50%
-    box-shadow: 0 0 3px 3px alpha($highlight, 60%)
+// @keyframes record-pulse
+//   0%, 100%
+//     box-shadow: 0 0 2px 2px alpha($highlight, 40%)
+//   50%
+//     box-shadow: 0 0 3px 3px alpha($highlight, 60%)
 
-.record-indicator
-  // border: 1px solid red
-  padding: $pad*3.2
-  fixed()
-  top: $pad*6
-  right: $pad*3
-  z-index: 10
-  dev-outline(yellow)
-  .light
-    width: $pad*3
-    height: $pad*3
-    border-radius: 50%
-    background: $highlight
-    animation: record-pulse 2s infinite
+// .record-indicator
+//   padding: $pad*3.2
+//   fixed()
+//   top: $pad*6
+//   right: $pad*3
+//   z-index: 10
+//   dev-outline(yellow)
+//   .light
+//     width: $pad*3
+//     height: $pad*3
+//     border-radius: 50%
+//     background: $highlight
+//     animation: record-pulse 2s infinite
 
 .range-slider
   width: 100%
-  dev-outline(orange)
-  
-a 
-  &:hover
-    text-decoration: none
+  dev-outline(orange) // $todo - where should this be
 
 button()
   relative()
@@ -102,19 +81,9 @@ button()
   letter-spacing: .2em
   font-weight: 700
   transition: .3s
-  // text-decoration: none
-  &:hover
-    text-decoration: none
   span
     balance()
     border: 0
-  &:active, &:focus, &:hover
+  &:hover
     opacity: .8
 
-.button
-  // button()
-  margin: 0
-  padding: 0
-  color: $highlight
-  margin-top: $pad
-  // text-decoration: underline

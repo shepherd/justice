@@ -1,21 +1,24 @@
 
-{{!-- <div class='background-image-full image-{{model.story.id}}'></div>
+<div class='background-image-full image-{{model.story.id}}'></div>
 <div class='background-image-pattern image-{{model.story.id}}'></div>
 
-{{noise-layer}} --}}
+
+
+{{noise-layer}}
+
 
 
 <section class='container information'>
 <div class='inner-w'>
 
-  <div class='document'>
+  <div class='document {{if showData 'active'}}'>
 
     {{lego-block-edges}}
 
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
-        <div class='name'>The Crime:</div>
+        <div class='name'>The Crime: {{valueSelected}} {{selectedSentence}}</div>
         <div class='charge'>
           <div class='timed one {{if showData "active"}}'>
             {{model.story.charge.description}}
@@ -54,20 +57,17 @@
       <p class='timed six {{if showData "active"}}'>{{model.story.charge.prompt}}</p>
     </section>
 
-{{!--     <a {{action 'openDetails' }} class='button'>
-      <svg class='icon-x'><use xlink:href='#icon-details'></use></svg>
-      <span>details</span>
-    </a>
- --}}
   </div>
 
 </div>
 </section>
 
-<section class='container range-area'>
+
+
+<section class='container action-area range-area'>
 <div class='inner-w'>
 
-  <div class='range-w'>
+  <div class='range-w timed seven {{if showData "active"}}'>
     {{ui-slider
       tooltip='always'
       classNames='range-slider'
@@ -81,69 +81,9 @@
     }}
   </div>
 
-  <footer class='button-w slider-button {{if showData "active"}}'>
-    {{next-button action='transitionToSentence'}}
-  </footer>
+  <div class='button-w timed eight {{if showData "active"}} '>
+    {{next-button action='transitionToSentence' icon='true'}}
+  </div>
 
 </div>
 </section>
-
-
-{{!-- 
-<section class='details {{if detailsOpen "open"}}'>
-
-  <div class='crime'>
-    <header class='heading'>
-      <div class='number'>{{model.story.id}}</div>
-      <div class='name'>The Crime: {{model.story.charge.description}}</div>
-    </header>
-    <div class='charge'>
-      <div class='timed one {{if showData "active"}}'>
-        {{model.story.charge.description}}
-      </div>
-    </div>
-  </div>
-  <footer class='stats'>
-    <div class='location'>
-      <span>Location:</span>
-      <div class='timed two {{if showData "active"}}'>
-        {{model.story.location}}
-      </div>
-    </div>
-    <div class='priors'>
-      <span>Priors:</span>
-      <div class='timed three {{if showData "active"}}'>
-        {{happy-bool model.story.charge.priors}}
-      </div>
-    </div>
-  </footer>
-
-  <section class='overview'>
-    <p class='timed four {{if showData "active"}}'>{{model.story.charge.overview}}</p>
-  </section>
-
-  {{#if model.story.charge.priors}}
-    <section class='priors-story'>
-      <p class='timed five {{if showData "active"}}'>{{model.story.charge.priors}}</p>
-    </section>
-  {{/if}}
-
-  <div class='button-w'>
-    <a {{action 'closeDetails'}} class='button'>
-      <svg class='icon-x'><use xlink:href='#icon-close'></use></svg>
-      <span>Close details</span>
-    </a>
-  </div>
-
-</section> --}}
-
-
-{{!-- <div class='center charge'>
-
-  <div class='lego-house {{if showData "active"}}'>
-
-
-
-  </div>
-
-</div> --}}
