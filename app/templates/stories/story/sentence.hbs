@@ -18,7 +18,7 @@
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
-        <div class='name'>The Sentence:</div>
+        <div class='name'>The Sentence</div>
         <div class="charge">
           <div class='timed one {{if showData 'active'}}'>
             {{model.story.sentence.headline}}
@@ -58,11 +58,11 @@
 
 
 
-<section class='container action-area'>
+<section class='container action-area timed one {{if showData 'active'}}'>
 <div class='inner-w'>
 
   <div class='button-w timed six {{if showData 'active'}}'>
-    {{next-button action='transitionToEffects'}}
+    {{next-button text='The effects' icon='true' action='transitionToEffects'}}
   </div>
 
 </div>

@@ -1,12 +1,12 @@
 
 .range-w
-  margin-top: 40px
+  margin-top: 48px
   // width: 70%
   // float: left
-  padding: 0 $pad*5
+  padding: 0 $pad*8
   @media $break-point-2
     padding: 0
-    width: 70%
+    width: 65%
     display: inline-block
 
 .slider-selection.tick-slider-selection
@@ -23,17 +23,18 @@
   background: $color
   font-size: 36px
   min-width: 60px
+  transition: width .3s
   position: relative
   bottom: 0px
   opacity: 1
   cursor: grab
   noir-type()
-  border-radius: 50%
+  // border-radius: 50%
   color: $white
 
 .tooltip.top
   padding: 0
-  transform: translate(0,-40px)
+  transform: translate(0,-46px)
 
 .tooltip.top .tooltip-arrow
   position: absolute

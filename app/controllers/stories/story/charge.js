@@ -19,6 +19,16 @@ export default Ember.Controller.extend({
     }
   }),
 
+  qualitative(value) {
+    if (value === 0) {
+      return 'Fine';
+    } else if (value === 40 ) {
+      return 'Life';
+    } else {
+      return value;
+    }
+  },
+
   valueSelected: Ember.computed('model.selectedSentence', function() {
     const value = this.get('model.selectedSentence');
     const min = this.get('model.story.charge.min');

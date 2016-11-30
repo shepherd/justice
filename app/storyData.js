@@ -7,7 +7,7 @@ const storyData = [
       "description": "Possession of 2.8 grams of marijuana.",
       "overview": "A 49-year-old man was stopped by police and found with a small amount of marijuana. He was convicted of simple possession in 2011.",
       "priors": "Prior convictions include: two convictions for possession of small amounts of marijuana and cocaine. No arrest history for violent crimes.",
-      "prompt": "What do you think is the appropriate sentence?",
+      "prompt": "How many years do you think is an appropriate sentence?",
       "min": 0,
       "max": 40,
       "step": 1
@@ -51,7 +51,7 @@ const storyData = [
       "description": "Facilitating one crack cocaine transaction in 1999.",
       "overview": "A 32-year-old single mother with no previous convictions was found guilty of one count of conspiracy to distribute crack cocaine, and acquitted of six counts of possession of crack cocaine and aiding and abetting.",
       "priors": "",
-      "prompt": "",
+      "prompt": "How many years do you think is an appropriate sentence?",
       "min": 0,
       "max": 40,
       "step": 1
@@ -95,7 +95,7 @@ const storyData = [
       "description": "Conspiracy and possession with intent to distribute LSD.",
       "overview": "A 24-year-old Vegan “Deadhead” is charged with selling LSD at Grateful Dead concert.",
       "priors": "Prior convictions include: two convictions for the possession of small amounts of marijuana and LSD. No arrest history for violent crimes.",
-      "prompt": "",
+      "prompt": "How many years do you think is an appropriate sentence?",
       "min": 0,
       "max": 40,
       "step": 1
@@ -139,7 +139,7 @@ const storyData = [
       "description": "Growing about three dozen marijuana plants.",
       "overview": "A 75-year-old disabled veteran is convicted for growing three dozen marijuana plants behind his son’s home in Dothan, Alabama. He says he intended to use the plants to alleviate chronic pain, which prosecutors did not dispute.",
       "priors": "Prior convictions include: three convictions for a string of robberies committed two decades ago, for which the man served 10 years in prison.",
-      "prompt": "",
+      "prompt": "How many years do you think is an appropriate sentence?",
       "min": 0,
       "max": 40,
       "step": 1
@@ -183,7 +183,7 @@ const storyData = [
       "description": "Leasing trucks to marijuana smugglers in Georgia.",
       "overview": "A 30-year-old man owned a towing and trucking company in Georgia. In 2002, prosecutors alleged that the man knowingly allowed marijuana smugglers to use his trucks to transport drugs within the state.",
       "priors": "Prior convictions include: trespassing for walking into a fast-food restaurant with a beer (a $150 fine).",
-      "prompt": "",
+      "prompt": "How many years do you think is an appropriate sentence?",
       "min": 0,
       "max": 40,
       "step": 1

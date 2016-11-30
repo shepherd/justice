@@ -188,9 +188,12 @@ p
       color: $color
 
 .action-area
-  // text-align: right
+  padding-bottom: $pad*4
   > .inner-w
     max-width: 650px
+    padding-bottom: $pad*5
+  &.active
+    background: $white
   dev-outline(lime)
   *
     // border: 1px solid red
@@ -210,9 +213,16 @@ p
     display: inline-block
     color: $highlight
     border: $thick solid $highlight
-  @media $break-point-2
+  @media $break-point-1
+    &.active
+      background: transparent
+  @media $break-point-1
+    .range-w
+      max-width: 90%
     .button-w
       float: right
+      padding-top: 7px
+      margin-left: 10px
     .next-button
       color: $white
       border: $thick solid $white
@@ -347,7 +357,7 @@ delay($delay)
   background-size: cover
   background-position: center center
   z-index: -1
-  display: none
+  // display: none
   @media $break-point-2
     display: block
 
@@ -412,8 +422,9 @@ delay($delay)
     flex-grow: 1
     align-content: stretch
     align-items: center
-    padding-bottom: 0
+    // padding-bottom: 0
     position: relative
+
   .brand-mark
     max-width: 30px
   .something
@@ -478,7 +489,14 @@ body.title
   max-width: 650px
   relative()
   z-index: 2
+  .inner-w
+    padding: 0
+  @media $break-point-1
+    padding-top: $pad*4
+    .inner-w
+      padding: 0
   @media $break-point-2
+    padding-top: 0
     .inner-w
       padding: 0
 
@@ -508,15 +526,16 @@ body.title
   dev-outline(lightgreen)
   max-width: 650px
   background: white
-  @media $break-point-2
-    min-height: 320px
-    opacity: 0
-    transform: translate(0, -($pad*4) )
-    transition: .2s
-    &.active
-      transform: translate(0,0)
-      -webkit-transform: translate(0,0)
-      opacity: 1
+  // @media $break-point-2
+  min-height: 320px
+  opacity: 0
+  transform: translate(0, -($pad*4) )
+  transition: .2s
+  padding: $pad*2
+  &.active
+    transform: translate(0,0)
+    -webkit-transform: translate(0,0)
+    opacity: 1
   .chunk
     position: absolute
     width: 40px
@@ -527,7 +546,6 @@ body.title
     z-index: -1
     @media $break-point-2
       display: block
-
   .left
     right: calc(100% - 40px)
     @media $break-point-2
@@ -576,12 +594,15 @@ body.title
       border-bottom: $thick solid $black
       display: inline-block
       text-align: center
+      noir-type()
     .name
       display: inline-block
     .charge
       padding: $pad
       solid-type()
       line-height: 1
+      font-size: 16px
+
     .location, .priors, .actual, .your
       float: left
       padding: 0 $pad
@@ -593,11 +614,16 @@ body.title
         small-type()
         height: 5px
         line-height: 5px
+        opacity: .7
         // border: 1px solid red
       .content
         // height: 10px
         // line-height: 10px
         // margin-bottom: $pad
+        // font-weight: bold
+    .actual
+      .content
+        color: $highlight
     .actual, .your
       .heading
         // border: 1px solid blue
@@ -609,18 +635,70 @@ body.title
     .location, .actual
       border-right: $thick solid $black
       //
+  &.eff
+    header
+      //
+      .table
+        float: left
+        width: auto
+        padding-right: $pad*3
+        margin-bottom: $pad*2
+        .number
+          border-bottom: 0
+    .charge
+      clear: left
+      padding: 0
+      margin-bottom: $pad*2
+  @media $break-point-1
+    padding: $pad*4
+    header
+      .charge
+        font-size: 18px
+
   @media $break-point-2
     background: $white
     padding: $pad*4
+    header
+      .charge
+        padding: $pad*2
+        font-size: 23px
+      .location, .priors
+        padding: $pad*.5 $pad
+      .actual, .your
+        .content
+          padding-top: $pad
 
 
 .fact-list
   li
     // border: 1px solid blue
-    margin-top: $pad*3
+    margin-top: $pad*5
   h3
+    border-bottom: $thick solid $black
     noir-type()
     font-size: 30px
+  @media $break-point-1
+    display: flex
+    flex-wrap: wrap
+    li
+      border: $thick solid $black
+      margin: 0
+      width: 50%
+      padding: $pad
+      &:nth-of-type(1)
+        border-right: 0
+      &:nth-of-type(3)
+        border-top: 0
+        width: 80%
+    h3
+      border-bottom: 0
+      font-size: 33px
+  @media $break-point-2
+    //
+    li
+      padding: $pad*2
+    h3
+      font-size: 50px
 
 .slider-button
   border: 1px solid red

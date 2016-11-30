@@ -18,7 +18,7 @@
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
-        <div class='name'>The Crime:</div>
+        <div class='name'>The Crime</div>
         <div class='charge'>
           <div class='timed one {{if showData "active"}}'>
             {{model.story.charge.description}}
@@ -64,10 +64,10 @@
 
 
 
-<section class='container action-area range-area'>
+<section class='container action-area range-area timed seven {{if showData "active"}}' >
 <div class='inner-w'>
 
-  <div class='range-w timed seven {{if showData "active"}}'>
+  <div class='range-w timed eight {{if showData "active"}}'>
     {{ui-slider
       tooltip='always'
       classNames='range-slider'
@@ -78,14 +78,12 @@
       step=model.story.charge.step
       value=selectedSentence
       changed='selectSentence'
+      formatter=qualitative
     }}
   </div>
 
-  <div class='button-w timed eight {{if showData "active"}} '>
-    <div class="sentence-note">
-      Sentence (in years)
-    </div>
-    {{next-button action='transitionToSentence' icon='true'}}
+  <div class='button-w timed nine {{if showData "active"}} '>
+    {{next-button text='sentence' action='transitionToSentence' icon='true'}}
   </div>
 
 </div>

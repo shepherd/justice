@@ -18,12 +18,13 @@
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
-        <div class='name'>Societal Effects:</div>
-        <div class='charge'>
-          <span class='timed three {{if showData 'active'}}' >
-            {{model.story.effects.title}}
-          </span>
-        </div>
+        <div class='name'>Societal Effects</div>
+      </div>
+
+      <div class='charge'>
+        <span class='timed three {{if showData 'active'}}' >
+          {{model.story.effects.title}}
+        </span>
       </div>
     </header>
 
@@ -44,15 +45,15 @@
 
 
 
-<section class='container action-area'>
+<section class='container action-area timed one {{if showData 'active'}}'>
 <div class='inner-w'>
 
   <footer class='button-w timed six {{if showData 'active'}}'>
     {{#if nextStoryExists}}
-      {{next-button action='transitionToNextStory'}}
+      {{next-button text='Next case' icon='true' action='transitionToNextStory'}}
     {{else}}
-      <a href='http://justicefor.us' class='next-button'>
-        <span>Finish</span>
+      <a href='http://www.justicefor.us/#action' class='next-button'>
+        <span>Take action</span>
       </a>
     {{/if}}
   </footer>
