@@ -16,7 +16,7 @@ export default Ember.Component.extend({
           opacity: [1, 0]
         });
         counter++;
-        console.log(thisLength, counter);
+        // console.log(thisLength, counter);
         if ( counter >= thisLength ) {
           Ember.$('body').find('.next-button').velocity({
             opacity: [1, 0],
