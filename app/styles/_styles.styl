@@ -76,12 +76,38 @@ p
   max-width: 40px
   z-index: 1
 
+  // @media $break-point-2
+  //   width: 30px
+  //   height: 28px
+  //   svg
+  //     width: 30px
+  //     height: 28px
+
+
+
+@media all and (-ms-high-contrast:none)
+  .brand-mark
+    // position: relative
+    // display: inline-block
+    // max-width: 40px
+    // z-index: 1
+    @media $break-point-2
+      width: 30px
+      height: 28px
+      svg
+        width: 30px
+        height: 28px
+  .noise-layer
+    display: none
+
 .menu
   li
     display: inline-block
     a
       padding: $pad 0
 
+.noise-layer
+  display: none
 
 .application-outlet
   dev-outline(green)
@@ -94,6 +120,7 @@ p
     padding: 0
     height: auto
     max-width: 650px
+    max-width: 100% // $check
   @media $break-point-2
     position: absolute
     position: fixed
@@ -104,6 +131,8 @@ p
     display: flex
     align-items: center
     justify-content: center
+    .inner-w
+      //
 
 .title-outlet
   //
@@ -160,23 +189,44 @@ p
 
 .action-area
   // text-align: right
+  > .inner-w
+    max-width: 650px
   dev-outline(lime)
   *
     // border: 1px solid red
   .button-w
-    float: right
+    // border: 1px solid blue
+    text-align: center
+    .next-button, .sentence-note
+      display: inline-block
+    .next-button
+      // outline: 1px solid green
+      // float: right
+    .sentence-note
+      // float: left
+      small-type()
   .next-button
     button()
     display: inline-block
     color: $highlight
     border: $thick solid $highlight
   @media $break-point-2
+    .button-w
+      float: right
     .next-button
       color: $white
       border: $thick solid $white
       &:hover
         opacity: .8
+    .sentence-note
+      position: absolute
+      top: 110%
+      standard-type()
+      color: $white
 
+.prompt
+  font-weight: bold
+  // color: $color
 
 .stats
   display: flex
@@ -245,6 +295,7 @@ delay($delay)
     delay(2.9s)
   &.active
     transform: translate(0,0)
+    -webkit-transform: translate(0,0)
     opacity: 1
 
 .page
@@ -302,15 +353,15 @@ delay($delay)
 
 .background-image-full
   &.image-1
-    background-image: url("/images/stories/1/right.png")
+    background-image: url("/images/stories/1/compressed.jpg")
   &.image-2
-    background-image: url("/images/stories/2/right.png")
+    background-image: url("/images/stories/2/compressed.jpg")
   &.image-3
-    background-image: url("/images/stories/3/right.png")
+    background-image: url("/images/stories/3/compressed.jpg")
   &.image-4
-    background-image: url("/images/stories/4/right.png")
+    background-image: url("/images/stories/4/compressed.jpg")
   &.image-5
-    background-image: url("/images/stories/5/right.png")
+    background-image: url("/images/stories/5/compressed.jpg")
 
 // .details
 //   position: fixed
@@ -464,6 +515,7 @@ body.title
     transition: .2s
     &.active
       transform: translate(0,0)
+      -webkit-transform: translate(0,0)
       opacity: 1
   .chunk
     position: absolute

@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       let thisMessage = this.get('message');
       var confirmation = confirm(thisMessage);
       if ( confirmation ) {
+        location.href = destination;
         // Ember.$('body').velocity({
         //   opacity: 0 // fading out the body in an attempt to smooth the transition to the new URL
         // }, {

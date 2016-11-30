@@ -8,8 +8,8 @@
 
 
 
-<section class='container'>
-<div class="inner-w">
+<section class='container information'>
+<div class='inner-w'>
 
   <div class='document eff {{if showData "active"}}'>
 
@@ -51,7 +51,9 @@
     {{#if nextStoryExists}}
       {{next-button action='transitionToNextStory'}}
     {{else}}
-      {{next-button text='finish' action='transitionToConclusion'}}
+      <a href='http://justicefor.us' class='next-button'>
+        <span>Finish</span>
+      </a>
     {{/if}}
   </footer>
 

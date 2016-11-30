@@ -18,7 +18,7 @@
     <header>
       <div class='table'>
         <div class='number'>{{model.story.id}}</div>
-        <div class='name'>The Crime: {{valueSelected}} {{selectedSentence}}</div>
+        <div class='name'>The Crime:</div>
         <div class='charge'>
           <div class='timed one {{if showData "active"}}'>
             {{model.story.charge.description}}
@@ -82,6 +82,9 @@
   </div>
 
   <div class='button-w timed eight {{if showData "active"}} '>
+    <div class="sentence-note">
+      Sentence (in years)
+    </div>
     {{next-button action='transitionToSentence' icon='true'}}
   </div>
 

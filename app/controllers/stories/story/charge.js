@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
 
     transitionToSentence() {
       const currentStoryId = this.get('model.story.id');
-      const participantState = this.get('participantState')
+      const participantState = this.get('participantState');
 
       // if value has not been set by user, use default which is set by slider
       if (participantState.getValueFor(currentStoryId) === undefined) {
