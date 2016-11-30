@@ -193,7 +193,7 @@ p
     max-width: 650px
     padding-bottom: $pad*5
   &.active
-    background: $white
+    // background: $white
   dev-outline(lime)
   *
     // border: 1px solid red
@@ -211,8 +211,8 @@ p
   .next-button
     button()
     display: inline-block
-    color: $highlight
-    border: $thick solid $highlight
+    color: $white
+    border: $thick solid $white
   @media $break-point-1
     &.active
       background: transparent
@@ -502,6 +502,7 @@ body.title
 
 .range-area
   max-width: 650px
+  margin-top: $pad*2
   @media $break-point-2
     .button-w
       margin-top: 36px
