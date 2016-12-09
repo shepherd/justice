@@ -170,6 +170,8 @@ p
   line-height: 30px
   text-align: right
   color: $gray
+  cursor: pointer
+  z-index: 2000
   @media $break-point-2
     color: $highlight
 
@@ -327,6 +329,8 @@ delay($delay)
     p
       fat-type()
   footer
+    position: relative
+    z-index: 100
     margin-top: $pad*6
 
   .button
