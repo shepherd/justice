@@ -11,18 +11,18 @@ test('visiting /stories/1/charge', function(assert) {
   });
 });
 
-test('visiting /stories/1/sentence', function(assert) {
-  visit('/stories/1/sentence');
+// test('visiting /stories/1/sentence', function(assert) {
+//   visit('/stories/1/sentence');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/stories/1/sentence');
-  });
-});
+//   andThen(function() {
+//     assert.equal(currentURL(), '/stories/1/sentence');
+//   });
+// });
 
-test('visiting /stories/1/effect', function(assert) {
-  visit('/stories/1/effect');
+// test('visiting /stories/1/effect', function(assert) {
+//   visit('/stories/1/effect');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/stories/1/effect');
-  });
-});
+//   andThen(function() {
+//     assert.equal(currentURL(), '/stories/1/effect');
+//   });
+// });

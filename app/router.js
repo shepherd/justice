@@ -18,9 +18,6 @@ Router.map(function() {
       this.route('effect');
     });
   });
-  this.route('conclusion', function() {
-    this.route('sign-up');
-  });
   this.route('base');
 });
 

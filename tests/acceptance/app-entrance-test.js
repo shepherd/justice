@@ -3,10 +3,18 @@ import moduleForAcceptance from 'justice-for-us/tests/helpers/module-for-accepta
 
 moduleForAcceptance('Acceptance | app entrance');
 
-test('visiting /app-entrance', function(assert) {
+test('visiting /', function(assert) {
   visit('/');
 
   andThen(function() {
     assert.equal(currentURL(), '/');
+  });
+});
+
+test('visiting /overview', function(assert) {
+  visit('/overview');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/overview');
   });
 });
